@@ -69,7 +69,7 @@ export default function Header() {
     <header className={root}>
       <ElevationScroll>
         <AppBar position="fixed" color="inherit">
-          <Container maxWidth="lg" disableGutters={true}>
+          <>
             <Toolbar className={toolbar}>
               <div className="logo">
                 <a href="/" onClick={handleClick}>
@@ -117,7 +117,7 @@ export default function Header() {
                 </ul>
               </div>
             </Toolbar>
-          </Container>
+          </>
         </AppBar>
       </ElevationScroll>
     </header>
