@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <header>
       <ElevationScroll>
-        <AppBar position="fixed" color="transparent">
+        <AppBar position="fixed" color="white">
           <Toolbar>
             <div className="logo">
               <a href="/">
