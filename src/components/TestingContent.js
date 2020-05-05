@@ -1,5 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
 
 export default function TestingContent() {
   return (
@@ -98,7 +99,9 @@ export default function TestingContent() {
         pulvinar nunc volutpat, consectetur ipsum.
       </Typography>
       <p>
-        <button>About me</button>
+        <Button variant="contained" color="primary" disableElevation>
+          About me
+        </Button>
       </p>
       <Typography paragraph>
         Duis vulputate malesuada turpis. Ut ornare, purus a auctor malesuada,

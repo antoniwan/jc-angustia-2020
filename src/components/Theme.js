@@ -51,10 +51,13 @@ let Theme = createMuiTheme({
       fontFamily: "big_johnregular",
     },
     button: {
-      fontFamily: "Comic Sans MS",
+      textTransform: "normal",
     },
   },
   palette: {
+    primary: {
+      main: "#1300ED",
+    },
     background: {
       paper: `#ffffff`,
       default: `#ffffff`,
