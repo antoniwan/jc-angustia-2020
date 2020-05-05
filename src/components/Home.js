@@ -10,7 +10,9 @@ export default function Home() {
         <div id="back-to-top-anchor"></div>
 
         <section>
-          <Typography variant="h2">Hey, I'm Juan Angustia.</Typography>
+          <Typography variant="h2" id="hello-anchor">
+            Hey, I'm Juan Angustia.
+          </Typography>
           <Typography paragraph>
             A Visual Designer at Google, who loves to create simple designs that
             inspire and engage people, an <strong>aspiring writing</strong>,{" "}
@@ -23,7 +25,9 @@ export default function Home() {
         </section>
 
         <section>
-          <Typography variant="h2">Simple Is Better</Typography>
+          <Typography variant="h2" id="projects-anchor">
+            Simple Is Better
+          </Typography>
           <Typography paragraph>
             On my 9 years of career. I had the previlege to work with talented
             designers in comsumer products that simplify millions of people’s
@@ -68,7 +72,9 @@ export default function Home() {
         </section>
 
         <section>
-          <Typography variant="h2">Testimonials</Typography>
+          <Typography variant="h2" id="testimonials-anchor">
+            Testimonials
+          </Typography>
           <Typography paragraph>
             Here I’m sharing what collague are saying on{" "}
             <strong>LinkedIn</strong> about their experience working with me.
@@ -76,7 +82,9 @@ export default function Home() {
         </section>
 
         <section>
-          <Typography variant="h2">Let's Talk</Typography>
+          <Typography variant="h2" id="hire-anchor">
+            Let's Talk
+          </Typography>
           <Typography paragraph>
             If interested to work with me on your next project feel free to
             contact me, don't be shy. It would be my pleasure to work on the
