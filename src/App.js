@@ -1,5 +1,4 @@
 import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Container from "@material-ui/core/Container";
@@ -45,9 +44,8 @@ function ScrollTop(props) {
 function App() {
   return (
     <>
-      <CssBaseline />
       <Header />
-      <Container>
+      <Container maxWidth="lg">
         <div id="back-to-top-anchor"></div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque

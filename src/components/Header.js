@@ -1,5 +1,6 @@
 import React from "react";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import Container from "@material-ui/core/Container";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import { ReactComponent as Logo } from "../svg/logo.svg";
@@ -22,13 +23,15 @@ export default function Header() {
     <header>
       <ElevationScroll>
         <AppBar position="fixed" color="white">
-          <Toolbar>
-            <div className="logo">
-              <a href="/">
-                <Logo />
-              </a>
-            </div>
-          </Toolbar>
+          <Container maxWidth="lg" disableGutters="true">
+            <Toolbar>
+              <div className="logo">
+                <a href="/">
+                  <Logo />
+                </a>
+              </div>
+            </Toolbar>
+          </Container>
         </AppBar>
       </ElevationScroll>
     </header>
