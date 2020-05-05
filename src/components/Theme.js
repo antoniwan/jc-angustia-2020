@@ -31,7 +31,28 @@ let Theme = createMuiTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(","),
-    fontSize: 20,
+    fontSize: 16,
+    h1: {
+      fontFamily: "big_johnregular",
+    },
+    h2: {
+      fontFamily: "big_johnregular",
+    },
+    h3: {
+      fontFamily: "big_johnregular",
+    },
+    h4: {
+      fontFamily: "big_johnregular",
+    },
+    h5: {
+      fontFamily: "big_johnregular",
+    },
+    h6: {
+      fontFamily: "big_johnregular",
+    },
+    button: {
+      fontFamily: "Comic Sans MS",
+    },
   },
   palette: {
     background: {
@@ -66,25 +87,6 @@ let Theme = createMuiTheme({
     createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8),
     createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8),
   ],
-  overrides: {
-    MuiCssBaseline: {
-      "@global": {
-        "@font-face": [
-          "Lato",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          '"Segoe UI"',
-          "Roboto",
-          '"Helvetica Neue"',
-          "Arial",
-          "sans-serif",
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-        ].join(","),
-      },
-    },
-  },
 });
 
 Theme = responsiveFontSizes(Theme);

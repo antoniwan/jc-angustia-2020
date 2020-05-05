@@ -5,6 +5,14 @@
   --border-radius: 4px;
 }
 
+@font-face {
+  font-family: "big_johnregular";
+  src: url("../fonts/big_john-webfont.woff2") format("woff2"),
+    url("../fonts/big_john-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
