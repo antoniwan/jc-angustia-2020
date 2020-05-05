@@ -22,8 +22,8 @@ export default function Header() {
   return (
     <header>
       <ElevationScroll>
-        <AppBar position="fixed" color="white">
-          <Container maxWidth="lg" disableGutters="true">
+        <AppBar position="fixed" color="inherit">
+          <Container maxWidth="lg" disableGutters={true}>
             <Toolbar>
               <div className="logo">
                 <a href="/">

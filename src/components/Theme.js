@@ -1,4 +1,8 @@
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import {
+  ThemeProvider,
+  createMuiTheme,
+  responsiveFontSizes,
+} from "@material-ui/core/styles";
 
 const shadowKeyUmbraOpacity = 0.2;
 const shadowKeyPenumbraOpacity = 0.14;
@@ -13,6 +17,22 @@ function createShadow(...px) {
 }
 
 let Theme = createMuiTheme({
+  typography: {
+    fontFamily: [
+      "Lato",
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+    fontSize: 20,
+  },
   palette: {
     background: {
       paper: `#ffffff`,
@@ -46,7 +66,28 @@ let Theme = createMuiTheme({
     createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8),
     createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8),
   ],
+  overrides: {
+    MuiCssBaseline: {
+      "@global": {
+        "@font-face": [
+          "Lato",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          '"Segoe UI"',
+          "Roboto",
+          '"Helvetica Neue"',
+          "Arial",
+          "sans-serif",
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+        ].join(","),
+      },
+    },
+  },
 });
+
+Theme = responsiveFontSizes(Theme);
 
 export default Theme;
 export { ThemeProvider };
