@@ -1,13 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import "./styles/reset.css";
 import "./styles/globals.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
+let theme = createMuiTheme();
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

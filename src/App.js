@@ -1,4 +1,5 @@
 import React from "react";
+import Container from "@material-ui/core/Container";
 import Header from "./components/Header";
 import "./styles/App.css";
 
@@ -6,7 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className="wrapper">
+      <Container>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
           nec vehicula lectus. Maecenas consectetur arcu leo, non sollicitudin
@@ -35,7 +36,7 @@ function App() {
           <div className="ball white-ball">#000000</div>
           <div className="ball black-ball">#FFFFFF</div>
         </div>
-      </div>
+      </Container>
     </>
   );
 }
