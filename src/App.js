@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import ScrollTop from "./components/ScrollTop";
 import Header from "./components/Header";
+import Home from "./components/Home";
 import Footer from "./components/Footer";
 import "./styles/App.css";
 import TestingContent from "./components/TestingContent";
@@ -22,11 +23,7 @@ function App() {
     <>
       <Header />
       <div className={classes.offset} />
-      <Container maxWidth="lg">
-        <div id="back-to-top-anchor"></div>
-        <main>app...</main>
-        <TestingContent />
-      </Container>
+      <Home />
       <Footer />
       <ScrollTop />
     </>

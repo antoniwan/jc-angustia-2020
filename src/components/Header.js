@@ -59,6 +59,7 @@ export default function Header() {
   function handleClick(e) {
     const goTo = e.target.dataset.anchor || "hello-anchor";
     const anchor = document.querySelector(`#${goTo}`);
+
     if (goTo) {
       anchor.scrollIntoView({ behavior: "smooth", block: "center" });
     }
