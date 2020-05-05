@@ -14,7 +14,7 @@ export default function TestingContent() {
         Pellentesque lectus lectus, ornare nec arcu non, lacinia imperdiet est.
         Fusce in arcu erat.
       </Typography>
-      <Typography variant="h1" gutterBottom>
+      <Typography variant="h1" gutterBottom id="hello-anchor">
         Testing headlines - h1
       </Typography>
       <Typography paragraph>
@@ -28,7 +28,7 @@ export default function TestingContent() {
         ex. Aenean tristique eros id vestibulum tincidunt. In a dui faucibus,
         pulvinar nunc volutpat, consectetur ipsum.
       </Typography>
-      <Typography variant="h2" gutterBottom>
+      <Typography variant="h2" gutterBottom id="projects-anchor">
         Testing headlines - h2
       </Typography>
       <Typography paragraph>
@@ -42,7 +42,7 @@ export default function TestingContent() {
         ex. Aenean tristique eros id vestibulum tincidunt. In a dui faucibus,
         pulvinar nunc volutpat, consectetur ipsum.
       </Typography>
-      <Typography variant="h3" gutterBottom>
+      <Typography variant="h3" gutterBottom id="testimonials-anchor">
         Testing headlines - h3
       </Typography>
       <Typography paragraph>
@@ -56,7 +56,7 @@ export default function TestingContent() {
         ex. Aenean tristique eros id vestibulum tincidunt. In a dui faucibus,
         pulvinar nunc volutpat, consectetur ipsum.
       </Typography>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h4" gutterBottom id="hire-anchor">
         Testing headlines - h4
       </Typography>
       <Typography paragraph>

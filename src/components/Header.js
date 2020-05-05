@@ -55,6 +55,15 @@ const useStyles = makeStyles((theme) => ({
 export default function Header() {
   const classes = useStyles();
   const { root, navigation, ul, li, toolbar } = classes;
+
+  function handleClick(e) {
+    const goTo = e.target.dataset.anchor || "hello-anchor";
+    const anchor = document.querySelector(`#${goTo}`);
+    if (goTo) {
+      anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
+
   return (
     <header className={root}>
       <ElevationScroll>
@@ -62,26 +71,50 @@ export default function Header() {
           <Container maxWidth="lg" disableGutters={true}>
             <Toolbar className={toolbar}>
               <div className="logo">
-                <a href="/">
+                <a href="/" onClick={handleClick}>
                   <Logo />
                 </a>
               </div>
-              <navigation className={navigation}>
+              <div className={navigation}>
                 <ul className={ul}>
                   <li>
-                    <a href="#hello">Hello</a>
+                    <a
+                      href="#hello"
+                      data-anchor="hello-anchor"
+                      onClick={handleClick}
+                    >
+                      Hello
+                    </a>
                   </li>
                   <li>
-                    <a href="#projects">Projects</a>
+                    <a
+                      href="#projects"
+                      data-anchor="projects-anchor"
+                      onClick={handleClick}
+                    >
+                      Projects
+                    </a>
                   </li>
                   <li>
-                    <a href="#testimonials">Testimonials</a>
+                    <a
+                      href="#testimonials"
+                      data-anchor="testimonials-anchor"
+                      onClick={handleClick}
+                    >
+                      Testimonials
+                    </a>
                   </li>
                   <li>
-                    <a href="#hire-me">Hire Me</a>
+                    <a
+                      href="#hire-me"
+                      data-anchor="hire-anchor"
+                      onClick={handleClick}
+                    >
+                      Hire Me
+                    </a>
                   </li>
                 </ul>
-              </navigation>
+              </div>
             </Toolbar>
           </Container>
         </AppBar>
