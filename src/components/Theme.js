@@ -53,10 +53,16 @@ let Theme = createMuiTheme({
     button: {
       textTransform: "normal",
     },
+    body2: {
+      fontSize: 13,
+    },
   },
   palette: {
     primary: {
       main: "#1300ED",
+    },
+    secondary: {
+      main: "#ffffff",
     },
     background: {
       paper: `#ffffff`,

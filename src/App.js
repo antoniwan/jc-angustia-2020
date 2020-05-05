@@ -1,8 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import Fab from "@material-ui/core/Fab";
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import ScrollTop from "./components/ScrollTop";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -30,11 +28,7 @@ function App() {
         <TestingContent />
       </Container>
       <Footer />
-      <ScrollTop>
-        <Fab color="inherit" size="medium" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
-        </Fab>
-      </ScrollTop>
+      <ScrollTop />
     </>
   );
 }
