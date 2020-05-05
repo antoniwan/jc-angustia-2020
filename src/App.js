@@ -55,7 +55,7 @@ function App() {
         <TestingContent />
       </Container>
       <ScrollTop>
-        <Fab color="secondary" size="small" aria-label="scroll back to top">
+        <Fab color="inherit" size="medium" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>
