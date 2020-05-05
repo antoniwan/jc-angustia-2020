@@ -1,18 +1,20 @@
 import React from "react";
-import Container from "@material-ui/core/Container";
-
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
 import { ReactComponent as Logo } from "../svg/logo.svg";
 
 export default function Header() {
   return (
     <header>
-      <Container>
-        <div className="logo">
-          <a href="/">
-            <Logo />
-          </a>
-        </div>
-      </Container>
+      <AppBar position="fixed">
+        <Toolbar>
+          <div className="logo">
+            <a href="/">
+              <Logo />
+            </a>
+          </div>
+        </Toolbar>
+      </AppBar>
     </header>
   );
 }
