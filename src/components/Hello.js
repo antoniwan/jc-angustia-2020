@@ -12,14 +12,39 @@ export default function Hello() {
         <Grid className="hello-content" item xs={9} md={6}>
           <div className="hello-content">
             <Typography variant="h1" id="hello-anchor" gutterBottom>
-              Hey,
-              <br /> I'm Juan Angustia.
+              Hey, I'm Juan Angustia.
             </Typography>
             <Typography paragraph>
-              A Visual Designer at Google, who loves to create simple designs
-              that inspire and engage people, an{" "}
-              <strong>aspiring writing</strong>, <strong>fashion lover</strong>,
-              and also a proud <strong>Afro-Latino</strong>.
+              A Visual Designer at{" "}
+              <a
+                href="https://students.googleblog.com/2020/02/my-path-to-google-juan-angustia-visual.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google
+              </a>
+              , who loves to create simple designs that inspire and engage
+              people, an{" "}
+              <strong>
+                <a
+                  href="https://medium.com/@angustia/a-latino-college-dropout-at-google-5eb2d0629710"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  aspiring writer
+                </a>
+              </strong>
+              ,{" "}
+              <strong>
+                <a
+                  href="https://www.instagram.com/p/B7JBE0ogWne/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  fashion lover
+                </a>
+              </strong>
+              , and also a proud <strong>Afro-Latino</strong>.
             </Typography>
             <Button variant="contained" color="primary" disableElevation>
               About me

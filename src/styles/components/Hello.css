@@ -1,0 +1,25 @@
+.hello {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.hello img {
+  height: 314px;
+  object-fit: contain;
+}
+.hello a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+@media (min-width: 960px) {
+  .hello-content {
+    margin-top: 13rem;
+  }
+  .hello img {
+    display: block;
+    position: relative;
+    height: 720px;
+    width: 370px;
+    left: 160px;
+  }
+}
