@@ -1,1 +1,6 @@
 @import "./Hello.css";
+
+.simple-is-better {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
