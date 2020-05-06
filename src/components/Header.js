@@ -31,15 +31,12 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    [theme.breakpoints.up("md")]: {
-      flexDirection: "row",
-    },
   },
   ul: {
-    display: "flex",
+    display: "none",
     flexDirection: "row",
     listStyle: "none",
     justifyContent: "space-around",
@@ -49,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
     fontFamily: "big_johnregular",
     color: "#000000",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+    },
   },
   li: {
     fontFamily: "big_johnregular",

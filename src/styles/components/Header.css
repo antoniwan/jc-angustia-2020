@@ -17,20 +17,3 @@ header a {
 header a:hover {
   color: var(--color-blue);
 }
-
-/* I don't understand why I have to do this */
-/* Material-UI for React could improve this
-(I don't want to write the media queries in JS,
-I feel this needs to be in the CSS file -
-maybe I can import it later as a string and plug it in the JS file) */
-.toolbar-override {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-@media (min-width: 960px) {
-  .toolbar-override {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-}
