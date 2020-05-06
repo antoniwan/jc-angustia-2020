@@ -2,6 +2,8 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
 
 export default function Home() {
   return (
@@ -10,8 +12,32 @@ export default function Home() {
         <div id="back-to-top-anchor"></div>
 
         <section>
+          <Grid container spacing={3}>
+            <Grid item xs={9} md={6}>
+              <Typography variant="h2" id="hello-anchor">
+                Hey,
+                <br /> I'm Juan Angustia.
+              </Typography>
+              <Typography paragraph>
+                A Visual Designer at Google, who loves to create simple designs
+                that inspire and engage people, an{" "}
+                <strong>aspiring writing</strong>,{" "}
+                <strong>fashion lover</strong>, and also a proud{" "}
+                <strong>Afro-Latino</strong>.
+              </Typography>
+              <Button variant="contained" color="primary" disableElevation>
+                About me
+              </Button>
+            </Grid>
+            <Grid item xs={3} md={6}>
+              test
+            </Grid>
+          </Grid>
+        </section>
+        <section>
           <Typography variant="h2" id="hello-anchor">
-            Hey, I'm Juan Angustia.
+            Hey,
+            <br /> I'm Juan Angustia.
           </Typography>
           <Typography paragraph>
             A Visual Designer at Google, who loves to create simple designs that
