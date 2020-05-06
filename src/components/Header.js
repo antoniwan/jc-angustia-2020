@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import Container from "@material-ui/core/Container";
+import Button from "@material-ui/core/Button";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import { ReactComponent as Logo } from "../svg/logo.svg";
@@ -72,55 +72,60 @@ export default function Header() {
     <header className={root}>
       <ElevationScroll>
         <AppBar position="fixed" color="inherit">
-          <>
-            <Toolbar className={`${toolbar} toolbar-override`}>
-              <div className="logo">
-                <a href="/" onClick={handleClick}>
-                  <Logo />
+          <Toolbar className={`${toolbar} toolbar-override`}>
+            <div className="logo">
+              <a href="/" onClick={handleClick}>
+                <Logo />
+              </a>
+            </div>
+            <div className={`${navigation} main-navigation`}>
+              <ul className={ul}>
+                <li>
+                  <a
+                    href="#hello"
+                    data-anchor="hello-anchor"
+                    onClick={handleClick}
+                  >
+                    Hello
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#projects"
+                    data-anchor="projects-anchor"
+                    onClick={handleClick}
+                  >
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#testimonials"
+                    data-anchor="testimonials-anchor"
+                    onClick={handleClick}
+                  >
+                    Testimonials
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#hire-me"
+                    data-anchor="hire-anchor"
+                    onClick={handleClick}
+                  >
+                    Hire Me
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="resume-tab">
+              <Button variant="contained" color="primary" disableElevation>
+                <a href="#resume" target="_blank" rel="noopener noreferrer">
+                  Resume
                 </a>
-              </div>
-              <div className={navigation}>
-                <ul className={ul}>
-                  <li>
-                    <a
-                      href="#hello"
-                      data-anchor="hello-anchor"
-                      onClick={handleClick}
-                    >
-                      Hello
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#projects"
-                      data-anchor="projects-anchor"
-                      onClick={handleClick}
-                    >
-                      Projects
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#testimonials"
-                      data-anchor="testimonials-anchor"
-                      onClick={handleClick}
-                    >
-                      Testimonials
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#hire-me"
-                      data-anchor="hire-anchor"
-                      onClick={handleClick}
-                    >
-                      Hire Me
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </Toolbar>
-          </>
+              </Button>
+            </div>
+          </Toolbar>
         </AppBar>
       </ElevationScroll>
     </header>
