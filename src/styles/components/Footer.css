@@ -1,0 +1,26 @@
+footer .logo svg {
+  display: block;
+  width: 143px;
+  height: 18px;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+footer li {
+  margin-right: 15px;
+}
