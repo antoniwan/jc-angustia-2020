@@ -8,7 +8,7 @@ import JC2x from "../images/photo-jc-2x.png";
 export default function Hello() {
   return (
     <section className="hello">
-      <Grid container spacing={3}>
+      <Grid container spacing={0}>
         <Grid className="hello-content" item xs={9} md={6}>
           <div className="hello-content">
             <Typography variant="h1" id="hello-anchor" gutterBottom>
@@ -28,6 +28,7 @@ export default function Hello() {
         </Grid>
         <Grid item xs={3} md={6}>
           <img
+            className="hello-image"
             srcSet={`${JC1x} 1x, ${JC2x} 2x`}
             alt="Juan Carlos Angustia, cool dude who dresses nice"
           />
