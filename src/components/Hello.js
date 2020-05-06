@@ -28,7 +28,7 @@ export default function Hello() {
         </Grid>
         <Grid item xs={3} md={6}>
           <img
-            srcset={`${JC1x} 1x, ${JC2x} 2x`}
+            srcSet={`${JC1x} 1x, ${JC2x} 2x`}
             alt="Juan Carlos Angustia, cool dude who dresses nice"
           />
         </Grid>

@@ -44,15 +44,19 @@ let Theme = createMuiTheme({
     },
     h3: {
       fontFamily: "big_johnregular",
+      color: "#1300ED",
     },
     h4: {
       fontFamily: "big_johnregular",
+      color: "#1300ED",
     },
     h5: {
       fontFamily: "big_johnregular",
+      color: "#1300ED",
     },
     h6: {
       fontFamily: "big_johnregular",
+      color: "#1300ED",
     },
     button: {
       textTransform: "normal",
