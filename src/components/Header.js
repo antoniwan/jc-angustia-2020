@@ -31,9 +31,12 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-between",
+    [theme.breakpoints.up("md")]: {
+      flexDirection: "row",
+    },
   },
   ul: {
     display: "flex",
@@ -70,7 +73,7 @@ export default function Header() {
       <ElevationScroll>
         <AppBar position="fixed" color="inherit">
           <>
-            <Toolbar className={toolbar}>
+            <Toolbar className={`${toolbar} toolbar-override`}>
               <div className="logo">
                 <a href="/" onClick={handleClick}>
                   <Logo />
