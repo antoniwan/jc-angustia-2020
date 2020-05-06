@@ -41,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
     listStyle: "none",
     justifyContent: "space-around",
     alignItems: "center",
-    width: "100%",
     margin: 0,
     padding: 0,
     fontFamily: "big_johnregular",
@@ -51,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   li: {
-    fontFamily: "big_johnregular",
+    marginRight: "3rem",
   },
 }));
 
@@ -80,7 +79,7 @@ export default function Header() {
             </div>
             <div className={`${navigation} main-navigation`}>
               <ul className={ul}>
-                <li>
+                <li className={li}>
                   <a
                     href="#hello"
                     data-anchor="hello-anchor"
@@ -89,7 +88,7 @@ export default function Header() {
                     Hello
                   </a>
                 </li>
-                <li>
+                <li className={li}>
                   <a
                     href="#projects"
                     data-anchor="projects-anchor"
@@ -98,7 +97,7 @@ export default function Header() {
                     Projects
                   </a>
                 </li>
-                <li>
+                <li className={li}>
                   <a
                     href="#testimonials"
                     data-anchor="testimonials-anchor"
