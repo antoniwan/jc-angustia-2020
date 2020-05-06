@@ -33,10 +33,14 @@ let Theme = createMuiTheme({
     ].join(","),
     fontSize: 16,
     h1: {
+      fontSize: 46,
       fontFamily: "big_johnregular",
+      color: "#1300ED",
     },
     h2: {
+      fontSize: 40,
       fontFamily: "big_johnregular",
+      color: "#1300ED",
     },
     h3: {
       fontFamily: "big_johnregular",

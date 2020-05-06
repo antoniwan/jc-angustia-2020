@@ -1,0 +1,25 @@
+.hello {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  overflow: hidden;
+}
+.hello img {
+  height: 314px;
+  object-fit: contain;
+  position: absolute;
+  right: -50px;
+}
+
+@media (min-width: 960px) {
+  .hello {
+  }
+  .hello-content {
+    margin-top: 13rem;
+  }
+  .hello img {
+    position: relative;
+    height: 720px;
+    width: 370px;
+    left: 60px;
+  }
+}
