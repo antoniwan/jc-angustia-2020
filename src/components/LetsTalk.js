@@ -64,6 +64,7 @@ export default function LetsTalk() {
               color="primary"
               disableElevation
               fullWidth
+              size="large"
             >
               Send message
             </Button>
