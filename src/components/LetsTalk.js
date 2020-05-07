@@ -4,10 +4,12 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import TextField from "@material-ui/core/TextField";
+import Alert from "@material-ui/lab/Alert";
 import { ValidateEmail } from "../utils/email";
 
 export default function LetsTalk() {
   const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
   const [name, setName] = useState("");
   const [nameError, setNameError] = useState();
   const [email, setEmail] = useState("");
@@ -30,11 +32,27 @@ export default function LetsTalk() {
 
   const handleFormSubmit = async function (e) {
     const errors = await executeFormValidation();
+    const db = window.firebase.firestore();
 
     if (!errors) {
       setLoading(true);
-      // Send the form
-      //setLoading(false);
+      db.collection("messages")
+        .add({
+          name: name,
+          email: email,
+          message: message,
+          date: new Date(),
+        })
+        .then(function (docRef) {
+          setLoading(false);
+          setSent(true);
+        })
+        .catch(function (error) {
+          console.error("Error adding document: ", error);
+          setLoading(false);
+          setSent(false);
+        });
+
       return;
     }
 
@@ -66,7 +84,7 @@ export default function LetsTalk() {
   };
 
   return (
-    <section>
+    <section className="lets-talk">
       <Grid container spacing={0} justify="center">
         <Grid className="" item xs={12} md={6}>
           <Typography variant="h2" id="hire-anchor" align="center" paragraph>
@@ -89,7 +107,7 @@ export default function LetsTalk() {
                   name="name"
                   id="form-name"
                   label="Full name"
-                  placeholder="Juan Doe"
+                  placeholder={!sent ? `Jane Doe` : name}
                   variant="outlined"
                   fullWidth
                   InputLabelProps={{
@@ -100,13 +118,14 @@ export default function LetsTalk() {
                   onChange={handleChange}
                   helperText={nameError}
                   error={!!nameError}
+                  disabled={sent}
                 />
                 <TextField
                   required
                   name="email"
                   id="form-email"
                   label="Email"
-                  placeholder="juan.doe@gmail.com"
+                  placeholder={!sent ? `jane.doe@gmail.com` : email}
                   variant="outlined"
                   fullWidth
                   InputLabelProps={{
@@ -117,6 +136,7 @@ export default function LetsTalk() {
                   onChange={handleChange}
                   helperText={emailError}
                   error={!!emailError}
+                  disabled={sent}
                 />
                 <TextField
                   name="message"
@@ -132,24 +152,31 @@ export default function LetsTalk() {
                   margin="normal"
                   value={message}
                   onChange={handleChange}
+                  disabled={sent}
                 />
               </>
             ) : (
               <CircularProgress size={50} />
             )}
 
-            <Button
-              className="form-submit-button"
-              variant="contained"
-              color="primary"
-              disableElevation
-              fullWidth
-              size="large"
-              onClick={handleFormSubmit}
-              disabled={loading}
-            >
-              {!loading ? `Send message` : `Sending...`}
-            </Button>
+            {!sent ? (
+              <Button
+                className="form-submit-button"
+                variant="contained"
+                color="primary"
+                disableElevation
+                fullWidth
+                size="large"
+                onClick={handleFormSubmit}
+                disabled={loading}
+              >
+                {!loading ? `Send message` : `Sending...`}
+              </Button>
+            ) : (
+              <Alert severity="success">
+                <strong>Thank you!</strong> I will contact you ASAP!
+              </Alert>
+            )}
           </form>
         </Grid>
       </Grid>

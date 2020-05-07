@@ -1,8 +1,14 @@
+.lets-talk {
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+}
+
 .form-submit-button {
   margin-top: 0.5rem;
 }
 
 .MuiCircularProgress-root {
   display: block !important;
-  margin: 2rem auto 3rem auto;
+  margin: 5rem auto 5rem auto;
+  opacity: 1;
 }
