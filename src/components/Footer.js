@@ -6,6 +6,7 @@ import { ReactComponent as Instagram } from "../svg/icon-instagram.svg";
 import { ReactComponent as Dribbble } from "../svg/icon-dribbble.svg";
 import { ReactComponent as Vimeo } from "../svg/icon-vimeo.svg";
 import { ReactComponent as Medium } from "../svg/icon-medium.svg";
+import { ReactComponent as Heart } from "../svg/icon-heart.svg";
 
 export default function Footer() {
   return (
@@ -62,7 +63,8 @@ export default function Footer() {
       </div>
       <div>
         <Typography variant="body2">
-          Copyright 2020 © Juan Angustia - All rights reserved.
+          Made with <Heart className="icon-heart" /> by Juan Angustia. Copyright
+          2020 - All rights reserved.
         </Typography>
       </div>
       <div className="logo">

@@ -32,6 +32,12 @@ footer li:last-child {
   margin-right: 0;
 }
 
+.icon-heart {
+  position: relative;
+  top: 2px;
+  margin-right: 2px;
+}
+
 @media (min-width: 960px) {
   footer {
     flex-direction: row;
