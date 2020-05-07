@@ -1,6 +1,1 @@
-<svg width="92" height="87" viewBox="0 0 92 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21.9188 6.9712L83.1752 42.3376L21.9188 77.704L21.9188 6.9712Z" stroke="#1300ED" stroke-width="1.5"/>
-<rect x="13.71" y="6.99448" width="12.027" height="12.027" transform="rotate(-30 13.71 6.99448)" fill="white" stroke="#1300ED"/>
-<rect x="73.9596" y="39.5619" width="12.027" height="12.027" transform="rotate(-30 73.9596 39.5619)" fill="white" stroke="#1300ED"/>
-<rect x="13.71" y="75.386" width="12.027" height="12.027" transform="rotate(-30 13.71 75.386)" fill="white" stroke="#1300ED"/>
-</svg>
+<svg fill="none" height="87" viewBox="0 0 92 87" width="92" xmlns="http://www.w3.org/2000/svg"><g stroke="#1300ed"><path d="m21.9188 6.9712 61.2564 35.3664-61.2564 35.3664z" stroke-width="1.5"/><g fill="#fff"><path d="m13.71 6.99448h12.027v12.027h-12.027z" transform="matrix(.8660254 -.5 .5 .8660254 -1.660448 7.792083)"/><path d="m73.9596 39.5619h12.027v12.027h-12.027z" transform="matrix(.8660254 -.5 .5 .8660254 -9.872242 42.28009)"/><path d="m13.71 75.386h12.027v12.027h-12.027z" transform="matrix(.8660254 -.5 .5 .8660254 -35.856208 16.954809)"/></g></g></svg>
