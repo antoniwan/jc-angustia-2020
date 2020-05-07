@@ -47,15 +47,15 @@ export default function LetsTalk() {
     setEmailError();
 
     if (name.length <= 0) {
-      setNameError(`Name can't be empty`);
+      setNameError(`Please enter your name`);
       foundError = true;
     } else if (name.length <= 3) {
-      setNameError(`Name is too short`);
+      setNameError(`Please enter your full name`);
       foundError = true;
     }
 
     if (email.length <= 0) {
-      setEmailError(`You must include an email`);
+      setEmailError(`Please enter an email`);
       foundError = true;
     } else if (!ValidateEmail(email)) {
       setEmailError(`Please enter a valid email`);
