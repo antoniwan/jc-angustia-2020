@@ -1,12 +1,3 @@
-footer .logo {
-  display: none;
-}
-footer .logo svg {
-  display: block;
-  width: 143px;
-  height: 18px;
-}
-
 footer {
   width: 100%;
   display: flex;
@@ -14,8 +5,8 @@ footer {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 footer ul {
   display: flex;
@@ -31,6 +22,14 @@ footer li {
 footer li:last-child {
   margin-right: 0;
 }
+footer .logo {
+  display: none;
+}
+footer .logo svg {
+  display: block;
+  width: 143px;
+  height: 18px;
+}
 
 .icon-heart {
   position: relative;
@@ -38,15 +37,24 @@ footer li:last-child {
   margin-right: 2px;
 }
 
+.hide-on-desktop {
+  display: block;
+}
+
 @media (min-width: 960px) {
   footer {
     flex-direction: row;
     align-content: space-between;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
   }
   footer li {
     margin-bottom: 0;
   }
   footer .logo {
     display: inherit;
+  }
+  .hide-on-desktop {
+    display: none;
   }
 }

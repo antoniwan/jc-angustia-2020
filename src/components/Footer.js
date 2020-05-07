@@ -62,9 +62,10 @@ export default function Footer() {
         </ul>
       </div>
       <div>
-        <Typography variant="body2">
-          Made with <Heart className="icon-heart" /> by Juan Angustia. Copyright
-          2020 - All rights reserved.
+        <Typography variant="body2" align="center">
+          Made with <Heart className="icon-heart" /> by Juan Angustia.
+          <br className="hide-on-desktop" />
+          {"  "}Copyright 2020 - All rights reserved.
         </Typography>
       </div>
       <div className="logo">
