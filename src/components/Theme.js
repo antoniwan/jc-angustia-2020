@@ -43,6 +43,7 @@ let Theme = createMuiTheme({
       color: "#1300ED",
     },
     h3: {
+      fontSize: 38,
       fontFamily: "big_johnregular",
       color: "#1300ED",
     },

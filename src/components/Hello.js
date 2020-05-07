@@ -16,13 +16,15 @@ export default function Hello() {
             </Typography>
             <Typography paragraph>
               A Visual Designer at{" "}
-              <a
-                href="https://students.googleblog.com/2020/02/my-path-to-google-juan-angustia-visual.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Google
-              </a>
+              <strong>
+                <a
+                  href="https://students.googleblog.com/2020/02/my-path-to-google-juan-angustia-visual.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Google
+                </a>
+              </strong>
               , who loves to create simple designs that inspire and engage
               people, an{" "}
               <strong>

@@ -9,8 +9,12 @@ export default function Projects() {
       <section className="project project-google-duo">
         <Grid container spacing={0}>
           <Grid item xs={12} md={6}>
-            <Typography variant="h3">Google Duo</Typography>
-            <Typography gutterBottom>Visual Designer (UX)</Typography>
+            <Typography variant="h3" paragraph>
+              Google Duo
+            </Typography>
+            <Typography variant="body2" paragraph>
+              Visual Designer (UX)
+            </Typography>
             <Typography paragraph>
               Simple, high quality video calls on Android phones, iPhones,
               tablets, computers, and Smart Displays.
@@ -32,8 +36,12 @@ export default function Projects() {
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <Typography variant="h3">XFINITY STREAM</Typography>
-            <Typography gutterBottom>Lead Visual Designer (UX)</Typography>
+            <Typography variant="h3" paragraph>
+              XFINITY STREAM
+            </Typography>
+            <Typography paragraph variant="body2">
+              Lead Visual Designer (UX)
+            </Typography>
             <Typography paragraph>
               Stream TV app was a company initiative to bring stream mobile
               experience on the big screen. I was responsible to lead visual and
@@ -47,8 +55,12 @@ export default function Projects() {
       <section className="project vevo-music">
         <Grid container spacing={0}>
           <Grid item xs={12} md={6}>
-            <Typography variant="h3">VEVO MUSIC</Typography>
-            <Typography gutterBottom>Product Designer</Typography>
+            <Typography variant="h3" paragraph>
+              VEVO MUSIC
+            </Typography>
+            <Typography variant="body2" gutterBottom>
+              Product Designer
+            </Typography>
             <Typography paragraph>
               Sometimes it’s difficult to find content that you love. This was
               my inspiration to made this concept. A ux experience where users
