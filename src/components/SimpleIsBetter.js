@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { ReactComponent as Ellipse9 } from "../svg/particles/particle-Ellipse-9.svg";
@@ -24,6 +24,7 @@ const particles = [
     width: 22,
     initialTop: 1089,
     initialLeft: 429,
+    speed: 60,
   },
   {
     name: "Ellipse10",
@@ -32,6 +33,7 @@ const particles = [
     width: 28,
     initialTop: 1639,
     initialLeft: 791,
+    speed: 40,
   },
   {
     name: "Ellipse11",
@@ -40,6 +42,7 @@ const particles = [
     width: 18,
     initialTop: 1285,
     initialLeft: 1245,
+    speed: 5,
   },
   {
     name: "Group3",
@@ -48,6 +51,7 @@ const particles = [
     width: 86,
     initialTop: 1053,
     initialLeft: 630,
+    speed: 24,
   },
   {
     name: "Group4",
@@ -56,6 +60,7 @@ const particles = [
     width: 69,
     initialTop: 1569,
     initialLeft: 529,
+    speed: 80,
   },
   {
     name: "Group6",
@@ -64,6 +69,7 @@ const particles = [
     width: 35,
     initialTop: 1071,
     initialLeft: 1135,
+    speed: 100,
   },
   {
     name: "Group7",
@@ -72,6 +78,7 @@ const particles = [
     width: 64,
     initialTop: 1588,
     initialLeft: 260,
+    speed: 120,
   },
   {
     name: "Group8",
@@ -81,6 +88,7 @@ const particles = [
     initialTop: 1204,
     initialLeft: 364.15,
     transform: `rotate(40.87deg)`,
+    speed: 30,
   },
   {
     name: "Polygon5",
@@ -89,6 +97,7 @@ const particles = [
     width: 27,
     initialTop: 1061,
     initialLeft: 205,
+    speed: 100,
   },
   {
     name: "Rectangle18",
@@ -98,6 +107,7 @@ const particles = [
     initialTop: 1581,
     initialLeft: 895,
     transform: `rotate(-15deg)`,
+    speed: 65,
   },
   {
     name: "Rectangle19",
@@ -107,6 +117,7 @@ const particles = [
     initialTop: 1439.24,
     initialLeft: 1302,
     transform: `rotate(56.31deg)`,
+    speed: 100,
   },
   {
     name: "Rectangle21",
@@ -116,6 +127,7 @@ const particles = [
     initialTop: 1644,
     initialLeft: 1184,
     transform: `rotate(-141.65deg)`,
+    speed: 200,
   },
   {
     name: "Vector1",
@@ -125,6 +137,7 @@ const particles = [
     initialTop: 1207,
     initialLeft: 729,
     transform: `rotate(-37.09deg)`,
+    speed: 100,
   },
   {
     name: "Vector2",
@@ -134,12 +147,21 @@ const particles = [
     initialTop: 1470,
     initialLeft: 109,
     transform: `rotate(-37.09deg)`,
+    speed: 10,
   },
 ];
 
 function SimpleParticles() {
   const Yoffset = 1000;
   const Xoffset = 90;
+  const [scrollTop, setScrollTop] = useState(0);
+
+  const handleScroll = function (e) {
+    const { scrollTop } = e.target.scrollingElement;
+    setScrollTop(scrollTop);
+  };
+
+  window.addEventListener("scroll", handleScroll);
 
   return (
     <div className="simple-particles">
@@ -151,7 +173,9 @@ function SimpleParticles() {
           initialTop,
           initialLeft,
           transform,
+          speed,
         } = element;
+
         return (
           <element.src
             key={name}
@@ -159,7 +183,7 @@ function SimpleParticles() {
             style={{
               height: `${height}px`,
               width: `${width}px`,
-              top: `${initialTop - Yoffset}px`,
+              top: `${initialTop - Yoffset + scrollTop / speed}px`,
               left: `${initialLeft - Xoffset}px`,
               transform: `${transform}`,
             }}
