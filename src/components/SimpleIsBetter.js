@@ -2,8 +2,6 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Particles from "react-particles-js";
-import { ReactComponent as TestSVG } from "../svg/logo.svg";
-import Test from "../images/photo-jc.png";
 
 export default function SimpleIsBetter() {
   return (
