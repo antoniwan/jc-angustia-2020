@@ -2,6 +2,8 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import { ReactComponent as A } from "../svg/graphic-A.svg";
+import { ReactComponent as AwBottomLine } from "../svg/graphic-A-bottom-line.svg";
 import JC1x from "../images/photo-jc.png";
 import JC2x from "../images/photo-jc-2x.png";
 
@@ -54,11 +56,15 @@ export default function Hello() {
           </div>
         </Grid>
         <Grid item xs={3} md={6}>
-          <img
-            className="hello-image"
-            srcSet={`${JC1x} 1x, ${JC2x} 2x`}
-            alt="Juan Carlos Angustia, cool dude who dresses nice"
-          />
+          <div className="hello-graphics">
+            <img
+              className="hello-picture"
+              srcSet={`${JC1x} 1x, ${JC2x} 2x`}
+              alt="Juan Carlos Angustia, cool dude who dresses nice"
+            />
+            <A className="hello-a" />
+            <AwBottomLine className="hello-a-bottom-line" />
+          </div>
         </Grid>
       </Grid>
     </section>
