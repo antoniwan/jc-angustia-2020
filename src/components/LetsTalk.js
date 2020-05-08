@@ -98,7 +98,7 @@ export default function LetsTalk() {
         </Grid>
       </Grid>
       <Grid container spacing={0} justify="center">
-        <Grid className="" item xs={12} md={4}>
+        <Grid className="" item xs={12} md={5}>
           <form className="lets-talk-form" noValidate autoComplete="off">
             {!loading ? (
               <>
