@@ -30,6 +30,7 @@
 @media (min-width: 960px) {
   .hello-content {
     margin-top: 13rem;
+    margin-bottom: 13rem;
   }
   .hello-graphics {
     position: relative;

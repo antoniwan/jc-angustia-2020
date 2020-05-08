@@ -1,6 +1,6 @@
 .simple-is-better {
-  padding-top: 30rem;
-  padding-bottom: 14rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
   position: relative;
 }
 
@@ -11,4 +11,35 @@
   width: 100vw;
   height: 100%;
   margin-left: -24px;
+}
+
+.simple-particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+@media (min-width: 960px) {
+  .simple-is-better {
+    padding-top: 20rem;
+    padding-bottom: 15rem;
+    position: relative;
+  }
+
+  .simple-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    margin-left: -24px;
+  }
+
+  .simple-particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
 }

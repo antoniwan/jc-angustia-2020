@@ -1,82 +1,173 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import { ReactComponent as Ellipse9 } from "../svg/particles/particle-Ellipse-9.svg";
+import { ReactComponent as Ellipse10 } from "../svg/particles/particle-Ellipse-10.svg";
+import { ReactComponent as Ellipse11 } from "../svg/particles/particle-Ellipse-11.svg";
+import { ReactComponent as Group3 } from "../svg/particles/particle-Group-3.svg";
+import { ReactComponent as Group4 } from "../svg/particles/particle-Group-4.svg";
+import { ReactComponent as Group6 } from "../svg/particles/particle-Group-6.svg";
+import { ReactComponent as Group7 } from "../svg/particles/particle-Group-7.svg";
+import { ReactComponent as Group8 } from "../svg/particles/particle-Group-8.svg";
+import { ReactComponent as Polygon5 } from "../svg/particles/particle-Polygon-5.svg";
+import { ReactComponent as Rectangle18 } from "../svg/particles/particle-Rectangle-18.svg";
+import { ReactComponent as Rectangle19 } from "../svg/particles/particle-Rectangle-19.svg";
+import { ReactComponent as Rectangle21 } from "../svg/particles/particle-Rectangle-21.svg";
+import { ReactComponent as Vector1 } from "../svg/particles/particle-Vector-1.svg";
+import { ReactComponent as Vector2 } from "../svg/particles/particle-Vector-2.svg";
 
 const particles = [
   {
-    src: `${process.env.PUBLIC_URL}/particles/particle-Ellipse-9.svg`,
+    name: "Ellipse9",
+    src: Ellipse9,
     height: 22,
     width: 22,
+    initialTop: 1089,
+    initialLeft: 429,
   },
   {
-    src: `${process.env.PUBLIC_URL}/particles/particle-Ellipse-10.svg`,
+    name: "Ellipse10",
+    src: Ellipse10,
     height: 28,
     width: 28,
+    initialTop: 1639,
+    initialLeft: 791,
   },
   {
-    src: `${process.env.PUBLIC_URL}/particles/particle-Ellipse-11.svg`,
-    height: 20,
-    width: 20,
+    name: "Ellipse11",
+    src: Ellipse11,
+    height: 18,
+    width: 18,
+    initialTop: 1285,
+    initialLeft: 1245,
   },
   {
-    src: `${process.env.PUBLIC_URL}/particles/particle-Group-3.svg`,
+    name: "Group3",
+    src: Group3,
     height: 91,
     width: 86,
+    initialTop: 1053,
+    initialLeft: 630,
   },
   {
-    src: `${process.env.PUBLIC_URL}/particles/particle-Group-4.svg`,
+    name: "Group4",
+    src: Group4,
     height: 71,
     width: 69,
+    initialTop: 1569,
+    initialLeft: 529,
   },
   {
-    src: `${process.env.PUBLIC_URL}/particles/particle-Group-6.svg`,
-    height: 20,
-    width: 20,
+    name: "Group6",
+    src: Group6,
+    height: 37,
+    width: 35,
+    initialTop: 1071,
+    initialLeft: 1135,
   },
   {
-    src: `${process.env.PUBLIC_URL}/particles/particle-Group-7.svg`,
+    name: "Group7",
+    src: Group7,
     height: 64,
     width: 64,
+    initialTop: 1588,
+    initialLeft: 260,
   },
   {
-    src: `${process.env.PUBLIC_URL}/particles/particle-Group-8.svg`,
+    name: "Group8",
+    src: Group8,
     height: 71,
     width: 89,
+    initialTop: 1204,
+    initialLeft: 364.15,
+    transform: `rotate(40.87deg)`,
   },
   {
-    src: `${process.env.PUBLIC_URL}/particles/particle-Polygon-5.svg`,
+    name: "Polygon5",
+    src: Polygon5,
     height: 27,
     width: 27,
-  },
-  // {
-  //   src: `${process.env.PUBLIC_URL}/particles/particle-Rectangle-18.svg`,
-  //   height: 20,
-  //   width: 8,
-  // },
-  // {
-  //   src: `${process.env.PUBLIC_URL}/particles/particle-Rectangle-19.svg`,
-  //   height: 36,
-  //   width: 11,
-  // },
-  // {
-  //   src: `${process.env.PUBLIC_URL}/particles/particle-Rectangle-21.svg`,
-  //   height: 2,
-  //   width: 36,
-  // },
-  {
-    src: `${process.env.PUBLIC_URL}/particles/particle-Vector-1.svg`,
-    height: 46,
-    width: 78,
+    initialTop: 1061,
+    initialLeft: 205,
   },
   {
-    src: `${process.env.PUBLIC_URL}/particles/particle-Vector-2.svg`,
-    height: 46,
-    width: 39,
+    name: "Rectangle18",
+    src: Rectangle18,
+    height: 8.4,
+    width: 20,
+    initialTop: 1581,
+    initialLeft: 895,
+    transform: `rotate(-15deg)`,
+  },
+  {
+    name: "Rectangle19",
+    src: Rectangle19,
+    height: 11.25,
+    width: 36.89,
+    initialTop: 1439.24,
+    initialLeft: 1302,
+    transform: `rotate(56.31deg)`,
+  },
+  {
+    name: "Rectangle21",
+    src: Rectangle21,
+    height: 2.77,
+    width: 36.16,
+    initialTop: 1644,
+    initialLeft: 1184,
+    transform: `rotate(-141.65deg)`,
+  },
+  {
+    name: "Vector1",
+    src: Vector1,
+    height: 78,
+    width: 46,
+    initialTop: 1207,
+    initialLeft: 729,
+    transform: `rotate(-37.09deg)`,
+  },
+  {
+    name: "Vector2",
+    src: Vector2,
+    height: 38.47,
+    width: 46,
+    initialTop: 1470,
+    initialLeft: 109,
+    transform: `rotate(-37.09deg)`,
   },
 ];
 
 function SimpleParticles() {
-  return <div className="simple-particles">let's go</div>;
+  const Yoffset = 1000;
+  const Xoffset = 90;
+
+  return (
+    <div className="simple-particles">
+      {particles.map((element) => {
+        const {
+          name,
+          height,
+          width,
+          initialTop,
+          initialLeft,
+          transform,
+        } = element;
+        return (
+          <element.src
+            key={name}
+            className={`simple-particle simple-particle-${name}`}
+            style={{
+              height: `${height}px`,
+              width: `${width}px`,
+              top: `${initialTop - Yoffset}px`,
+              left: `${initialLeft - Xoffset}px`,
+              transform: `${transform}`,
+            }}
+          />
+        );
+      })}
+    </div>
+  );
 }
 
 export default function SimpleIsBetter() {
