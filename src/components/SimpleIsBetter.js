@@ -24,7 +24,7 @@ const particles = [
     width: 22,
     initialTop: 1089,
     initialLeft: 429,
-    speed: 60,
+    speed: 160,
   },
   {
     name: "Ellipse10",
@@ -76,9 +76,9 @@ const particles = [
     src: Group7,
     height: 64,
     width: 64,
-    initialTop: 1588,
+    initialTop: 1588 - 200,
     initialLeft: 260,
-    speed: 120,
+    speed: 4.2,
   },
   {
     name: "Group8",
@@ -88,7 +88,7 @@ const particles = [
     initialTop: 1204,
     initialLeft: 364.15,
     transform: `rotate(40.87deg)`,
-    speed: 30,
+    speed: 27,
   },
   {
     name: "Polygon5",
@@ -97,17 +97,17 @@ const particles = [
     width: 27,
     initialTop: 1061,
     initialLeft: 205,
-    speed: 100,
+    speed: 11,
   },
   {
     name: "Rectangle18",
     src: Rectangle18,
     height: 8.4,
     width: 20,
-    initialTop: 1581,
+    initialTop: 1581 - 500,
     initialLeft: 895,
     transform: `rotate(-15deg)`,
-    speed: 65,
+    speed: 3,
   },
   {
     name: "Rectangle19",
@@ -137,7 +137,7 @@ const particles = [
     initialTop: 1207,
     initialLeft: 729,
     transform: `rotate(-37.09deg)`,
-    speed: 100,
+    speed: 25,
   },
   {
     name: "Vector2",
@@ -147,7 +147,7 @@ const particles = [
     initialTop: 1470,
     initialLeft: 109,
     transform: `rotate(-37.09deg)`,
-    speed: 10,
+    speed: 7,
   },
 ];
 
