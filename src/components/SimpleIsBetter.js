@@ -195,14 +195,6 @@ function SimpleParticles() {
   );
 }
 
-const Arrow = function () {
-  return (
-    <div className="simple-arrow-down">
-      <ArrowDown />
-    </div>
-  );
-};
-
 export default function SimpleIsBetter() {
   return (
     <section className="simple-is-better">
@@ -226,7 +218,7 @@ export default function SimpleIsBetter() {
             <strong>I would like to show you some of them.</strong>
           </Typography>
           <Typography align="center">
-            <Arrow />
+            <ArrowDown />
           </Typography>
         </Grid>
       </Grid>
