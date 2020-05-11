@@ -15,6 +15,7 @@ import { ReactComponent as Rectangle19 } from "../svg/particles/particle-Rectang
 import { ReactComponent as Rectangle21 } from "../svg/particles/particle-Rectangle-21.svg";
 import { ReactComponent as Vector1 } from "../svg/particles/particle-Vector-1.svg";
 import { ReactComponent as Vector2 } from "../svg/particles/particle-Vector-2.svg";
+import { ReactComponent as ArrowDown } from "../svg/graphic-down-arrow.svg";
 
 const particles = [
   {
@@ -194,6 +195,14 @@ function SimpleParticles() {
   );
 }
 
+const Arrow = function () {
+  return (
+    <div className="simple-arrow-down">
+      <ArrowDown />
+    </div>
+  );
+};
+
 export default function SimpleIsBetter() {
   return (
     <section className="simple-is-better">
@@ -213,8 +222,11 @@ export default function SimpleIsBetter() {
             designers in comsumer products that simplify millions of people’s
             life.
           </Typography>
-          <Typography align="center">
+          <Typography align="center" paragraph>
             <strong>I would like to show you some of them.</strong>
+          </Typography>
+          <Typography align="center">
+            <Arrow />
           </Typography>
         </Grid>
       </Grid>
