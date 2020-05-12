@@ -12,17 +12,19 @@ const BackToTopAnchor = function () {
 
 export default function Home() {
   return (
-    <Container maxWidth="lg">
-      <main>
+    <main>
+      <Container maxWidth="lg">
         <BackToTopAnchor />
         <Hello />
         <SimpleIsBetter />
         <Projects />
+      </Container>
 
+      <Container maxWidth="lg">
         <section>Video Parallax Section</section>
         <Testimonials />
         <LetsTalk />
-      </main>
-    </Container>
+      </Container>
+    </main>
   );
 }

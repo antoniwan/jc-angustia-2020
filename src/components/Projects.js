@@ -2,12 +2,18 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
+import PhotoGoogleDuo from "../images/photo-google-duo.png";
+import PhotoGoogleDuo2x from "../images/photo-google-duo-2x.png";
+import PhotoVevoMusic from "../images/photo-vevo-music.png";
+import PhotoVevoMusic2x from "../images/photo-vevo-music-2x.png";
+import PhotoXfinityStream from "../images/photo-xfinity-stream.png";
+import PhotoXfinityStream2x from "../images/photo-xfinity-stream-2x.png";
 
 export default function Projects() {
   return (
     <>
       <section className="project project-google-duo">
-        <Grid container spacing={0}>
+        <Grid container spacing={4} justify="center" alignItems="center">
           <Grid item xs={12} md={6}>
             <Typography variant="h3" paragraph>
               Google Duo
@@ -24,15 +30,27 @@ export default function Projects() {
             </Button>
           </Grid>
           <Grid item xs={12} md={6}>
-            Image
+            <Grid container justify="center" alignItems="center">
+              <img
+                className="project-google-duo-picture"
+                srcSet={`${PhotoGoogleDuo} 1x, ${PhotoGoogleDuo2x} 2x`}
+                alt="Google Duo Screenshots on multiple devices"
+              />
+            </Grid>
           </Grid>
         </Grid>
       </section>
 
-      <section className="project xfinity-stream">
-        <Grid container spacing={0}>
+      <section className="project project-xfinity-stream xfinity-stream">
+        <Grid container spacing={4} justify="center" alignItems="center">
           <Grid item xs={12} md={6}>
-            Image
+            <Grid container justify="center" alignItems="center">
+              <img
+                className="project-xfinity-stream-picture"
+                srcSet={`${PhotoXfinityStream} 1x, ${PhotoXfinityStream2x} 2x`}
+                alt="Xfinity Stream TV application Screenshots"
+              />
+            </Grid>
           </Grid>
 
           <Grid item xs={12} md={6}>
@@ -52,8 +70,8 @@ export default function Projects() {
         </Grid>
       </section>
 
-      <section className="project vevo-music">
-        <Grid container spacing={0}>
+      <section className="project project-vevo-music vevo-music">
+        <Grid container spacing={4} justify="center" alignItems="center">
           <Grid item xs={12} md={6}>
             <Typography variant="h3" paragraph>
               VEVO MUSIC
@@ -68,7 +86,13 @@ export default function Projects() {
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
-            Image
+            <Grid container justify="center" alignItems="center">
+              <img
+                className="project-vevo-music-picture"
+                srcSet={`${PhotoVevoMusic} 1x, ${PhotoVevoMusic2x} 2x`}
+                alt="Vevo Music user interface Screenshots"
+              />
+            </Grid>
           </Grid>
         </Grid>
       </section>
