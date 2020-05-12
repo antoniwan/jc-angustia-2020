@@ -1,0 +1,21 @@
+.magic-video {
+  position: relative;
+  height: 500px;
+  max-height: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.magic-video video {
+  margin: 0 auto;
+  min-width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: -999;
+  min-height: calc(100% - 64px);
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background-size: cover;
+  transition: 1s opacity;
+}

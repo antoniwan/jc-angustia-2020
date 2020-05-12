@@ -5,6 +5,7 @@ import SimpleIsBetter from "./SimpleIsBetter";
 import Projects from "./Projects";
 import Testimonials from "./Testimonials";
 import LetsTalk from "./LetsTalk";
+import MagicVideo from "./MagicVideo";
 
 const BackToTopAnchor = function () {
   return <div id="back-to-top-anchor"></div>;
@@ -19,9 +20,8 @@ export default function Home() {
         <SimpleIsBetter />
         <Projects />
       </Container>
-
+      <MagicVideo />
       <Container maxWidth="lg">
-        <section>Video Parallax Section</section>
         <Testimonials />
         <LetsTalk />
       </Container>

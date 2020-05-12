@@ -5,8 +5,9 @@ footer {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: var(--color-white);
 }
 footer ul {
   display: flex;
@@ -45,8 +46,8 @@ footer .logo svg {
   footer {
     flex-direction: row;
     align-content: space-between;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
   }
   footer li {
     margin-bottom: 0;
