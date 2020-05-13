@@ -14,20 +14,13 @@ import { ReactComponent as Group24 } from "../svg/particles/particle-Group-24.sv
 import { ReactComponent as Ellipse15 } from "../svg/particles/particle-Ellipse-15.svg";
 import { ReactComponent as Group23 } from "../svg/particles/particle-Group-23.svg";
 import { ReactComponent as Group25 } from "../svg/particles/particle-Group-25.svg";
-
-import { ReactComponent as Ellipse10 } from "../svg/particles/particle-Ellipse-10.svg";
 import { ReactComponent as Ellipse12 } from "../svg/particles/particle-Ellipse-12.svg";
-import { ReactComponent as Group3 } from "../svg/particles/particle-Group-3.svg";
-import { ReactComponent as Group4 } from "../svg/particles/particle-Group-4.svg";
 import { ReactComponent as Group11 } from "../svg/particles/particle-Group-11.svg";
 import { ReactComponent as Group20 } from "../svg/particles/particle-Group-20.svg";
 import { ReactComponent as Group10 } from "../svg/particles/particle-Group-10.svg";
-import { ReactComponent as Polygon5 } from "../svg/particles/particle-Polygon-5.svg";
 import { ReactComponent as Rectangle37 } from "../svg/particles/particle-Rectangle-37.svg";
 import { ReactComponent as Rectangle38 } from "../svg/particles/particle-Rectangle-38.svg";
 import { ReactComponent as Rectangle21 } from "../svg/particles/particle-Rectangle-21.svg";
-import { ReactComponent as Vector1 } from "../svg/particles/particle-Vector-1.svg";
-import { ReactComponent as Vector2 } from "../svg/particles/particle-Vector-2.svg";
 
 const particles = [
   {
@@ -204,8 +197,6 @@ function TalkParticles() {
           speed,
           background,
         } = element;
-
-        console.log(element);
 
         return (
           <element.source
