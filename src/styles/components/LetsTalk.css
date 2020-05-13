@@ -1,6 +1,8 @@
 .lets-talk {
   padding-top: 10rem;
   padding-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .form-submit-button {
@@ -11,4 +13,26 @@
   display: block !important;
   margin: 5rem auto 5rem auto;
   opacity: 1;
+}
+
+.talk-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  margin-left: -24px;
+}
+
+.talk-particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: all 0.1s ease-in-out;
+}
+
+@media (min-width: 960px) {
+  .lets-talk {
+    padding-top: 20rem;
+  }
 }
