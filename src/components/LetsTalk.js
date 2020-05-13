@@ -11,18 +11,20 @@ import { ReactComponent as Polygon10 } from "../svg/particles/particle-Polygon-1
 import { ReactComponent as Polygon11 } from "../svg/particles/particle-Polygon-11.svg";
 import { ReactComponent as Vector4 } from "../svg/particles/particle-Vector-4.svg";
 import { ReactComponent as Group24 } from "../svg/particles/particle-Group-24.svg";
+import { ReactComponent as Ellipse15 } from "../svg/particles/particle-Ellipse-15.svg";
+import { ReactComponent as Group23 } from "../svg/particles/particle-Group-23.svg";
+import { ReactComponent as Group25 } from "../svg/particles/particle-Group-25.svg";
 
-import { ReactComponent as Ellipse9 } from "../svg/particles/particle-Ellipse-9.svg";
 import { ReactComponent as Ellipse10 } from "../svg/particles/particle-Ellipse-10.svg";
-import { ReactComponent as Ellipse11 } from "../svg/particles/particle-Ellipse-11.svg";
+import { ReactComponent as Ellipse12 } from "../svg/particles/particle-Ellipse-12.svg";
 import { ReactComponent as Group3 } from "../svg/particles/particle-Group-3.svg";
 import { ReactComponent as Group4 } from "../svg/particles/particle-Group-4.svg";
-import { ReactComponent as Group6 } from "../svg/particles/particle-Group-6.svg";
-import { ReactComponent as Group7 } from "../svg/particles/particle-Group-7.svg";
-import { ReactComponent as Group8 } from "../svg/particles/particle-Group-8.svg";
+import { ReactComponent as Group11 } from "../svg/particles/particle-Group-11.svg";
+import { ReactComponent as Group20 } from "../svg/particles/particle-Group-20.svg";
+import { ReactComponent as Group10 } from "../svg/particles/particle-Group-10.svg";
 import { ReactComponent as Polygon5 } from "../svg/particles/particle-Polygon-5.svg";
-import { ReactComponent as Rectangle18 } from "../svg/particles/particle-Rectangle-18.svg";
-import { ReactComponent as Rectangle19 } from "../svg/particles/particle-Rectangle-19.svg";
+import { ReactComponent as Rectangle37 } from "../svg/particles/particle-Rectangle-37.svg";
+import { ReactComponent as Rectangle38 } from "../svg/particles/particle-Rectangle-38.svg";
 import { ReactComponent as Rectangle21 } from "../svg/particles/particle-Rectangle-21.svg";
 import { ReactComponent as Vector1 } from "../svg/particles/particle-Vector-1.svg";
 import { ReactComponent as Vector2 } from "../svg/particles/particle-Vector-2.svg";
@@ -30,7 +32,7 @@ import { ReactComponent as Vector2 } from "../svg/particles/particle-Vector-2.sv
 const particles = [
   {
     name: "Polygon11",
-    src: Polygon11,
+    source: Polygon11,
     height: 55,
     width: 55,
     initialTop: 1210.78,
@@ -39,7 +41,7 @@ const particles = [
   },
   {
     name: "Polygon10",
-    src: Polygon10,
+    source: Polygon10,
     height: 27.32,
     width: 27.32,
     initialTop: 1622.73,
@@ -48,17 +50,17 @@ const particles = [
   },
   {
     name: "Polygon9",
-    src: Polygon9,
+    source: Polygon9,
     height: 55,
     width: 55,
     initialTop: 1600,
     initialLeft: 1146,
     speed: 50,
-    transform: `rotate(-26.51deg)`,
+    transform: `rotate(26.51deg)`,
   },
   {
     name: "Vector4",
-    src: Vector4,
+    source: Vector4,
     height: 46,
     width: 78,
     initialTop: 1260.74,
@@ -68,12 +70,110 @@ const particles = [
   },
   {
     name: "Group24",
-    src: Group24,
+    source: Group24,
     height: 64,
     width: 64,
     initialTop: 642,
     initialLeft: 987,
     speed: 7,
+  },
+  {
+    name: "Ellipse15",
+    source: Ellipse15,
+    height: 22,
+    width: 22,
+    initialTop: 1191,
+    initialLeft: 125,
+    speed: 40,
+  },
+  {
+    name: "Group23",
+    source: Group23,
+    height: 69,
+    width: 71.07,
+    initialTop: 1317,
+    initialLeft: 274,
+    speed: 100,
+    transform: `rotate(40.87deg)`,
+  },
+  {
+    name: "Group25",
+    source: Group25,
+    height: 36,
+    width: 38,
+    initialTop: 1225,
+    initialLeft: 1260,
+    speed: 100,
+    transform: `rotate(-27deg)`,
+  },
+  {
+    name: "Rectangle21",
+    source: Rectangle21,
+    height: 2.77,
+    width: 37,
+    initialTop: 1392,
+    initialLeft: 1076.36,
+    speed: 50,
+    transform: `rotate(-141.65deg)`,
+    background: `black`,
+  },
+  {
+    name: "Rectangle38",
+    source: Rectangle38,
+    height: 11.25,
+    width: 36.89,
+    initialTop: 1372,
+    initialLeft: 1272.36,
+    speed: 100,
+    transform: `rotate(56.31deg)`,
+  },
+  {
+    name: "Group10",
+    source: Group10,
+    height: 36,
+    width: 38,
+    initialTop: 1532,
+    initialLeft: 157.43,
+    speed: 50,
+    transform: `rotate(-49.11deg)`,
+  },
+  {
+    name: "Group20",
+    source: Group20,
+    height: 64,
+    width: 64,
+    initialTop: 1793,
+    initialLeft: 113,
+    speed: 120,
+  },
+  {
+    name: "Ellipse12",
+    source: Ellipse12,
+    height: 22,
+    width: 22,
+    initialTop: 1482,
+    initialLeft: 286,
+    speed: 10,
+  },
+  {
+    name: "Group11",
+    source: Group11,
+    height: 69,
+    width: 71,
+    initialTop: 1428,
+    initialLeft: 1228.15,
+    speed: 50,
+    transform: `rotate(40.87deg)`,
+  },
+  {
+    name: "Rectangle37",
+    source: Rectangle37,
+    height: 11.25,
+    width: 37,
+    initialTop: 1885,
+    initialLeft: 1274,
+    speed: 100,
+    transform: `rotate(56.31deg)`,
   },
 ];
 
@@ -102,10 +202,14 @@ function TalkParticles() {
           initialLeft,
           transform,
           speed,
+          background,
         } = element;
 
+        console.log(element);
+
         return (
-          <element.src
+          <element.source
+            preserveAspectRatio="xMidYMid meet"
             key={name}
             className={`talk-particle talk-particle-${name}`}
             style={{
@@ -114,6 +218,7 @@ function TalkParticles() {
               top: `${initialTop - Yoffset + scrollTop / speed}px`,
               left: `${initialLeft - Xoffset}px`,
               transform: `${transform}`,
+              background: `${background}`,
             }}
           />
         );
