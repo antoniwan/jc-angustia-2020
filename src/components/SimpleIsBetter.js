@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { ReactComponent as Ellipse9 } from "../svg/particles/particle-Ellipse-9.svg";
@@ -162,7 +162,9 @@ function SimpleParticles() {
     setScrollTop(scrollTop);
   };
 
-  window.addEventListener("scroll", handleScroll);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
 
   return (
     <div className="simple-particles">
