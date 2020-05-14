@@ -73,7 +73,7 @@ export default function Hello() {
     <section className="hello">
       <AboutMeModal isOpen={modalOpen} handleClose={handleClose} />
       <Grid container spacing={0}>
-        <Grid className="hello-content" item xs={9} md={6}>
+        <Grid className="hello-content" item xs={9} md={5}>
           <div className="hello-content">
             <Typography variant="h1" id="hello-anchor" gutterBottom>
               Hey, I'm Juan Angustia.
@@ -122,7 +122,7 @@ export default function Hello() {
             </Button>
           </div>
         </Grid>
-        <Grid item xs={3} md={6}>
+        <Grid item xs={3} md={7}>
           <div className="hello-graphics">
             <img
               className="hello-picture"
