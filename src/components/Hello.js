@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
@@ -44,6 +44,16 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
 
 export default function Hello() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [scrollTop, setScrollTop] = useState(0);
+  const [positiveOffset, setPositiveOffset] = useState(0);
+  const [negativeOffset, setNegativeOffset] = useState(0);
+
+  const handleScroll = function (e) {
+    const { scrollTop } = e.target.scrollingElement;
+    setScrollTop(scrollTop);
+    setNegativeOffset((-100 * scrollTop) / 1000);
+    setPositiveOffset((-200 * scrollTop) / 1000);
+  };
 
   const handleClick = function (e) {
     setModalOpen(true);
@@ -52,6 +62,10 @@ export default function Hello() {
   const handleClose = function (e) {
     setModalOpen(false);
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
 
   return (
     <section className="hello">
@@ -113,8 +127,14 @@ export default function Hello() {
               srcSet={`${JC1x} 1x, ${JC2x} 2x`}
               alt="Juan Carlos Angustia, cool dude who dresses nice"
             />
-            <A className="hello-a" />
-            <AwBottomLine className="hello-a-bottom-line" />
+            <A
+              className="hello-a"
+              style={{ transform: `translate(${positiveOffset}px)` }}
+            />
+            <AwBottomLine
+              className="hello-a-bottom-line"
+              style={{ transform: `translate(${negativeOffset}px)` }}
+            />
           </div>
         </Grid>
       </Grid>
