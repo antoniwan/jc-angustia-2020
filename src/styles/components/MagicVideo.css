@@ -1,6 +1,6 @@
 .magic-video {
   position: relative;
-  height: 700px;
+  height: 550px;
   width: 100%;
   overflow: hidden;
 }
@@ -10,5 +10,5 @@
   background-size: cover;
   width: 100%;
   top: -100px;
-  transform: scale(1.4);
+  transform: scale(1.2);
 }

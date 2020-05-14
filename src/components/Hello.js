@@ -108,7 +108,7 @@ export default function Hello() {
                   fashion lover
                 </a>
               </strong>
-              , and also a proud <strong>Afro-Latino</strong>.
+              , and also a proud Afro-Latino.
             </Typography>
             <Button
               variant="contained"
