@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Button from "@material-ui/core/Button";
@@ -59,7 +59,24 @@ export default function Header() {
   const classes = useStyles();
   const { root, navigation, ul, li, toolbar } = classes;
 
-  function handleClick(e) {
+  const handleScroll = (e) => {
+    const { scrollTop } = e.target.scrollingElement;
+    const projectsAnchor = document.querySelector("#projects-anchor");
+    const testimonialsAnchor = document.querySelector("#testimonials-anchor");
+    const hireAnchor = document.querySelector(".lets-talk");
+
+    if (scrollTop > hireAnchor.offsetTop) {
+      setActiveSection("hire-anchor");
+    } else if (scrollTop > testimonialsAnchor.offsetTop - 400) {
+      setActiveSection("testimonials-anchor");
+    } else if (scrollTop > projectsAnchor.offsetTop) {
+      setActiveSection("projects-anchor");
+    } else {
+      setActiveSection("hello-anchor");
+    }
+  };
+
+  const handleClick = (e) => {
     const goTo = e.target.dataset.anchor || "hello-anchor";
     const anchor = document.querySelector(`#${goTo}`);
 
@@ -67,7 +84,11 @@ export default function Header() {
       setActiveSection(anchor.id);
       anchor.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-  }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
 
   return (
     <header className={root}>
