@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import debounce from "lodash/debounce";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { ReactComponent as Ellipse9 } from "../svg/particles/particle-Ellipse-9.svg";
@@ -163,7 +164,7 @@ function SimpleParticles() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", debounce(handleScroll, 3));
   });
 
   return (

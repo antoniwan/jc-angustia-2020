@@ -5,6 +5,7 @@ import Button from "@material-ui/core/Button";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import { ReactComponent as Logo } from "../svg/logo.svg";
+import debounce from "lodash/debounce";
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -87,7 +88,7 @@ export default function Header() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", debounce(handleScroll, 10));
   });
 
   return (

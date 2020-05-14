@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import debounce from "lodash/debounce";
 import MagicVideoMp4 from "../video/loop-optim.mp4";
 import MagicVideoWebm from "../video/loop-optim.webm";
 
@@ -11,7 +12,7 @@ export default function MagicVideo() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", debounce(handleScroll, 3));
   });
   return (
     <div className="magic-video">
