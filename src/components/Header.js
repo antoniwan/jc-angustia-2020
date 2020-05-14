@@ -66,7 +66,7 @@ export default function Header() {
     const testimonialsAnchor = document.querySelector("#testimonials-anchor");
     const hireAnchor = document.querySelector(".lets-talk");
 
-    if (scrollTop > hireAnchor.offsetTop) {
+    if (scrollTop > hireAnchor.offsetTop - 400) {
       setActiveSection("hire-anchor");
     } else if (scrollTop > testimonialsAnchor.offsetTop - 400) {
       setActiveSection("testimonials-anchor");
