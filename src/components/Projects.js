@@ -13,8 +13,8 @@ export default function Projects() {
   return (
     <>
       <section className="project project-google-duo">
-        <Grid container spacing={4} justify="center" alignItems="center">
-          <Grid item xs={12} md={6}>
+        <Grid container spacing={4} justify="flex-start" alignItems="center">
+          <Grid item xs={12} md={5}>
             <Typography variant="h3" paragraph>
               Google Duo
             </Typography>

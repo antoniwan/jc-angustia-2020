@@ -47,12 +47,14 @@ export default function Hello() {
   const [scrollTop, setScrollTop] = useState(0);
   const [aTranslation, setaTranslation] = useState(0);
   const [aOutlineTranslation, setaOutlineTranslation] = useState(0);
+  const [jcTranslation, setjcTranslation] = useState(0);
 
   const handleScroll = function (e) {
     const { scrollTop } = e.target.scrollingElement;
     setScrollTop(scrollTop);
     setaOutlineTranslation((-100 * scrollTop) / 1000);
     setaTranslation((+200 * scrollTop) / 1000);
+    setjcTranslation((-50 * scrollTop) / 1000);
   };
 
   const handleClick = function (e) {
@@ -126,6 +128,7 @@ export default function Hello() {
               className="hello-picture"
               srcSet={`${JC1x} 1x, ${JC2x} 2x`}
               alt="Juan Carlos Angustia, cool dude who dresses nice"
+              style={{ transform: `translate(${jcTranslation}px)` }}
             />
             <A
               className="hello-a"

@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import ScrollTop from "./components/ScrollTop";
+// import ScrollTop from "./components/ScrollTop";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
@@ -24,7 +24,7 @@ function App() {
       <div className={classes.offset} />
       <Home />
       <Footer />
-      <ScrollTop />
+      {/* <ScrollTop /> */}
     </>
   );
 }
