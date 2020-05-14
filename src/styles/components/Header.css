@@ -19,6 +19,10 @@ header .main-navigation a:hover {
   color: var(--color-blue);
 }
 
+header .main-navigation .is-active a {
+  color: var(--color-blue);
+}
+
 header .resume-tab button {
   border-top-left-radius: 100%;
   border-radius: 50px 4px 4px 50px;

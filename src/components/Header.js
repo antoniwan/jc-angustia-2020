@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Button from "@material-ui/core/Button";
@@ -55,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Header() {
+  const [activeSection, setActiveSection] = useState("hello-anchor");
   const classes = useStyles();
   const { root, navigation, ul, li, toolbar } = classes;
 
@@ -63,6 +64,7 @@ export default function Header() {
     const anchor = document.querySelector(`#${goTo}`);
 
     if (goTo) {
+      setActiveSection(anchor.id);
       anchor.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }
@@ -78,8 +80,12 @@ export default function Header() {
               </a>
             </div>
             <div className={`${navigation} main-navigation`}>
-              <ul className={ul}>
-                <li className={li}>
+              <ul className={`${ul} `}>
+                <li
+                  className={`${li} ${
+                    activeSection === "hello-anchor" ? "is-active" : ""
+                  }`}
+                >
                   <a
                     href="#hello"
                     data-anchor="hello-anchor"
@@ -88,7 +94,11 @@ export default function Header() {
                     Hello
                   </a>
                 </li>
-                <li className={li}>
+                <li
+                  className={`${li} ${
+                    activeSection === "projects-anchor" ? "is-active" : ""
+                  }`}
+                >
                   <a
                     href="#projects"
                     data-anchor="projects-anchor"
@@ -97,7 +107,11 @@ export default function Header() {
                     Projects
                   </a>
                 </li>
-                <li className={li}>
+                <li
+                  className={`${li} ${
+                    activeSection === "testimonials-anchor" ? "is-active" : ""
+                  }`}
+                >
                   <a
                     href="#testimonials"
                     data-anchor="testimonials-anchor"
@@ -106,7 +120,11 @@ export default function Header() {
                     Testimonials
                   </a>
                 </li>
-                <li>
+                <li
+                  className={`${li} ${
+                    activeSection === "hire-anchor" ? "is-active" : ""
+                  }`}
+                >
                   <a
                     href="#hire-me"
                     data-anchor="hire-anchor"
