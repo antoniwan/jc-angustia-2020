@@ -31,6 +31,7 @@
 @media (min-width: 960px) {
   .hello {
     padding-bottom: 40px;
+    overflow: visible;
   }
   .hello-content {
     margin-top: 13rem;
@@ -43,22 +44,22 @@
   }
   .hello-picture {
     position: absolute;
-    height: 720px;
+    height: 702px;
     width: 370px;
     left: 160px;
-    top: -10px;
+    top: 6px;
     right: 0;
   }
   .hello-a {
     position: absolute;
     top: 9px;
-    right: 0;
+    right: -160px;
     width: 740px;
     height: 698px;
   }
   .hello-a-bottom-line {
     position: absolute;
-    right: 0;
+    right: -59px;
     top: 3px;
     width: 740px;
     height: 710px;

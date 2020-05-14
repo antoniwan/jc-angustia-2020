@@ -45,14 +45,14 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
 export default function Hello() {
   const [modalOpen, setModalOpen] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
-  const [positiveOffset, setPositiveOffset] = useState(0);
-  const [negativeOffset, setNegativeOffset] = useState(0);
+  const [aTranslation, setaTranslation] = useState(0);
+  const [aOutlineTranslation, setaOutlineTranslation] = useState(0);
 
   const handleScroll = function (e) {
     const { scrollTop } = e.target.scrollingElement;
     setScrollTop(scrollTop);
-    setNegativeOffset((-100 * scrollTop) / 1000);
-    setPositiveOffset((-200 * scrollTop) / 1000);
+    setaOutlineTranslation((-100 * scrollTop) / 1000);
+    setaTranslation((+200 * scrollTop) / 1000);
   };
 
   const handleClick = function (e) {
@@ -129,11 +129,11 @@ export default function Hello() {
             />
             <A
               className="hello-a"
-              style={{ transform: `translate(${positiveOffset}px)` }}
+              style={{ transform: `translate(${aTranslation}px)` }}
             />
             <AwBottomLine
               className="hello-a-bottom-line"
-              style={{ transform: `translate(${negativeOffset}px)` }}
+              style={{ transform: `translate(${aOutlineTranslation}px)` }}
             />
           </div>
         </Grid>
