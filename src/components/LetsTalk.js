@@ -243,7 +243,7 @@ export default function LetsTalk() {
   };
 
   const handleFormSubmit = async function (e) {
-    const errors = await executeFormValidation();
+    const errors = executeFormValidation();
     const db = window.firebase.firestore();
 
     if (!errors) {
@@ -299,7 +299,7 @@ export default function LetsTalk() {
     <section className="lets-talk">
       <TalkParticles />
       <Grid container spacing={0} justify="center">
-        <Grid className="" item xs={12} md={6}>
+        <Grid className="" item xs={12} md={5}>
           <Typography variant="h2" id="hire-anchor" align="center" paragraph>
             Let's Talk
           </Typography>
