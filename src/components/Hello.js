@@ -44,14 +44,12 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
 
 export default function Hello() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [scrollTop, setScrollTop] = useState(0);
   const [aTranslation, setaTranslation] = useState(0);
   const [aOutlineTranslation, setaOutlineTranslation] = useState(0);
   const [jcTranslation, setjcTranslation] = useState(0);
 
   const handleScroll = function (e) {
     const { scrollTop } = e.target.scrollingElement;
-    setScrollTop(scrollTop);
     setaOutlineTranslation((-100 * scrollTop) / 1000);
     setaTranslation((+200 * scrollTop) / 1000);
     setjcTranslation((-50 * scrollTop) / 1000);

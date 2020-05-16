@@ -154,6 +154,10 @@ const particles = [
 ];
 
 function SimpleParticles() {
+  // I can improve these animations by using the translate
+  // CSS transition instead of modifying the
+  // top CSS values
+
   const Yoffset = 1000;
   const Xoffset = 90;
   const [scrollTop, setScrollTop] = useState(0);
