@@ -114,6 +114,19 @@ let Theme = createMuiTheme({
     createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8),
     createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8),
   ],
+  overrides: {
+    MuiFormLabel: {
+      root: {
+        color: "#1300ED",
+      },
+    },
+    MuiOutlinedInput: {
+      notchedOutline: {
+        borderColor: "#1300ED",
+        borderWidth: 2,
+      },
+    },
+  },
 });
 
 Theme = responsiveFontSizes(Theme);

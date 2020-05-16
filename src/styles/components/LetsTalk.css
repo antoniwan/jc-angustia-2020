@@ -31,6 +31,10 @@
   transform: all 0.1s ease-in-out;
 }
 
+.lets-talk .form-submit-button {
+  margin-top: 8px;
+}
+
 @media (min-width: 960px) {
   .lets-talk {
     padding-top: 20rem;
