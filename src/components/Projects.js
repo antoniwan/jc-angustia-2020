@@ -13,7 +13,7 @@ export default function Projects() {
   return (
     <>
       <section className="project project-google-duo">
-        <Grid container spacing={4} justify="flex-start" alignItems="center">
+        <Grid container spacing={0} justify="space-between" alignItems="center">
           <Grid item xs={12} md={5}>
             <Typography variant="h3" paragraph>
               Google Duo
@@ -42,7 +42,7 @@ export default function Projects() {
       </section>
 
       <section className="project project-xfinity-stream xfinity-stream">
-        <Grid container spacing={4} justify="center" alignItems="center">
+        <Grid container spacing={0} justify="space-between" alignItems="center">
           <Grid item xs={12} md={6}>
             <Grid container justify="center" alignItems="center">
               <img
@@ -53,7 +53,7 @@ export default function Projects() {
             </Grid>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={5}>
             <Typography variant="h3" paragraph>
               XFINITY STREAM
             </Typography>
@@ -71,8 +71,8 @@ export default function Projects() {
       </section>
 
       <section className="project project-vevo-music vevo-music">
-        <Grid container spacing={4} justify="center" alignItems="center">
-          <Grid item xs={12} md={6}>
+        <Grid container spacing={0} justify="space-between" alignItems="center">
+          <Grid item xs={12} md={5}>
             <Typography variant="h3" paragraph>
               VEVO MUSIC
             </Typography>

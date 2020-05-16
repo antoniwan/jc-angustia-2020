@@ -46,20 +46,20 @@
     position: absolute;
     height: 702px;
     width: 370px;
-    left: 160px;
+    left: 210px;
     top: 6px;
     right: 0;
   }
   .hello-a {
     position: absolute;
     top: 9px;
-    right: -62px;
+    right: -162px;
     width: 740px;
     height: 698px;
   }
   .hello-a-bottom-line {
     position: absolute;
-    right: 44px;
+    right: calc(-57px);
     top: 3px;
     width: 740px;
     height: 710px;
