@@ -29,7 +29,7 @@ export default function Projects() {
               See more
             </Button>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={5}>
             <Grid container justify="center" alignItems="center">
               <img
                 className="project-google-duo-picture"
@@ -43,7 +43,7 @@ export default function Projects() {
 
       <section className="project project-xfinity-stream xfinity-stream">
         <Grid container spacing={0} justify="space-between" alignItems="center">
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={5}>
             <Grid container justify="center" alignItems="center">
               <img
                 className="project-xfinity-stream-picture"
@@ -85,7 +85,7 @@ export default function Projects() {
               can personalize their experience based on their taste.
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={5}>
             <Grid container justify="center" alignItems="center">
               <img
                 className="project-vevo-music-picture"

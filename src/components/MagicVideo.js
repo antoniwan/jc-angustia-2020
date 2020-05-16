@@ -24,7 +24,8 @@ export default function MagicVideo() {
         muted={true}
         loop={true}
         style={{
-          top: `${-500 + scrollTop / 5}px`,
+          // top: `${-900 + scrollTop / 5}px`,
+          transform: `translateY(${scrollTop / 5}px)`,
         }}
       >
         <source src={MagicVideoWebm} type="video/webm" />
