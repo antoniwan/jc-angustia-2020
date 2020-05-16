@@ -8,7 +8,7 @@ import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "fixed",
-    bottom: theme.spacing(12),
+    bottom: theme.spacing(10),
     right: theme.spacing(3),
   },
   offset: theme.mixins.toolbar,
@@ -32,7 +32,12 @@ function ScrollTop() {
   return (
     <Zoom in={trigger}>
       <div onClick={handleClick} role="presentation" className={classes.root}>
-        <Fab color="secondary" size="medium" aria-label="scroll back to top">
+        <Fab
+          className="back-to-top-fab"
+          color="secondary"
+          size="medium"
+          aria-label="scroll back to top"
+        >
           <KeyboardArrowUpIcon />
         </Fab>
       </div>
