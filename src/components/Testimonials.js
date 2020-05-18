@@ -119,9 +119,7 @@ export default function Testimonials() {
             Testimonials
           </Typography>
           <Typography paragraph align="center">
-            Here I’m sharing what collague are saying on{" "}
-            <strong id="testimonials-anchor">LinkedIn</strong> about their
-            experience working with me.
+            Check out what others are saying about me.
           </Typography>
         </Grid>
       </Grid>
