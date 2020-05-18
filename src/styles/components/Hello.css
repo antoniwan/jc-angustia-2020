@@ -1,7 +1,6 @@
 .hello {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  overflow: hidden;
 }
 .hello a {
   text-decoration: none;
@@ -31,7 +30,6 @@
 @media (min-width: 960px) {
   .hello {
     padding-bottom: 40px;
-    overflow: visible;
   }
   .hello-content {
     margin-top: 13rem;
