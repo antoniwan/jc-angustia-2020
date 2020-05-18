@@ -7,7 +7,7 @@ import Fab from "@material-ui/core/Fab";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
 
-function Slide() {
+function Slide({ recommendationCopy, writtenBy, writtenByTitle }) {
   return (
     <div>
       <Grid container spacing={0} justify="center">
@@ -18,15 +18,13 @@ function Slide() {
             align="center"
             paragraph
           >
-            “Juan is rockstar in many regards. His passion for pushing toward a
-            solution that is both effective and elegant is evident in every
-            project he applies himself to – big or small.”
+            “{recommendationCopy}”
           </Typography>
           <Typography className="testimonial-person" paragraph align="center">
-            Jonathan Zweifzer
+            {writtenBy}
           </Typography>
           <Typography className="testimonial-person-title" align="center">
-            Innovation Strategy at Comcast NBCUniversal
+            {writtenByTitle}
           </Typography>
         </Grid>
       </Grid>
@@ -93,10 +91,21 @@ function TestimonialsCarousel() {
         )
       }
     >
-      <Slide />
-      <Slide />
-      <Slide />
-      <Slide />
+      <Slide
+        recommendationCopy={`Juan is an extremely talented individual that is not afraid of any visual challenge. His high energy, and "no problem" attitude make him a great candidate for any team.`}
+        writtenBy={`Alberto Orsini`}
+        writtenByTitle={`Sr. Manager, Product Design at Royal Caribbean Cruises Ltd.`}
+      />
+      <Slide
+        recommendationCopy={`Juan is a hard worker and very talented in the fast-paced online world. We work together on several Interactive projects and he's a genuine team player.`}
+        writtenBy={`Isis Zeledon`}
+        writtenByTitle={`Interactive and Visual Designer`}
+      />
+      <Slide
+        recommendationCopy={`“Juan is tremendously reliable and creative designer. His broad skill set in design, UX, social media management and art direction, make him an excellent fit in any team.”`}
+        writtenBy={`Jorge Suarez`}
+        writtenByTitle={`Senior Product Manager at Webflow`}
+      />
     </Carousel>
   );
 }
