@@ -14,7 +14,7 @@ import { ReactComponent as A } from "../svg/graphic-A.svg";
 import { ReactComponent as AwBottomLine } from "../svg/graphic-A-bottom-line.svg";
 import JC1x from "../images/photo-jc.png";
 import JC2x from "../images/photo-jc-2x.png";
-import { enterAnimation, exitAnimation } from "../utils/animations";
+import { enterFromLeft, exitToLeft } from "../utils/animations";
 
 const AboutMeModal = function ({ isOpen, handleClose }) {
   const onClose = function (e) {
@@ -71,14 +71,12 @@ export default function Hello() {
   useEffect(() => {
     if (inView) {
       window.addEventListener("scroll", debounce(handleScroll, 1));
-      controls.start(enterAnimation);
+      controls.start(enterFromLeft);
     } else {
       window.removeEventListener("scroll", handleScroll);
-      controls.start(exitAnimation);
+      controls.start(exitToLeft);
     }
   });
-
-  // controls.start({ y: 0, opacity: 1 });
 
   return (
     <section className="hello" ref={ref}>
@@ -142,30 +140,52 @@ export default function Hello() {
           </motion.div>
         </Grid>
         <Grid item xs={3} md={7}>
-          <motion.div
-            initial={{ y: -100, opacity: 0 }}
-            animate={controls}
-            transition={{
-              type: "spring",
-              damping: 20,
-            }}
-            className="hello-graphics"
-          >
-            <img
-              className="hello-picture"
-              srcSet={`${JC1x} 1x, ${JC2x} 2x`}
-              alt="Juan Carlos Angustia, cool dude who dresses nice"
-              style={{ transform: `translate(${jcTranslation}px)` }}
-            />
-            <A
-              className="hello-a"
-              style={{ transform: `translate(${aTranslation}px)` }}
-            />
-            <AwBottomLine
-              className="hello-a-bottom-line"
-              style={{ transform: `translate(${aOutlineTranslation}px)` }}
-            />
-          </motion.div>
+          <div className="hello-graphics">
+            <motion.div
+              className="hg-jc-photo"
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                type: "spring",
+                damping: 20,
+              }}
+            >
+              <img
+                className="hello-picture"
+                srcSet={`${JC1x} 1x, ${JC2x} 2x`}
+                alt="Juan Carlos Angustia, cool dude who dresses nice"
+                style={{ transform: `translate(${jcTranslation}px)` }}
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 200, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                type: "spring",
+                damping: 20,
+              }}
+            >
+              <A
+                className="hello-a"
+                style={{ transform: `translate(${aTranslation}px)` }}
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ x: -200, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                type: "spring",
+                damping: 20,
+              }}
+            >
+              <AwBottomLine
+                className="hello-a-bottom-line"
+                style={{ transform: `translate(${aOutlineTranslation}px)` }}
+              />
+            </motion.div>
+          </div>
         </Grid>
       </Grid>
     </section>
