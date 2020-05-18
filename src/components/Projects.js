@@ -30,7 +30,12 @@ export default function Projects() {
             </Button>
           </Grid>
           <Grid item xs={12} md={5}>
-            <Grid container justify="center" alignItems="center">
+            <Grid
+              className="project-picture-container"
+              container
+              justify="center"
+              alignItems="center"
+            >
               <img
                 className="project-google-duo-picture"
                 srcSet={`${PhotoGoogleDuo} 1x, ${PhotoGoogleDuo2x} 2x`}
@@ -43,8 +48,13 @@ export default function Projects() {
 
       <section className="project project-xfinity-stream xfinity-stream">
         <Grid container spacing={0} justify="space-between" alignItems="center">
-          <Grid item xs={12} md={5}>
-            <Grid container justify="center" alignItems="center">
+          <Grid className="flex-order-2" item xs={12} md={5}>
+            <Grid
+              className="project-picture-container"
+              container
+              justify="center"
+              alignItems="center"
+            >
               <img
                 className="project-xfinity-stream-picture"
                 srcSet={`${PhotoXfinityStream} 1x, ${PhotoXfinityStream2x} 2x`}
@@ -53,7 +63,7 @@ export default function Projects() {
             </Grid>
           </Grid>
 
-          <Grid item xs={12} md={5}>
+          <Grid className="flex-order-1" item xs={12} md={5}>
             <Typography variant="h3" paragraph>
               XFINITY STREAM
             </Typography>
@@ -86,7 +96,12 @@ export default function Projects() {
             </Typography>
           </Grid>
           <Grid item xs={12} md={5}>
-            <Grid container justify="center" alignItems="center">
+            <Grid
+              className="project-picture-container"
+              container
+              justify="center"
+              alignItems="center"
+            >
               <img
                 className="project-vevo-music-picture"
                 srcSet={`${PhotoVevoMusic} 1x, ${PhotoVevoMusic2x} 2x`}

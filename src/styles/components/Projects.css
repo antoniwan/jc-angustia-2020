@@ -2,3 +2,26 @@ section.project {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
+
+.project-picture-container {
+}
+.project-picture-container img {
+  max-width: 100%;
+  margin-top: 4rem;
+}
+
+.flex-order-1 {
+  order: 1;
+}
+.flex-order-2 {
+  order: 2;
+}
+
+@media (min-width: 960px) {
+  .flex-order-1 {
+    order: 0;
+  }
+  .flex-order-2 {
+    order: 0;
+  }
+}
