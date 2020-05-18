@@ -152,7 +152,7 @@ export default function Header() {
                     data-anchor="hire-anchor"
                     onClick={handleClick}
                   >
-                    Hire Me
+                    Let's Talk
                   </a>
                 </li>
               </ul>

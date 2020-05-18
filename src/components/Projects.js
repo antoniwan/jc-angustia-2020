@@ -109,8 +109,8 @@ function ProjectVevoMusic() {
             </Typography>
             <Typography paragraph>
               Sometimes it’s difficult to find content that you love. This was
-              my inspiration to made this concept. A ux experience where users
-              can personalize their experience based on their taste.
+              my inspiration as I made this concept: an experience for people to
+              personalize with their musical tastes.
             </Typography>
           </motion.div>
         </Grid>
@@ -199,10 +199,9 @@ function ProjectXfinityStream() {
               Lead Visual Designer (UX)
             </Typography>
             <Typography paragraph>
-              Stream TV app was a company initiative to bring stream mobile
-              experience on the big screen. I was responsible to lead visual and
-              UX experience for Stream tv on Roku, and smart tvs like LG, and
-              Samsung.
+              Stream TV app took a streaming mobile experience to the big
+              screen. I lead the visual and UX experience and brought the Stream
+              TV apps to Roku, and smart tvs like LG and Samsung.
             </Typography>
           </motion.div>
         </Grid>
