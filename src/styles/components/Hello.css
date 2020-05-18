@@ -18,13 +18,16 @@
   position: absolute;
   height: 314px;
   top: 0;
-  right: 0;
+  right: -346px;
 }
 .hello-a-bottom-line {
   position: absolute;
   height: 314px;
   top: 0;
-  right: 0;
+  right: -336px;
+}
+.hello-content h1 {
+  margin-right: 50px;
 }
 
 @media (min-width: 960px) {
