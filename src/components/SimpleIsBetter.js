@@ -235,12 +235,12 @@ export default function SimpleIsBetter() {
               Simple Is Better
             </Typography>
             <Typography paragraph align="center">
-              On my 9 years of career. I had the previlege to work with talented
-              designers in comsumer products that simplify millions of people’s
-              life.
+              Through my career as a designer, I've been privileged to work with
+              talented designers to innovate consumer products that simplify
+              millions of people's life.
             </Typography>
             <Typography align="center" paragraph>
-              <strong>I would like to show you some of them.</strong>
+              <strong>Here's a few that I'd like to share.</strong>
             </Typography>
             <Typography align="center">
               <motion.div

@@ -107,14 +107,19 @@ export default function Hello() {
                 </a>
               </strong>
               , who loves to create simple designs that inspire and engage
-              people, an{" "}
+              people. I'm an{" "}
+              <strong>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  entrepeneur,
+                </a>
+              </strong>{" "}
               <strong>
                 <a
                   href="https://medium.com/@angustia/a-latino-college-dropout-at-google-5eb2d0629710"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  aspiring writer
+                  writer
                 </a>
               </strong>
               ,{" "}
@@ -124,10 +129,10 @@ export default function Hello() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  fashion lover
+                  urban fashion lover
                 </a>
               </strong>
-              , and also a proud Afro-Latino.
+              , and proud Afro-Latino.
             </Typography>
             <Button
               variant="contained"
@@ -135,7 +140,7 @@ export default function Hello() {
               disableElevation
               onClick={handleClick}
             >
-              About me
+              See more
             </Button>
           </motion.div>
         </Grid>
