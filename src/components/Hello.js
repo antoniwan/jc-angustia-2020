@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
@@ -72,7 +73,15 @@ export default function Hello() {
       <AboutMeModal isOpen={modalOpen} handleClose={handleClose} />
       <Grid container spacing={0}>
         <Grid className="hello-content" item xs={9} md={5}>
-          <div className="hello-content">
+          <motion.div
+            className="hello-content"
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              damping: 20,
+            }}
+          >
             <Typography variant="h1" id="hello-anchor" gutterBottom>
               Hey, I'm Juan Angustia.
             </Typography>
@@ -118,7 +127,7 @@ export default function Hello() {
             >
               About me
             </Button>
-          </div>
+          </motion.div>
         </Grid>
         <Grid item xs={3} md={7}>
           <div className="hello-graphics">
