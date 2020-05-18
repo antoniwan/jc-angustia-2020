@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
@@ -48,6 +49,8 @@ export default function Hello() {
   const [aTranslation, setaTranslation] = useState(0);
   const [aOutlineTranslation, setaOutlineTranslation] = useState(0);
   const [jcTranslation, setjcTranslation] = useState(0);
+  const [ref, inView, entry] = useInView();
+  const controls = useAnimation();
 
   const handleScroll = function (e) {
     const { scrollTop } = e.target.scrollingElement;
@@ -66,17 +69,25 @@ export default function Hello() {
 
   useEffect(() => {
     window.addEventListener("scroll", debounce(handleScroll, 3));
+
+    if (inView) {
+      controls.start({ y: 0, opacity: 1 });
+    } else {
+      controls.start({ y: -100, opacity: 0 });
+    }
   });
 
+  // controls.start({ y: 0, opacity: 1 });
+
   return (
-    <section className="hello">
+    <section className="hello" ref={ref}>
       <AboutMeModal isOpen={modalOpen} handleClose={handleClose} />
       <Grid container spacing={0}>
         <Grid className="hello-content" item xs={9} md={5}>
           <motion.div
             className="hello-content"
             initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            animate={controls}
             transition={{
               type: "spring",
               damping: 20,
@@ -130,7 +141,15 @@ export default function Hello() {
           </motion.div>
         </Grid>
         <Grid item xs={3} md={7}>
-          <div className="hello-graphics">
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={controls}
+            transition={{
+              type: "spring",
+              damping: 20,
+            }}
+            className="hello-graphics"
+          >
             <img
               className="hello-picture"
               srcSet={`${JC1x} 1x, ${JC2x} 2x`}
@@ -145,7 +164,7 @@ export default function Hello() {
               className="hello-a-bottom-line"
               style={{ transform: `translate(${aOutlineTranslation}px)` }}
             />
-          </div>
+          </motion.div>
         </Grid>
       </Grid>
     </section>
