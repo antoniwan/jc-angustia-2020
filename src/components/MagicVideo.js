@@ -15,9 +15,9 @@ export default function MagicVideo() {
     window.addEventListener("scroll", debounce(handleScroll, 3));
   });
   return (
-    <div className="magic-video">
+    <section className="magic-video">
       <video
-        className=""
+        className="video"
         poster="img/stage.jpg"
         playsInline={true}
         autoPlay={true}
@@ -31,6 +31,6 @@ export default function MagicVideo() {
         <source src={MagicVideoWebm} type="video/webm" />
         <source src={MagicVideoMp4} type="video/mp4" />
       </video>
-    </div>
+    </section>
   );
 }

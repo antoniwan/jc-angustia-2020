@@ -1,15 +1,23 @@
 .magic-video {
-  position: relative;
-  height: 550px;
-  width: 100%;
-  overflow: hidden;
+  display: none;
 }
 
-.magic-video video {
-  position: relative;
-  background-size: cover;
-  width: 100%;
-  top: -700px;
-  transform: scale(1.2);
-  transition: 0.1s ease;
+@media (min-width: 960px) {
+  .magic-video {
+    display: block;
+    position: relative;
+    height: 550px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .magic-video video {
+    display: block;
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    top: -700px;
+    transform: scale(1.2);
+    transition: 0.1s ease;
+  }
 }

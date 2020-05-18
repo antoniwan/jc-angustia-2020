@@ -17,7 +17,15 @@ section.project {
   order: 2;
 }
 
+section.project-vevo-music {
+  padding-bottom: 0rem;
+}
+
 @media (min-width: 960px) {
+  section.project {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
   .flex-order-1 {
     order: 0;
   }
