@@ -171,33 +171,95 @@ function SimpleParticles() {
     window.addEventListener("scroll", debounce(handleScroll, 3));
   });
 
-  return (
-    <div className="simple-particles">
-      {particles.map((element) => {
-        const {
-          name,
-          height,
-          width,
-          initialTop,
-          initialLeft,
-          transform,
-          speed,
-        } = element;
+  const deepParticles = particles.slice(0, 4);
+  const baseParticles = particles.slice(4, 8);
+  const backParticles = particles.slice(8);
 
-        return (
-          <element.src
-            key={name}
-            className={`simple-particle simple-particle-${name}`}
-            style={{
-              height: `${height}px`,
-              width: `${width}px`,
-              top: `${initialTop - Yoffset + scrollTop / speed}px`,
-              left: `${initialLeft - Xoffset}px`,
-              transform: `${transform}`,
-            }}
-          />
-        );
-      })}
+  console.log(deepParticles, baseParticles, backParticles);
+
+  return (
+    <div className="simple-particles  parallax">
+      <div className="parallaxLayer  parallaxLayerDeep">
+        {deepParticles.map((element) => {
+          const {
+            name,
+            height,
+            width,
+            initialTop,
+            initialLeft,
+            transform,
+            speed,
+          } = element;
+
+          return (
+            <element.src
+              key={name}
+              className={`simple-particle simple-particle-${name}`}
+              style={{
+                height: `${height}px`,
+                width: `${width}px`,
+                top: `${initialTop - Yoffset}px`,
+                left: `${initialLeft - Xoffset}px`,
+                transform: `${transform}`,
+              }}
+            />
+          );
+        })}
+      </div>
+      <div className="parallaxLayer  parallaxLayerBase">
+        {baseParticles.map((element) => {
+          const {
+            name,
+            height,
+            width,
+            initialTop,
+            initialLeft,
+            transform,
+            speed,
+          } = element;
+
+          return (
+            <element.src
+              key={name}
+              className={`simple-particle simple-particle-${name}`}
+              style={{
+                height: `${height}px`,
+                width: `${width}px`,
+                top: `${initialTop - Yoffset}px`,
+                left: `${initialLeft}px`,
+                transform: `${transform}`,
+              }}
+            />
+          );
+        })}
+      </div>
+      <div className="parallaxLayer  parallaxLayerBack">
+        {backParticles.map((element) => {
+          const {
+            name,
+            height,
+            width,
+            initialTop,
+            initialLeft,
+            transform,
+            speed,
+          } = element;
+
+          return (
+            <element.src
+              key={name}
+              className={`simple-particle simple-particle-${name}`}
+              style={{
+                height: `${height}px`,
+                width: `${width}px`,
+                top: `${initialTop - Yoffset}px`,
+                left: `${initialLeft}px`,
+                transform: `${transform}`,
+              }}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
