@@ -19,6 +19,7 @@ import { ReactComponent as Rectangle21 } from "../svg/particles/particle-Rectang
 import { ReactComponent as Vector1 } from "../svg/particles/particle-Vector-1.svg";
 import { ReactComponent as Vector2 } from "../svg/particles/particle-Vector-2.svg";
 import { ReactComponent as ArrowDown } from "../svg/graphic-down-arrow.svg";
+import { enterFromBottom, exitToBottom } from "../utils/animations";
 
 const particles = [
   {
@@ -208,27 +209,54 @@ export default function SimpleIsBetter() {
   const [ref, inView, entry] = useInView();
   const controls = useAnimation();
 
+  useEffect(() => {
+    if (inView) {
+      controls.start(enterFromBottom);
+    } else {
+      controls.start(exitToBottom);
+    }
+  });
+
   return (
     <section className="simple-is-better">
       <SimpleParticles />
       <Grid container spacing={0} justify="center">
         <Grid className="simple-is-better-content" item xs={12} md={7}>
-          <Typography variant="h2" align="center" paragraph>
-            Simple Is Better
-          </Typography>
-          <Typography paragraph align="center">
-            On my 9 years of career. I had the previlege to work with talented
-            designers in comsumer products that simplify millions of people’s
-            life.
-          </Typography>
-          <Typography align="center" paragraph>
-            <strong>I would like to show you some of them.</strong>
-          </Typography>
-          <Typography align="center">
-            <motion.div id="projects-anchor">
-              <ArrowDown />
-            </motion.div>
-          </Typography>
+          <motion.div
+            ref={ref}
+            initial={{ y: -100, opacity: 0 }}
+            animate={controls}
+            transition={{
+              type: "spring",
+              damping: 20,
+            }}
+          >
+            <Typography variant="h2" align="center" paragraph>
+              Simple Is Better
+            </Typography>
+            <Typography paragraph align="center">
+              On my 9 years of career. I had the previlege to work with talented
+              designers in comsumer products that simplify millions of people’s
+              life.
+            </Typography>
+            <Typography align="center" paragraph>
+              <strong>I would like to show you some of them.</strong>
+            </Typography>
+            <Typography align="center">
+              <motion.div
+                initial={{ y: 0 }}
+                animate={{ y: [20, 40, 20] }}
+                transition={{
+                  loop: Infinity,
+                  ease: "linear",
+                  duration: 1,
+                }}
+                id="projects-anchor"
+              >
+                <ArrowDown />
+              </motion.div>
+            </Typography>
+          </motion.div>
         </Grid>
       </Grid>
     </section>
