@@ -14,6 +14,7 @@ import { ReactComponent as A } from "../svg/graphic-A.svg";
 import { ReactComponent as AwBottomLine } from "../svg/graphic-A-bottom-line.svg";
 import JC1x from "../images/photo-jc.png";
 import JC2x from "../images/photo-jc-2x.png";
+import { enterAnimation, exitAnimation } from "../utils/animations";
 
 const AboutMeModal = function ({ isOpen, handleClose }) {
   const onClose = function (e) {
@@ -68,12 +69,12 @@ export default function Hello() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", debounce(handleScroll, 3));
-
     if (inView) {
-      controls.start({ y: 0, opacity: 1 });
+      window.addEventListener("scroll", debounce(handleScroll, 1));
+      controls.start(enterAnimation);
     } else {
-      controls.start({ y: -100, opacity: 0 });
+      window.removeEventListener("scroll", handleScroll);
+      controls.start(exitAnimation);
     }
   });
 

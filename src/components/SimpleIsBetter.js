@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import debounce from "lodash/debounce";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -203,6 +205,9 @@ function SimpleParticles() {
 }
 
 export default function SimpleIsBetter() {
+  const [ref, inView, entry] = useInView();
+  const controls = useAnimation();
+
   return (
     <section className="simple-is-better">
       <SimpleParticles />
