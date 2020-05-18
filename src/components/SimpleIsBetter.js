@@ -213,12 +213,7 @@ export default function SimpleIsBetter() {
       <SimpleParticles />
       <Grid container spacing={0} justify="center">
         <Grid className="simple-is-better-content" item xs={12} md={7}>
-          <Typography
-            variant="h2"
-            id="projects-anchor"
-            align="center"
-            paragraph
-          >
+          <Typography variant="h2" align="center" paragraph>
             Simple Is Better
           </Typography>
           <Typography paragraph align="center">
@@ -230,7 +225,9 @@ export default function SimpleIsBetter() {
             <strong>I would like to show you some of them.</strong>
           </Typography>
           <Typography align="center">
-            <ArrowDown />
+            <motion.div id="projects-anchor">
+              <ArrowDown />
+            </motion.div>
           </Typography>
         </Grid>
       </Grid>

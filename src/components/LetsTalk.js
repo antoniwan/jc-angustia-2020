@@ -300,7 +300,7 @@ export default function LetsTalk() {
       <TalkParticles />
       <Grid container spacing={0} justify="center">
         <Grid className="" item xs={12} md={5}>
-          <Typography variant="h2" id="hire-anchor" align="center" paragraph>
+          <Typography variant="h2" align="center" paragraph>
             Let's Talk
           </Typography>
           <Typography paragraph align="center">
@@ -312,7 +312,12 @@ export default function LetsTalk() {
       </Grid>
       <Grid container spacing={0} justify="center">
         <Grid className="" item xs={12} md={5}>
-          <form className="lets-talk-form" noValidate autoComplete="off">
+          <form
+            className="lets-talk-form"
+            noValidate
+            autoComplete="off"
+            id="hire-anchor"
+          >
             {!loading ? (
               <>
                 <TextField

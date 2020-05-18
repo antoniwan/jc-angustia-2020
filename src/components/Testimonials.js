@@ -69,7 +69,7 @@ function TestimonialsCarousel() {
             onClick={onClickHandler}
             title={label}
             color="secondary"
-            size="medium"
+            size="large"
             aria-label="Previous testimonial"
           >
             <NavigateBeforeIcon />
@@ -83,7 +83,7 @@ function TestimonialsCarousel() {
             onClick={onClickHandler}
             title={label}
             color="secondary"
-            size="medium"
+            size="large"
             aria-label="Next testimonial"
           >
             <NavigateNextIcon />
@@ -115,17 +115,13 @@ export default function Testimonials() {
     <section className="testimonials">
       <Grid container spacing={0} justify="center">
         <Grid className="simple-is-better-content" item xs={12} md={6}>
-          <Typography
-            variant="h2"
-            id="testimonials-anchor"
-            align="center"
-            paragraph
-          >
+          <Typography variant="h2" align="center" paragraph>
             Testimonials
           </Typography>
           <Typography paragraph align="center">
             Here I’m sharing what collague are saying on{" "}
-            <strong>LinkedIn</strong> about their experience working with me.
+            <strong id="testimonials-anchor">LinkedIn</strong> about their
+            experience working with me.
           </Typography>
         </Grid>
       </Grid>
