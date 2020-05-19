@@ -231,7 +231,12 @@ export default function SimpleIsBetter() {
               damping: 20,
             }}
           >
-            <Typography variant="h2" align="center" paragraph>
+            <Typography
+              variant="h2"
+              align="center"
+              paragraph
+              id="projects-anchor"
+            >
               Simple Is Better
             </Typography>
             <Typography paragraph align="center">
@@ -251,7 +256,6 @@ export default function SimpleIsBetter() {
                   ease: "linear",
                   duration: 1,
                 }}
-                id="projects-anchor"
               >
                 <ArrowDown />
               </motion.div>
