@@ -85,7 +85,7 @@ export default function Hello() {
         <Grid className="hello-content" item xs={9} md={5}>
           <motion.div
             className="hello-content"
-            initial={{ y: -100, opacity: 0 }}
+            initial={{ x: -100, opacity: 0 }}
             animate={controls}
             transition={{
               type: "spring",
