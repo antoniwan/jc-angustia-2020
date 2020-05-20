@@ -44,7 +44,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     margin: 0,
     padding: 0,
-    fontFamily: "big_johnregular",
+    fontWeight: 800,
+    textTransform: "uppercase",
     color: "#000000",
     [theme.breakpoints.up("md")]: {
       display: "flex",

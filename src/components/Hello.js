@@ -111,7 +111,11 @@ export default function Hello() {
               , who loves to create simple designs that inspire and engage
               people. I'm an{" "}
               <strong>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   entrepeneur,
                 </a>
               </strong>{" "}

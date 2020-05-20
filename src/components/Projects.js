@@ -112,6 +112,9 @@ function ProjectVevoMusic() {
               my inspiration as I made this concept: an experience for people to
               personalize with their musical tastes.
             </Typography>
+            <Button variant="contained" color="primary" disableElevation>
+              See more
+            </Button>
           </motion.div>
         </Grid>
         <Grid item xs={12} md={5}>
@@ -203,6 +206,9 @@ function ProjectXfinityStream() {
               screen. I lead the visual and UX experience and brought the Stream
               TV apps to Roku, and smart tvs like LG and Samsung.
             </Typography>
+            <Button variant="contained" color="primary" disableElevation>
+              See more
+            </Button>
           </motion.div>
         </Grid>
       </Grid>

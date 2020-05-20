@@ -28,7 +28,7 @@ let Theme = createMuiTheme({
   },
   typography: {
     fontFamily: [
-      "Lato",
+      "Poppins",
       "-apple-system",
       "BlinkMacSystemFont",
       '"Segoe UI"',
@@ -43,36 +43,36 @@ let Theme = createMuiTheme({
     fontSize: 16,
     h1: {
       fontSize: 46,
-      fontFamily: "big_johnregular",
       color: "#1300ED",
+      fontWeight: 900,
     },
     h2: {
       fontSize: 40,
-      fontFamily: "big_johnregular",
       color: "#1300ED",
+      fontWeight: 900,
     },
     h3: {
       fontSize: 38,
-      fontFamily: "big_johnregular",
       color: "#1300ED",
+      fontWeight: 900,
     },
     h4: {
-      fontFamily: "big_johnregular",
       color: "#1300ED",
+      fontWeight: 900,
     },
     h5: {
-      fontFamily: "big_johnregular",
       color: "#1300ED",
+      fontWeight: 900,
     },
     h6: {
-      fontFamily: "big_johnregular",
       color: "#1300ED",
+      fontWeight: 900,
     },
     button: {
-      textTransform: "normal",
+      fontWeight: 800,
     },
     body2: {
-      fontSize: 13,
+      fontSize: 15,
     },
   },
   palette: {
@@ -115,6 +115,12 @@ let Theme = createMuiTheme({
     createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8),
   ],
   overrides: {
+    MuiButton: {
+      root: {
+        fontSize: 12,
+        padding: "8px 20px",
+      },
+    },
     MuiFormLabel: {
       root: {
         color: "#1300ED",

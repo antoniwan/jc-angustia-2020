@@ -221,7 +221,7 @@ export default function SimpleIsBetter() {
     <section className="simple-is-better" id="projects-anchor">
       <SimpleParticles />
       <Grid container spacing={0} justify="center">
-        <Grid className="simple-is-better-content" item xs={12} md={7}>
+        <Grid className="simple-is-better-content" item xs={12} md={8}>
           <motion.div
             ref={ref}
             initial={{ y: -100, opacity: 0 }}
@@ -232,7 +232,7 @@ export default function SimpleIsBetter() {
             }}
           >
             <Typography variant="h2" align="center" paragraph>
-              Simple Is Better
+              "Simple Is Better"
             </Typography>
             <Typography paragraph align="center">
               Through my career as a designer, I've been privileged to work with
