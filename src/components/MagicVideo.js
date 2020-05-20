@@ -12,25 +12,28 @@ export default function MagicVideo() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", debounce(handleScroll, 3));
+    window.addEventListener("scroll", debounce(handleScroll, 2));
   });
+
   return (
     <section className="magic-video">
-      <video
-        className="video"
-        poster="img/stage.jpg"
-        playsInline={true}
-        autoPlay={true}
-        muted={true}
-        loop={true}
-        style={{
-          // top: `${-900 + scrollTop / 5}px`,
-          transform: `translateY(${scrollTop / 5}px)`,
-        }}
-      >
-        <source src={MagicVideoWebm} type="video/webm" />
-        <source src={MagicVideoMp4} type="video/mp4" />
-      </video>
+      <div className="magic-video-wrapper">
+        <video
+          className="video"
+          poster="img/stage.jpg"
+          playsInline={true}
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          style={{
+            // top: `${820 + scrollTop / 20}px `,
+            transform: `translateY(-${scrollTop / 3.5}px)`,
+          }}
+        >
+          <source src={MagicVideoWebm} type="video/webm" />
+          <source src={MagicVideoMp4} type="video/mp4" />
+        </video>
+      </div>
     </section>
   );
 }
