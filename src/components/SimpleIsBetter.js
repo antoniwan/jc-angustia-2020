@@ -218,7 +218,7 @@ export default function SimpleIsBetter() {
   });
 
   return (
-    <section className="simple-is-better">
+    <section className="simple-is-better" id="projects-anchor">
       <SimpleParticles />
       <Grid container spacing={0} justify="center">
         <Grid className="simple-is-better-content" item xs={12} md={7}>
@@ -231,12 +231,7 @@ export default function SimpleIsBetter() {
               damping: 20,
             }}
           >
-            <Typography
-              variant="h2"
-              align="center"
-              paragraph
-              id="projects-anchor"
-            >
+            <Typography variant="h2" align="center" paragraph>
               Simple Is Better
             </Typography>
             <Typography paragraph align="center">

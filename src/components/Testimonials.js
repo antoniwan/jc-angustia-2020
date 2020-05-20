@@ -12,12 +12,7 @@ function Slide({ recommendationCopy, writtenBy, writtenByTitle }) {
     <div>
       <Grid container spacing={0} justify="center">
         <Grid className="simple-is-better-content" item xs={12} md={9}>
-          <Typography
-            className="testimonial-quote"
-            id="testimonials-anchor"
-            align="center"
-            paragraph
-          >
+          <Typography className="testimonial-quote" align="center" paragraph>
             “{recommendationCopy}”
           </Typography>
           <Typography className="testimonial-person" paragraph align="center">
@@ -113,7 +108,7 @@ function TestimonialsCarousel() {
 export default function Testimonials() {
   return (
     <section className="testimonials">
-      <Grid container spacing={0} justify="center">
+      <Grid container spacing={0} justify="center" id="testimonials-anchor">
         <Grid className="simple-is-better-content" item xs={12} md={6}>
           <Typography variant="h2" align="center" paragraph>
             Testimonials
