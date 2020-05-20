@@ -15,10 +15,18 @@ function Slide({ recommendationCopy, writtenBy, writtenByTitle }) {
           <Typography className="testimonial-quote" align="center" paragraph>
             “{recommendationCopy}”
           </Typography>
-          <Typography className="testimonial-person" paragraph align="center">
+          <Typography
+            className="testimonial-person"
+            gutterBottom
+            align="center"
+          >
             {writtenBy}
           </Typography>
-          <Typography className="testimonial-person-title" align="center">
+          <Typography
+            className="testimonial-person-title"
+            align="center"
+            variant="body2"
+          >
             {writtenByTitle}
           </Typography>
         </Grid>
