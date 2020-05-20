@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Typography from "@material-ui/core/Typography";
 import { ReactComponent as Logo } from "../svg/logo.svg";
 import { ReactComponent as Twitter } from "../svg/icon-twitter.svg";
@@ -63,7 +64,20 @@ export default function Footer() {
       </div>
       <div>
         <Typography variant="body2" align="center">
-          Made with <Heart className="icon-heart" /> by Juan Angustia.
+          Made with{" "}
+          <motion.div
+            className="beating-heart"
+            initial={{ scale: 0 }}
+            animate={{ scale: [1.1, 1.3, 1] }}
+            transition={{
+              loop: Infinity,
+              ease: "easeOut",
+              duration: 1.5,
+            }}
+          >
+            <Heart className="icon-heart" />
+          </motion.div>{" "}
+          by Juan Angustia.
           <br className="hide-on-desktop" />
           {"  "}Copyright 2020 - All rights reserved.
         </Typography>

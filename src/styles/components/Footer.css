@@ -49,6 +49,11 @@ footer .logo svg {
 .hide-on-desktop {
   display: block;
 }
+.beating-heart {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 
 @media (min-width: 960px) {
   footer {
