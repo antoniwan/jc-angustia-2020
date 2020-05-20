@@ -28,7 +28,7 @@ function ProjectGoogleDuo() {
       <Grid container spacing={0} justify="space-between" alignItems="center">
         <Grid item xs={12} md={5}>
           <motion.div
-            initial={{ y: -100, opacity: 0 }}
+            initial={{ y: -20, opacity: 0 }}
             animate={controls}
             transition={{
               type: "spring",
@@ -58,7 +58,7 @@ function ProjectGoogleDuo() {
             alignItems="center"
           >
             <motion.div
-              initial={{ y: -100, opacity: 0 }}
+              initial={{ y: -20, opacity: 0 }}
               animate={controls}
               transition={{
                 type: "spring",
@@ -94,7 +94,7 @@ function ProjectVevoMusic() {
       <Grid container spacing={0} justify="space-between" alignItems="center">
         <Grid item xs={12} md={5}>
           <motion.div
-            initial={{ y: -100, opacity: 0 }}
+            initial={{ y: -20, opacity: 0 }}
             animate={controls}
             transition={{
               type: "spring",
@@ -102,7 +102,7 @@ function ProjectVevoMusic() {
             }}
           >
             <Typography variant="h3" paragraph>
-              VEVO MUSIC
+              Vevo Music
             </Typography>
             <Typography variant="body2" gutterBottom>
               Product Designer
@@ -125,7 +125,7 @@ function ProjectVevoMusic() {
             alignItems="center"
           >
             <motion.div
-              initial={{ y: -100, opacity: 0 }}
+              initial={{ y: -20, opacity: 0 }}
               animate={controls}
               transition={{
                 type: "spring",
@@ -170,7 +170,7 @@ function ProjectXfinityStream() {
             alignItems="center"
           >
             <motion.div
-              initial={{ y: -100, opacity: 0 }}
+              initial={{ y: -20, opacity: 0 }}
               animate={controls}
               transition={{
                 type: "spring",
@@ -188,7 +188,7 @@ function ProjectXfinityStream() {
 
         <Grid className="flex-order-1" item xs={12} md={5}>
           <motion.div
-            initial={{ y: -100, opacity: 0 }}
+            initial={{ y: -20, opacity: 0 }}
             animate={controls}
             transition={{
               type: "spring",
@@ -196,7 +196,7 @@ function ProjectXfinityStream() {
             }}
           >
             <Typography variant="h3" paragraph>
-              XFINITY STREAM
+              Xfinity Stream
             </Typography>
             <Typography paragraph variant="body2">
               Lead Visual Designer (UX)

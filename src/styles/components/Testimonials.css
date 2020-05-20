@@ -72,11 +72,11 @@
   width: 20px;
   background: var(--color-light-gray);
   transition: width 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  outline: none;
 }
 .carousel .indicator.indicator-selected {
   background: var(--color-blue);
-  width: 30px;
-  transition: width 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: 60px;
 }
 
 @media (min-width: 960px) {
@@ -89,7 +89,7 @@
   }
 
   .testimonial-quote {
-    font-size: 1.8rem !important;
+    font-size: 1.6rem !important;
     font-weight: bold !important;
   }
   .testimonial-person {

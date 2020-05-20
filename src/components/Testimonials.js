@@ -34,15 +34,6 @@ function TestimonialsCarousel() {
       showStatus={false}
       statusFormatter={(current, total) => false}
       renderIndicator={(onClickHandler, isSelected, index, label) => {
-        if (isSelected) {
-          return (
-            <li
-              aria-label={`Selected: ${label} ${index + 1}`}
-              title={`Selected: ${label} ${index + 1}`}
-              className={`indicator indicator-selected`}
-            />
-          );
-        }
         return (
           <li
             onClick={onClickHandler}
@@ -51,9 +42,19 @@ function TestimonialsCarousel() {
             key={index}
             role="button"
             tabIndex={0}
-            title={`${label} ${index + 1}`}
-            aria-label={`${label} ${index + 1}`}
-            className={`indicator`}
+            title={
+              !isSelected
+                ? `${label} ${index + 1}`
+                : `Selected: ${label} ${index + 1}`
+            }
+            aria-label={
+              !isSelected
+                ? `${label} ${index + 1}`
+                : `Selected: ${label} ${index + 1}`
+            }
+            className={
+              !isSelected ? `indicator` : `indicator indicator-selected`
+            }
           />
         );
       }}
