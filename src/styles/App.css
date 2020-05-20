@@ -21,3 +21,8 @@ button.back-to-top-fab:hover {
 main {
   overflow: hidden;
 }
+
+a:hover {
+  color: var(--color-blue);
+  transition: 0.2s ease;
+}
