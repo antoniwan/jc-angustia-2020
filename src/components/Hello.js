@@ -93,7 +93,9 @@ export default function Hello() {
             }}
           >
             <Typography variant="h1" id="hello-anchor" gutterBottom>
-              Hey, I'm Juan Angustia.
+              Hello there!
+              <br />
+              I'm Juan Angustia.
             </Typography>
             <Typography paragraph>
               A Visual Designer at{" "}
