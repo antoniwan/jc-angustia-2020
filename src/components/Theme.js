@@ -71,6 +71,9 @@ let Theme = createMuiTheme({
     button: {
       fontWeight: 800,
     },
+    body: {
+      fontSize: 15,
+    },
     body2: {
       fontSize: 15,
     },
