@@ -97,7 +97,7 @@ function TestimonialsCarousel() {
         writtenByTitle={`Interactive and Visual Designer`}
       />
       <Slide
-        recommendationCopy={`“Juan is tremendously reliable and creative designer. His broad skill set in design, UX, social media management and art direction, make him an excellent fit in any team.”`}
+        recommendationCopy={`Juan is tremendously reliable and creative designer. His broad skill set in design, UX, social media management and art direction, make him an excellent fit in any team.`}
         writtenBy={`Jorge Suarez`}
         writtenByTitle={`Senior Product Manager at Webflow`}
       />
