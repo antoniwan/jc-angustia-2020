@@ -60,6 +60,7 @@
     left: 210px;
     top: 6px;
     right: 0;
+    object-fit: contain;
   }
   .hello-a {
     position: absolute;
