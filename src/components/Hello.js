@@ -49,7 +49,7 @@ export default function Hello() {
     <section className="hello" ref={ref}>
       <AboutMeModal isOpen={modalOpen} handleClose={handleClose} />
       <Grid container spacing={0}>
-        <Grid className="hello-content" item xs={9} md={5}>
+        <Grid className="hello-content" item xs={9} md={6}>
           <motion.div
             className="hello-content"
             initial={{ x: -100, opacity: 0 }}
@@ -59,7 +59,7 @@ export default function Hello() {
               damping: 20,
             }}
           >
-            <Typography variant="h1" id="hello-anchor" gutterBottom>
+            <Typography variant="h1" id="hello-anchor">
               Hello there!
               <br />
               I'm Juan Angustia
@@ -117,7 +117,7 @@ export default function Hello() {
             </Button>
           </motion.div>
         </Grid>
-        <Grid item xs={3} md={7}>
+        <Grid item xs={3} md={6}>
           <div className="hello-graphics">
             <motion.div
               className="hg-jc-photo"

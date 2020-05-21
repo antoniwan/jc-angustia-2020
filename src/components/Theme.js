@@ -42,9 +42,10 @@ let Theme = createMuiTheme({
     ].join(","),
     fontSize: 16,
     h1: {
-      fontSize: 46,
+      fontSize: 57,
       color: "#1300ED",
       fontWeight: 900,
+      marginBottom: 40,
     },
     h2: {
       fontSize: 40,
