@@ -71,11 +71,11 @@ export default function Header() {
     // console.log(`st, test => `, scrollTop, testimonialsAnchor.offsetTop);
     // console.log(`st, proj => `, scrollTop, projectsAnchor.offsetTop);
 
-    if (scrollTop > hireAnchor.offsetTop - 700) {
+    if (scrollTop >= hireAnchor.offsetTop - 160) {
       setActiveSection("hire-anchor");
-    } else if (scrollTop > testimonialsAnchor.offsetTop - 400) {
+    } else if (scrollTop >= testimonialsAnchor.offsetTop - 500) {
       setActiveSection("testimonials-anchor");
-    } else if (scrollTop > projectsAnchor.offsetTop) {
+    } else if (scrollTop >= projectsAnchor.offsetTop - 140) {
       setActiveSection("projects-anchor");
     } else {
       setActiveSection("hello-anchor");
@@ -87,8 +87,8 @@ export default function Header() {
     const anchor = document.querySelector(`#${goTo}`);
 
     if (goTo) {
-      setActiveSection(anchor.id);
       anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+      setActiveSection(anchor.id);
     }
   };
 
