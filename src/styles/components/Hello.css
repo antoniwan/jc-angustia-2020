@@ -34,6 +34,12 @@
   margin-right: 50px;
 }
 
+.aboutme-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 @media (min-width: 960px) {
   .hello {
     padding-bottom: 40px;

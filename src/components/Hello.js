@@ -4,46 +4,13 @@ import { useInView } from "react-intersection-observer";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
 import debounce from "lodash/debounce";
 import { ReactComponent as A } from "../svg/graphic-A.svg";
 import { ReactComponent as AwBottomLine } from "../svg/graphic-A-bottom-line.svg";
 import JC1x from "../images/photo-jc.png";
 import JC2x from "../images/photo-jc-2x.png";
 import { enterFromLeft, exitToLeft } from "../utils/animations";
-
-const AboutMeModal = function ({ isOpen, handleClose }) {
-  const onClose = function (e) {
-    console.log(e);
-  };
-  return (
-    <Dialog
-      fullWidth={false}
-      maxWidth={"lg"}
-      open={isOpen}
-      onBackdropClick={handleClose}
-      onEscapeKeyDown={handleClose}
-      onClose={onClose}
-      aria-labelledby="max-width-dialog-title"
-    >
-      <DialogTitle id="max-width-dialog-title">Optional sizes</DialogTitle>
-      <DialogContent>
-        <DialogContentText>
-          You can set my maximum width and whether to adapt or not.
-        </DialogContentText>
-      </DialogContent>
-      <DialogActions>
-        <Button onClick={handleClose} color="primary">
-          Close
-        </Button>
-      </DialogActions>
-    </Dialog>
-  );
-};
+import AboutMeModal from "../components/AboutMeModal";
 
 export default function Hello() {
   const [modalOpen, setModalOpen] = useState(false);
