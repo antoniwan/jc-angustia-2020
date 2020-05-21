@@ -35,7 +35,12 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
             srcSet={`${Photo} 1x, ${Photo2x} 2x`}
             alt="Handsome afro-latino with cool glasses, sitting on a stool, smiling into the sun"
           />
-          <Grid item xs={7} style={{ zIndex: "1", paddingBottom: "1rem" }}>
+          <Grid
+            item
+            xs={12}
+            md={7}
+            style={{ zIndex: "1", paddingBottom: "1rem" }}
+          >
             <Typography paragraph variant="h1">
               I am Juan Angustia
             </Typography>
