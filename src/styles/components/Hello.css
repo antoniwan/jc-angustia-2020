@@ -31,6 +31,7 @@
   right: -336px;
 }
 .hello-content h1 {
+  margin-bottom: 1rem;
 }
 
 .aboutme-image {
@@ -46,6 +47,9 @@
   .hello-content {
     margin-top: 11rem;
     margin-bottom: 11rem;
+  }
+  .hello-content h1 {
+    margin-bottom: 40px;
   }
   .hello-graphics {
     position: relative;
