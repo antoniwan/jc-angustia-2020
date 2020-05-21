@@ -232,7 +232,7 @@ export default function SimpleIsBetter() {
             }}
           >
             <Typography variant="h2" align="center" paragraph>
-              "Simple Is Better"
+              "Simple is Better"
             </Typography>
             <Typography paragraph align="center">
               Through my career as a designer, I've been privileged to work with

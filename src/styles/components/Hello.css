@@ -10,20 +10,24 @@
 .hello-graphics {
   position: relative;
 }
+.hello-graphics > div {
+  position: relative;
+  top: 0;
+}
 .hello-picture {
   height: 314px;
-  object-fit: contain;
+  object-fit: cover;
 }
 .hello-a {
   position: absolute;
   height: 314px;
-  top: 0;
+  top: -319px;
   right: -346px;
 }
 .hello-a-bottom-line {
   position: absolute;
   height: 314px;
-  top: 0;
+  top: -317px;
   right: -336px;
 }
 .hello-content h1 {
