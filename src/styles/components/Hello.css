@@ -63,6 +63,13 @@ button:hover.modal-close {
 }
 
 @media (min-width: 960px) {
+  .aboutme-image {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 280px;
+  }
   .hello {
     padding-bottom: 40px;
   }
@@ -104,13 +111,10 @@ button:hover.modal-close {
 }
 
 @media (min-width: 1220px) {
-  .aboutme-image {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
   .about-me-modal .MuiDialogContent-root {
     padding: 50px;
+  }
+  .aboutme-image {
+    width: 480px;
   }
 }

@@ -35,7 +35,8 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
           />
           <Grid
             item
-            md={12}
+            sm={12}
+            md={9}
             lg={7}
             style={{ zIndex: "1", paddingBottom: "1rem" }}
           >
