@@ -31,6 +31,7 @@
 }
 .carousel .control-arrow {
   display: none !important;
+  background: var(--color-white) !important;
 }
 
 .carousel .control-arrow:before {
@@ -46,6 +47,11 @@
 .carousel .control-prev.control-arrow,
 .carousel .control-next.control-arrow {
   top: 100px;
+}
+
+.carousel .MuiSvgIcon-root {
+  top: 6px;
+  position: relative;
 }
 
 .carousel .control-dots {
