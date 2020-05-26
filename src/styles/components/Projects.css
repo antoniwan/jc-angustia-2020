@@ -21,6 +21,22 @@ section.project-vevo-music {
   padding-bottom: 0rem;
 }
 
+img.project-google-duo-picture {
+  max-width: 100%;
+  left: 0;
+  position: relative;
+}
+img.project-xfinity-stream-picture {
+  max-width: 100%;
+  left: 0;
+  position: relative;
+}
+img.project-vevo-music-picture {
+  max-width: 100%;
+  left: 0;
+  position: relative;
+}
+
 @media (min-width: 960px) {
   section.project {
     padding-top: 8rem;
@@ -31,5 +47,15 @@ section.project-vevo-music {
   }
   .flex-order-2 {
     order: 0;
+  }
+
+  img.project-google-duo-picture {
+    max-width: 110%;
+    left: -10%;
+  }
+  img.project-xfinity-stream-picture {
+    max-width: 120%;
+  }
+  img.project-vevo-music-picture {
   }
 }
