@@ -1,10 +1,9 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
+import CloseIcon from "@material-ui/icons/Close";
 import DialogContent from "@material-ui/core/DialogContent";
 import Grid from "@material-ui/core/Grid";
-import DialogTitle from "@material-ui/core/DialogTitle";
 import Typography from "@material-ui/core/Typography";
 import Photo from "../images/photo-jc-sitting.png";
 import Photo2x from "../images/photo-jc-sitting-2x.png";
@@ -15,6 +14,7 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
   };
   return (
     <Dialog
+      className="about-me-modal"
       fullWidth={false}
       maxWidth={"lg"}
       open={isOpen}
@@ -23,11 +23,9 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
       onClose={onClose}
       aria-labelledby="max-width-dialog-title"
     >
-      <DialogActions>
-        <Button onClick={handleClose} color="primary">
-          Close
-        </Button>
-      </DialogActions>
+      <Button className="modal-close" onClick={handleClose} color="primary">
+        <CloseIcon />
+      </Button>
       <DialogContent>
         <Grid container alignItems="flex-start" justify="flex-end">
           <img
@@ -37,43 +35,74 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
           />
           <Grid
             item
-            xs={12}
-            md={7}
+            md={12}
+            lg={7}
             style={{ zIndex: "1", paddingBottom: "1rem" }}
           >
-            <Typography paragraph variant="h1">
-              I am Juan Angustia
+            <Typography paragraph variant="h6">
+              About me
             </Typography>
             <Typography paragraph>
               <strong>
-                Visual Designer with a decade of experience; specializing in
-                UI/UX, wireframing, and prototyping.
+                My name is Juan Angustia, a Visual Designer with a decade of
+                experience; specializing in UI/UX, wireframing, and prototyping.
               </strong>
             </Typography>
             <Typography paragraph>
-              I was born and raised in Constanza, a small town surrounded by
-              beautiful mountains in the Dominican Republic. In the year 2004,
-              before I ever dreamed of joining Google, I went to college at the
-              Universidad Autónoma de Santo Domingo (UASD) to study Advertising.
-              However, I did not finish my degree because the school did not
-              offer classes that sparked my interest. Instead, I decided to
-              continue teaching myself the things that I loved. I wrote an
-              article about it on Medium.
+              I come from a small town in the Dominican Republic, called
+              Constanza. Before I ever dreamt of joining Google, I went to
+              college to pursue a degree in Advertising. I eventually dropped
+              out to pursue my own interests. Read more about my journey via an{" "}
+              <a
+                href="https://medium.com/@angustia/a-latino-college-dropout-at-google-5eb2d0629710"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                article
+              </a>{" "}
+              I wrote on Medium.
             </Typography>
             <Typography paragraph>
               In the Design & Technologie fields, I have 10 years of experience
-              working on projects for diverse brands such as Comcast,
-              MasterCard, Copa Airlines, Clorox Company, and among others.
+              working on projects for diverse brands such as{" "}
+              <a
+                href="http://design.comcast.com/team/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Comcast
+              </a>
+              , <strong>MasterCard</strong>, <strong>Copa Airlines</strong> and
+              among others.
             </Typography>
             <Typography paragraph>
-              Today, I work in <strong>Google Duo</strong>, where I try to
-              incorporate UX, visual design, motion, and front end prototyping.
-              But in my free time I love to work on personal projects such as
-              <strong>Dominicana TV</strong>, a streaming app on Roku that
-              allows the Dominican community in the United States and Europe to
-              watch local Dominican TV channels and radio stations live and
-              free. Also, I love to take photos and make videos, like the short
-              film “El Camino”.
+              Currently I work in{" "}
+              <a
+                href="http://duo.google.com/about/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Google Duo
+              </a>
+              , but in my free time I love to work on personal projects such as{" "}
+              <a
+                href="https://channelstore.roku.com/details/209306/dominicana-tv"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Dominicana TV
+              </a>
+              , an app on Roku that allows Dominicans in the U.S. and Europe to
+              watch local Dominican TV and listen to radio stations live and
+              free. Also, I love to make videos, like the short film{" "}
+              <a
+                href="https://youtu.be/4emMRsvgnyI"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                "El Camino"
+              </a>
+              .
             </Typography>
             <Typography paragraph>
               As a product designer I believe in the simplicity of things: good
@@ -81,15 +110,19 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
               also creates an emotional experience for people by bringing
               emotion in each visual interaction.
             </Typography>
-            <Typography paragraph>
+            <Typography>
               Throughout my career, I have learned that the product is most
               successful when we put people first and listen to them. As a
               designer, my goal is always to find a way to learn about people's
               needs and create emotional designs that connect, engage, and
-              deliver.
-            </Typography>
-            <Typography paragraph>
-              You want to know more, I invite you to read; My path to Google
+              deliver. You want to know more, I invite you to read;{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://students.googleblog.com/2020/02/my-path-to-google-juan-angustia-visual.html"
+              >
+                My path to Google
+              </a>
             </Typography>
           </Grid>
         </Grid>

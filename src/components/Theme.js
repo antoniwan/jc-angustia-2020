@@ -57,14 +57,17 @@ let Theme = createMuiTheme({
       fontWeight: 900,
     },
     h4: {
+      fontSize: 34,
       color: "#1300ED",
       fontWeight: 900,
     },
     h5: {
+      fontSize: 30,
       color: "#1300ED",
       fontWeight: 900,
     },
     h6: {
+      fontSize: 26,
       color: "#1300ED",
       fontWeight: 900,
     },
