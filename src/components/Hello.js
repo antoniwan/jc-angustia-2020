@@ -113,7 +113,7 @@ export default function Hello() {
               disableElevation
               onClick={handleClick}
             >
-              See more
+              Read more
             </Button>
           </motion.div>
         </Grid>
