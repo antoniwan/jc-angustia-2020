@@ -80,6 +80,10 @@ let Theme = createMuiTheme({
     body2: {
       fontSize: 15,
     },
+    body3: {
+      fontSize: 16,
+      fontWeight: 100,
+    },
   },
   palette: {
     primary: {

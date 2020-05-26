@@ -231,7 +231,7 @@ export default function SimpleIsBetter() {
               damping: 20,
             }}
           >
-            <Typography variant="h2" align="center" paragraph>
+            <Typography variant="h1" align="center" paragraph>
               "Simple is Better"
             </Typography>
             <Typography paragraph align="center">

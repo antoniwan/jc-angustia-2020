@@ -35,10 +35,10 @@ function ProjectGoogleDuo() {
               damping: 20,
             }}
           >
-            <Typography variant="h3" paragraph>
+            <Typography variant="h2" paragraph>
               Google Duo
             </Typography>
-            <Typography variant="body2" paragraph>
+            <Typography variant="body3" paragraph>
               Visual Designer (UX)
             </Typography>
             <Typography paragraph>
@@ -101,10 +101,10 @@ function ProjectVevoMusic() {
               damping: 20,
             }}
           >
-            <Typography variant="h3" paragraph>
+            <Typography variant="h2" paragraph>
               Vevo Music
             </Typography>
-            <Typography variant="body2" gutterBottom>
+            <Typography variant="body3" paragraph>
               Product Designer
             </Typography>
             <Typography paragraph>
@@ -195,10 +195,10 @@ function ProjectXfinityStream() {
               damping: 20,
             }}
           >
-            <Typography variant="h3" paragraph>
+            <Typography variant="h2" paragraph>
               Xfinity Stream
             </Typography>
-            <Typography paragraph variant="body2">
+            <Typography paragraph variant="body3">
               Lead Visual Designer (UX)
             </Typography>
             <Typography paragraph>
