@@ -84,6 +84,9 @@ let Theme = createMuiTheme({
       fontSize: 16,
       fontWeight: 100,
     },
+    copyright: {
+      fontSize: 13,
+    },
   },
   palette: {
     primary: {

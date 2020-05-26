@@ -63,7 +63,7 @@ export default function Footer() {
         </ul>
       </div>
       <div>
-        <Typography variant="body2" align="center">
+        <Typography variant="copyright" align="center">
           Made with{" "}
           <motion.div
             className="beating-heart"
