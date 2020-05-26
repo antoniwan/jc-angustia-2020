@@ -96,6 +96,11 @@ function TestimonialsCarousel() {
       }
     >
       <Slide
+        recommendationCopy={`Juan is rockstar in many regards. His passion for pushing toward a solution that is both effective and elegant is evident in every project he applies himself to – big or small.`}
+        writtenBy={`Jonathan Zweifler`}
+        writtenByTitle={`Innovation Strategy at Comcast NBCUniversal`}
+      />
+      <Slide
         recommendationCopy={`Juan is an extremely talented individual that is not afraid of any visual challenge. His high energy, and "no problem" attitude make him a great candidate for any team.`}
         writtenBy={`Alberto Orsini`}
         writtenByTitle={`Sr. Manager, Product Design at Royal Caribbean Cruises Ltd.`}
@@ -119,7 +124,7 @@ export default function Testimonials() {
     <section className="testimonials">
       <Grid container spacing={0} justify="center" id="testimonials-anchor">
         <Grid className="simple-is-better-content" item xs={12} md={6}>
-          <Typography variant="h2" align="center" paragraph>
+          <Typography variant="h1" align="center" paragraph>
             Testimonials
           </Typography>
           <Typography paragraph align="center">
