@@ -55,6 +55,10 @@ footer .logo svg {
   margin-right: 5px;
 }
 
+.copyright-text {
+  font-size: 14px;
+}
+
 @media (min-width: 960px) {
   footer {
     flex-direction: row;

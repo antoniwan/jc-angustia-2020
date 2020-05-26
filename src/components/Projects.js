@@ -13,7 +13,7 @@ import PhotoXfinityStream2x from "../images/photo-xfinity-stream-2x.png";
 import { enterFromBottom, exitToBottom } from "../utils/animations";
 
 function ProjectGoogleDuo() {
-  const [ref, inView, entry] = useInView();
+  const [ref, inView] = useInView();
   const controls = useAnimation();
 
   useEffect(() => {
@@ -79,7 +79,7 @@ function ProjectGoogleDuo() {
 }
 
 function ProjectVevoMusic() {
-  const [ref, inView, entry] = useInView();
+  const [ref, inView] = useInView();
   const controls = useAnimation();
 
   useEffect(() => {
@@ -146,7 +146,7 @@ function ProjectVevoMusic() {
 }
 
 function ProjectXfinityStream() {
-  const [ref, inView, entry] = useInView();
+  const [ref, inView] = useInView();
   const controls = useAnimation();
 
   useEffect(() => {
@@ -217,7 +217,7 @@ function ProjectXfinityStream() {
 }
 
 export default function Projects() {
-  const [ref, inView, entry] = useInView();
+  const [, inView] = useInView();
   const controls = useAnimation();
 
   useEffect(() => {
