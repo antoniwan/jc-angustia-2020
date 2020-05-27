@@ -36,7 +36,7 @@ let Theme = createMuiTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(","),
-    fontSize: 15.5,
+    fontSize: 15,
     h1: {
       fontSize: 57,
       color: "#1300ED",
@@ -143,6 +143,14 @@ let Theme = createMuiTheme({
     },
   },
 });
+
+Theme.typography.h1 = {
+  ...Theme.typography.h1,
+  fontSize: 30,
+  [Theme.breakpoints.up("md")]: {
+    fontSize: 57,
+  },
+};
 
 export default Theme;
 export { ThemeProvider };

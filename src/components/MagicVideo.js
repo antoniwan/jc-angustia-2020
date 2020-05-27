@@ -12,7 +12,7 @@ export default function MagicVideo() {
   return (
     <div
       className="magic-video  jarallax"
-      data-video-src="https://www.youtube.com/watch?v=NL-AWrKqqb0&feature=youtu.be"
+      data-video-src="https://vimeo.com/415724764"
     />
   );
 }
