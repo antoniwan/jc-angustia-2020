@@ -206,7 +206,7 @@ function SimpleParticles() {
 }
 
 export default function SimpleIsBetter() {
-  const [ref, inView, entry] = useInView();
+  const [ref, inView] = useInView();
   const controls = useAnimation();
 
   useEffect(() => {

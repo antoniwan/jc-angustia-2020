@@ -17,7 +17,7 @@ export default function Hello() {
   const [aTranslation, setaTranslation] = useState(0);
   const [aOutlineTranslation, setaOutlineTranslation] = useState(0);
   const [jcTranslation, setjcTranslation] = useState(0);
-  const [ref, inView, entry] = useInView();
+  const [ref, inView] = useInView();
   const controls = useAnimation();
 
   const handleScroll = function (e) {
