@@ -1,8 +1,4 @@
-import {
-  ThemeProvider,
-  createMuiTheme,
-  responsiveFontSizes,
-} from "@material-ui/core/styles";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 const shadowKeyUmbraOpacity = 0.2;
 const shadowKeyPenumbraOpacity = 0.14;
@@ -40,7 +36,7 @@ let Theme = createMuiTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(","),
-    fontSize: 16,
+    fontSize: 15.5,
     h1: {
       fontSize: 57,
       color: "#1300ED",
@@ -147,8 +143,6 @@ let Theme = createMuiTheme({
     },
   },
 });
-
-Theme = responsiveFontSizes(Theme);
 
 export default Theme;
 export { ThemeProvider };
