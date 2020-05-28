@@ -108,6 +108,8 @@ button:hover.modal-close {
     height: calc(100% - 215px);
     width: calc(100% - 150px);
     max-width: 1290px !important;
+    border-radius: 14px;
+    overflow: hidden;
   }
 }
 
