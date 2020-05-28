@@ -171,7 +171,7 @@ function SimpleParticles() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", debounce(handleScroll, 3));
+    // window.addEventListener("scroll", debounce(handleScroll, 3));
   });
 
   return (
@@ -219,7 +219,7 @@ export default function SimpleIsBetter() {
 
   return (
     <section className="simple-is-better" id="projects-anchor">
-      <SimpleParticles />
+      {/* <SimpleParticles /> */}
       <Grid container spacing={0} justify="center">
         <Grid className="simple-is-better-content" item xs={12} md={8}>
           <motion.div

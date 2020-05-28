@@ -182,7 +182,7 @@ function TalkParticles() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", debounce(handleScroll, 3));
+    // window.addEventListener("scroll", debounce(handleScroll, 3));
   });
 
   return (
@@ -297,7 +297,7 @@ export default function LetsTalk() {
 
   return (
     <section className="lets-talk">
-      <TalkParticles />
+      {/* <TalkParticles /> */}
       <Grid container spacing={0} justify="center">
         <Grid className="" item xs={12} md={7}>
           <Typography variant="h2" align="center" paragraph>
