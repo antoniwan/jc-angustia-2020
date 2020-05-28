@@ -37,8 +37,6 @@
   display: none;
 }
 
-.about-me-modal .MuiDialog-paperScrollPaper {
-}
 .about-me-modal .MuiDialogContent-root {
   padding: 20px;
   padding-top: 50px;
@@ -62,14 +60,12 @@ button:hover.modal-close {
   background: none;
 }
 
+.about-me-modal .MuiDialog-paperScrollPaper {
+  height: calc(100% - 24px);
+  width: calc(100% - 24px);
+}
+
 @media (min-width: 960px) {
-  .aboutme-image {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 280px;
-  }
   .hello {
     padding-bottom: 40px;
   }
@@ -108,13 +104,23 @@ button:hover.modal-close {
     width: 740px;
     height: 710px;
   }
+  .about-me-modal .MuiDialog-paperScrollPaper {
+    height: calc(100% - 215px);
+    width: calc(100% - 150px);
+    max-width: 1290px !important;
+  }
 }
 
 @media (min-width: 1220px) {
   .about-me-modal .MuiDialogContent-root {
     padding: 50px;
   }
+
   .aboutme-image {
+    display: block;
+    position: absolute;
     width: 480px;
+    left: 30px;
+    bottom: -17px;
   }
 }

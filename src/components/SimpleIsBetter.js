@@ -29,7 +29,7 @@ const particles = [
     width: 22,
     initialTop: 1089,
     initialLeft: 429,
-    speed: 160,
+    speed: 80,
   },
   {
     name: "Ellipse10",
@@ -56,7 +56,7 @@ const particles = [
     width: 86,
     initialTop: 1053,
     initialLeft: 630,
-    speed: 24,
+    speed: 18,
   },
   {
     name: "Group4",

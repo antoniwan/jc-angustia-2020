@@ -16,7 +16,7 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
     <Dialog
       className="about-me-modal"
       fullWidth={false}
-      maxWidth={"lg"}
+      maxWidth={"xl"}
       open={isOpen}
       onBackdropClick={handleClose}
       onEscapeKeyDown={handleClose}
@@ -36,7 +36,7 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
           <Grid
             item
             sm={12}
-            md={9}
+            md={11}
             lg={7}
             style={{ zIndex: "1", paddingBottom: "1rem" }}
           >
