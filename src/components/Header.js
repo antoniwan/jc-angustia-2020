@@ -102,7 +102,7 @@ export default function Header() {
         <AppBar position="fixed" color="inherit">
           <Toolbar className={`${toolbar} toolbar-override`}>
             <div className="logo">
-              <a href="/" onClick={handleClick}>
+              <a href="#hello" onClick={handleClick}>
                 <Logo />
               </a>
             </div>
