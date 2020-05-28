@@ -17,6 +17,11 @@ section.project {
   order: 2;
 }
 
+section.project .MuiTypography-h2 {
+  line-height: 1 !important;
+  margin-bottom: 18px !important;
+}
+
 section.project-vevo-music {
   padding-bottom: 0rem;
 }
@@ -28,7 +33,7 @@ img.project-google-duo-picture {
 }
 img.project-xfinity-stream-picture {
   max-width: 100%;
-  left: 0;
+  left: 10px;
   position: relative;
 }
 img.project-vevo-music-picture {
