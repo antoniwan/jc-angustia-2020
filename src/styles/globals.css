@@ -3,7 +3,7 @@
   --color-black: #000000;
   --color-white: #ffffff;
   --color-light-gray: #e2e2e2;
-  --border-radius: 4px;
+  --border-radius: 8px;
 }
 
 body {
@@ -16,7 +16,18 @@ body {
   background-color: var(--color-white);
 }
 
+.MuiTypography-paragraph {
+  margin-bottom: 24px !important;
+}
+
+.MuiTypography-body1 {
+  line-height: 30px !important;
+}
+
 strong,
 b {
   font-weight: 600 !important;
+}
+
+@media (min-width: 920px) {
 }

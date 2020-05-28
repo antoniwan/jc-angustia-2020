@@ -72,6 +72,7 @@ let Theme = createMuiTheme({
     },
     body: {
       fontSize: 15,
+      lineHeight: "32px",
     },
     body2: {
       fontSize: 15,
@@ -126,8 +127,9 @@ let Theme = createMuiTheme({
   overrides: {
     MuiButton: {
       root: {
-        fontSize: 12,
-        padding: "8px 20px",
+        fontSize: 13,
+        padding: "23px 1.7rem",
+        lineHeight: 1,
       },
     },
     MuiFormLabel: {
@@ -149,6 +151,7 @@ Theme.typography.h1 = {
   fontSize: 30,
   [Theme.breakpoints.up("md")]: {
     fontSize: 57,
+    lineHeight: "64px",
   },
 };
 
