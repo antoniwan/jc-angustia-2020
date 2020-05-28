@@ -58,10 +58,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("hello-anchor");
+  const [useScroll, setUseScroll] = useState(true);
   const classes = useStyles();
   const { root, navigation, ul, li, toolbar } = classes;
 
   const handleScroll = (e) => {
+    if (!useScroll) {
+      return;
+    }
+
     const { scrollTop } = e.target.scrollingElement;
     const projectsAnchor = document.querySelector("#projects-anchor");
     const testimonialsAnchor = document.querySelector("#testimonials-anchor");
@@ -82,14 +87,15 @@ export default function Header() {
     }
   };
 
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
+    setUseScroll(false);
     const goTo = e.target.dataset.anchor || "hello-anchor";
     const anchor = document.querySelector(`#${goTo}`);
-
     if (goTo) {
-      anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+      await anchor.scrollIntoView({ behavior: "smooth", block: "center" });
       setActiveSection(anchor.id);
     }
+    setUseScroll(true);
   };
 
   useEffect(() => {
@@ -153,7 +159,7 @@ export default function Header() {
                   }`}
                 >
                   <a
-                    href="#hire-me"
+                    href="#lets-talk"
                     data-anchor="hire-anchor"
                     onClick={handleClick}
                   >
