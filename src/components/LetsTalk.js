@@ -299,7 +299,7 @@ export default function LetsTalk() {
     <section className="lets-talk">
       <TalkParticles />
       <Grid container spacing={0} justify="center">
-        <Grid className="" item xs={12} md={5}>
+        <Grid className="" item xs={12} md={7}>
           <Typography variant="h2" align="center" paragraph>
             Let's Talk
           </Typography>
