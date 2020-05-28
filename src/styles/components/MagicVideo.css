@@ -10,22 +10,4 @@
     width: 100%;
     overflow: hidden;
   }
-
-  .magic-video-wrapper {
-    width: 120%;
-    height: 120%;
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-
-  .magic-video video {
-    display: block;
-    position: relative;
-    background-size: cover;
-    width: 100%;
-    top: 900px;
-    left: 0;
-    margin: 0 auto;
-  }
 }
