@@ -1,3 +1,5 @@
+@import "./AboutMeModal.css";
+
 .hello {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -32,43 +34,6 @@
 }
 .hello-content h1 {
   margin-bottom: 1rem;
-}
-.aboutme-image {
-  display: none;
-}
-
-.about-me-modal .MuiDialogContent-root {
-  padding: 20px;
-  padding-top: 50px;
-}
-.about-me-modal .MuiGrid-item {
-  padding-bottom: 0 !important;
-}
-.about-me-modal a,
-.about-me-modal a:hover {
-  font-weight: 600;
-  color: var(--color-black);
-  text-decoration: none;
-}
-
-button.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 40px;
-  display: block;
-}
-button:hover.modal-close {
-}
-button.modal-close svg {
-  font-size: 2rem;
-}
-
-.about-me-modal .MuiDialog-paperScrollPaper {
-  height: calc(100% - 24px);
-  width: calc(100% - 24px);
 }
 
 @media (min-width: 960px) {
@@ -110,26 +75,7 @@ button.modal-close svg {
     width: 740px;
     height: 710px;
   }
-  .about-me-modal .MuiDialog-paperScrollPaper {
-    height: calc(100% - 215px);
-    width: calc(100% - 150px);
-    max-width: 1290px !important;
-    max-height: 715px !important;
-    border-radius: 14px;
-    overflow: hidden;
-  }
 }
 
 @media (min-width: 1220px) {
-  .about-me-modal .MuiDialogContent-root {
-    padding: 50px;
-  }
-
-  .aboutme-image {
-    display: block;
-    position: absolute;
-    width: 480px;
-    left: 30px;
-    top: 17px;
-  }
 }

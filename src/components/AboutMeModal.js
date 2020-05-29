@@ -27,18 +27,23 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
         <CloseIcon />
       </Button>
       <DialogContent>
-        <Grid container alignItems="flex-start" justify="flex-end">
+        <Grid
+          className="aboutme-grid-container"
+          container
+          alignItems="flex-start"
+          justify="flex-end"
+        >
           <img
             className="aboutme-image"
             srcSet={`${Photo} 1x, ${Photo2x} 2x`}
             alt="Handsome afro-latino with cool glasses, sitting on a stool, smiling into the sun"
           />
           <Grid
+            className="aboutme-content"
             item
-            sm={12}
-            md={11}
+            md={12}
             lg={7}
-            style={{ zIndex: "1", paddingBottom: "1rem" }}
+            style={{ zIndex: "1" }}
           >
             <Typography paragraph variant="h6">
               About me

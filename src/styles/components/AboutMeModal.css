@@ -1,0 +1,80 @@
+.about-me-modal .MuiDialogContent-root {
+  padding: 20px;
+}
+
+.about-me-modal a,
+.about-me-modal a:hover {
+  font-weight: 600;
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.about-me-modal button.modal-close {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: calc(32px + 20px);
+  height: calc(32px + 20px);
+  border-radius: calc(32px + 20px);
+  max-width: calc(32px + 20px) !important;
+  max-height: calc(32px + 20px) !important;
+  min-width: calc(32px + 20px) !important;
+  z-index: 999;
+  text-align: center;
+  padding: 10px;
+}
+.about-me-modal button.modal-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.about-me-modal button.modal-close span {
+  position: relative;
+  top: 0;
+  left: 1px;
+}
+.about-me-modal button.modal-close svg {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.about-me-modal .MuiDialog-paperScrollPaper {
+  height: calc(100% - 24px);
+  max-height: calc(100% - 24px);
+  width: calc(100% - 24px);
+  margin: 0;
+}
+
+.about-me-modal img.aboutme-image {
+  display: none;
+}
+.about-me-modal .aboutme-content {
+  padding: 0px;
+}
+
+@media (min-width: 960px) {
+  .about-me-modal .MuiDialog-paperScrollPaper {
+    height: calc(100% - 215px);
+    width: calc(100% - 150px);
+    max-width: 1290px !important;
+    max-height: 715px !important;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1220px) {
+  .about-me-modal .MuiDialogContent-root {
+    padding: 0;
+  }
+
+  .about-me-modal img.aboutme-image {
+    display: block;
+    position: absolute;
+    width: 480px;
+    left: 30px;
+    top: 17px;
+  }
+  .about-me-modal .aboutme-content {
+    padding: 40px;
+  }
+}
