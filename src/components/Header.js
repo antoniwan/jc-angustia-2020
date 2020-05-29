@@ -170,7 +170,12 @@ export default function Header() {
             </div>
             <div className="resume-tab">
               <Button variant="contained" color="primary" disableElevation>
-                <a href="#resume" target="_blank" rel="noopener noreferrer">
+                <a
+                  download
+                  href={process.env.PUBLIC_URL + "/pdf/angustia-2020.pdf"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Resume
                 </a>
               </Button>
