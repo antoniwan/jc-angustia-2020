@@ -171,7 +171,7 @@ const particles = [
   },
 ];
 
-function TalkParticles() {
+function TalkParticles({ disableMovement }) {
   const Yoffset = 1140;
   const Xoffset = 90;
   const [scrollTop, setScrollTop] = useState(0);
@@ -182,7 +182,9 @@ function TalkParticles() {
   };
 
   useEffect(() => {
-    // window.addEventListener("scroll", debounce(handleScroll, 3));
+    if (!disableMovement) {
+      window.addEventListener("scroll", debounce(handleScroll, 3));
+    }
   });
 
   return (
@@ -297,7 +299,7 @@ export default function LetsTalk() {
 
   return (
     <section className="lets-talk">
-      {/* <TalkParticles /> */}
+      <TalkParticles disableMovement={true} />
       <Grid container spacing={0} justify="center">
         <Grid className="" item xs={12} md={7}>
           <Typography variant="h2" align="center" paragraph>
