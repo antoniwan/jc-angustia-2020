@@ -1,6 +1,20 @@
+.projects {
+}
+.projects img {
+  width: 100%;
+}
+.projects .project-image {
+  margin-bottom: 48px;
+  margin-top: 48px;
+}
+
 section.project {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .project-picture-container {
@@ -27,26 +41,29 @@ section.project-vevo-music {
 }
 
 img.project-google-duo-picture {
-  max-width: 100%;
-  left: 0;
-  position: relative;
 }
 img.project-xfinity-stream-picture {
-  max-width: 100%;
-  left: 10px;
+}
+section.project-vevo-music .project-image {
+  right: 0;
   position: relative;
 }
 img.project-vevo-music-picture {
-  max-width: 100%;
-  left: 0;
-  position: relative;
 }
 
 @media (min-width: 960px) {
   section.project {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
+  section.project .project-text {
+    width: 540px;
+  }
+
   .flex-order-1 {
     order: 0;
   }
@@ -55,11 +72,16 @@ img.project-vevo-music-picture {
   }
 
   img.project-google-duo-picture {
-    max-width: 110%;
-    left: -10%;
   }
   img.project-xfinity-stream-picture {
-    max-width: 120%;
+  }
+
+  section.project-vevo-music {
+    padding-bottom: 6rem;
+  }
+  section.project-vevo-music .project-image {
+    right: 120px;
+    position: relative;
   }
   img.project-vevo-music-picture {
   }
