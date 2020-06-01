@@ -3,7 +3,6 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
 import PhotoGoogleDuo from "../images/photo-google-duo.png";
 import PhotoGoogleDuo2x from "../images/photo-google-duo-2x.png";
 import PhotoVevoMusic from "../images/photo-vevo-music.png";

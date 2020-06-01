@@ -50,6 +50,9 @@
 .about-me-modal .aboutme-content {
   padding: 0px;
 }
+.about-me-modal .MuiTouchRipple-root {
+  display: none;
+}
 
 @media (min-width: 960px) {
   .about-me-modal .MuiDialog-paperScrollPaper {
