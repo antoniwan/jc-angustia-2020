@@ -21,8 +21,8 @@ export default function Home() {
         <Projects />
       </Container>
       <MagicVideo />
+      <Testimonials />
       <Container maxWidth="lg">
-        <Testimonials />
         <LetsTalk />
       </Container>
     </main>

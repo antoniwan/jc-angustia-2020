@@ -16,7 +16,9 @@
     "react-dom": "^16.13.1",
     "react-intersection-observer": "^8.26.2",
     "react-responsive-carousel": "^3.2.7",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-slick": "^0.26.1",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

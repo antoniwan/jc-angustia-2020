@@ -3,163 +3,89 @@
   padding-bottom: 6rem;
 }
 
-.testimonials .carousel .slider.animated {
-  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-}
-
-.carousel .slide {
+.testimonials-slider .slick-slide {
   background: white;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  padding-left: 24px;
+  padding-right: 24px;
 }
-.carousel .thumbs-wrapper.axis-vertical {
+.testimonials-slider .testimonial-quote {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.testimonials-slider .testimonial-person {
+  color: var(--color-blue);
+  font-weight: bold;
+}
+.testimonials-slider .testimonial-person-title {
+  font-weight: 300;
+}
+.testimonials-slider .slick-dots li {
+  width: 20px;
+  transition: all 0.5s ease;
+}
+.testimonials-slider .slick-dots li.slick-active {
+  width: 50px;
+}
+.testimonials-slider .slick-dots li button:before {
+  border-radius: 4px;
+  height: 4px;
+  width: 20px;
+  background: var(--color-light-gray);
+  content: " ";
+  transition: all 0.5s ease;
+}
+.testimonials-slider .slick-dots li.slick-active button:before {
+  width: 50px;
+  background: var(--color-blue);
+}
+
+.custom-arrows {
   display: none;
 }
 
-.testimonial-quote {
-  font-size: 1.3rem !important;
-  font-weight: 600 !important;
-}
-.testimonial-person {
-  color: var(--color-blue);
-  font-weight: bold !important;
-}
-.testimonial-person-title {
-  font-weight: 300 !important;
-}
-.carousel .slider-wrapper {
-}
-.carousel .control-arrow {
-  display: none !important;
-  background: var(--color-white) !important;
-}
-
-.carousel .control-arrow:before {
-  display: none !important;
-}
-
-.carousel .control-prev.control-arrow {
-  left: 24px;
-}
-.carousel .control-next.control-arrow {
-  right: 24px;
-}
-.carousel .control-prev.control-arrow,
-.carousel .control-next.control-arrow {
-  top: 100px;
-}
-
-.carousel .MuiSvgIcon-root {
-  top: 6px;
-  position: relative;
-}
-
-.carousel .control-dots {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  align-content: center;
-  margin: 0;
-  padding: 0;
-}
-.carousel .control-dots li {
-  list-style: none;
-  border-radius: 4px;
-  height: 4px;
-  width: 38px;
-  margin-right: 5px;
-}
-.carousel .control-dots li:last-child {
-  margin-right: 0;
-}
-
-.carousel .indicator {
-  height: 5px;
-  width: 20px;
-  background: var(--color-light-gray);
-  transition: width 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  outline: none;
-}
-.carousel .indicator.indicator-selected {
-  background: var(--color-blue);
-  width: 60px;
-}
-
 @media (min-width: 960px) {
-  .carousel .slide {
+  .testimonials-slider-wrapper {
+    position: relative;
+  }
+
+  .testimonials-slider .slick-slide {
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
-  .carousel .thumbs-wrapper.axis-vertical {
-    display: none;
-  }
-  .carousel .slider-wrapper {
-    margin-top: 2rem;
-  }
 
-  .testimonial-quote {
-    font-size: 1.6rem !important;
-    font-weight: 600 !important;
+  .testimonials-slider .testimonial-quote {
+    font-size: 1.6rem;
+    font-weight: 600;
   }
-  .testimonial-person {
+  .testimonials-slider .testimonial-person {
     color: var(--color-blue);
-    font-weight: bold !important;
+    font-weight: bold;
   }
-  .testimonial-person-title {
-    font-weight: 300 !important;
+  .testimonials-slider .testimonial-person-title {
+    font-weight: 300;
   }
-  .carousel .control-arrow {
-    display: block !important;
-    color: var(--color-blue) !important;
-    opacity: 1 !important;
-    top: 50px;
+
+  .custom-arrows {
+    display: block;
+    z-index: 9999;
+    width: 100%;
+    background: red;
+    position: absolute;
+    top: calc(50% - 56px);
+  }
+  .custom-arrows .next-arrow,
+  .custom-arrows .prev-arrow {
     background: var(--color-white);
+    color: var(--color-blue);
+    position: absolute;
   }
 
-  .carousel .control-arrow:before {
-    display: none !important;
+  .custom-arrows .next-arrow {
+    right: 48px;
   }
-
-  .carousel .control-prev.control-arrow {
-    left: 24px;
-  }
-  .carousel .control-next.control-arrow {
-    right: 24px;
-  }
-  .carousel .control-prev.control-arrow,
-  .carousel .control-next.control-arrow {
-    top: 100px;
-  }
-
-  .carousel .control-dots {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    margin: 0;
-    padding: 0;
-  }
-  .carousel .control-dots li {
-    list-style: none;
-    border-radius: 4px;
-    height: 4px;
-    width: 38px;
-    margin-right: 5px;
-  }
-  .carousel .control-dots li:last-child {
-    margin-right: 0;
-  }
-
-  .carousel .indicator {
-    height: 5px;
-    width: 20px;
-    background: var(--color-light-gray);
-  }
-  .carousel .indicator.indicator-selected {
-    background: var(--color-blue);
+  .custom-arrows .prev-arrow {
+    left: 48px;
   }
 }
