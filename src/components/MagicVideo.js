@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
 import { jarallax, jarallaxVideo } from "jarallax";
+import "jarallax/dist/jarallax.css";
 
 export default function MagicVideo() {
   useEffect(() => {
     jarallaxVideo();
     jarallax(document.querySelectorAll(".jarallax"), {
       speed: 0.2,
+      videoLoop: true,
+      videoPlayOnlyVisible: false,
     });
   });
 
