@@ -1,4 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -93,20 +95,74 @@ function TestimonialsCarousel() {
 }
 
 export default function Testimonials() {
+  const [ref, inView] = useInView({ threshold: 0.5 });
+  const controls = useAnimation();
+
+  const section = {
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { staggerChildren: 0.07 },
+    },
+    hidden: {
+      opacity: 0,
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  };
+
+  const item = {
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 },
+      },
+    },
+    hidden: {
+      y: 20,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 },
+      },
+    },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  });
+
   return (
     <section className="testimonials">
-      <Grid container spacing={0} justify="center" id="testimonials-anchor">
-        <Grid className="simple-is-better-content" item xs={12} md={6}>
-          <Typography variant="h1" align="center" paragraph>
-            Testimonials
-          </Typography>
-          <Typography paragraph align="center">
-            Check out what others are saying about me.
-          </Typography>
-        </Grid>
-      </Grid>
+      <motion.div
+        ref={ref}
+        initial={{ y: -100, opacity: 0 }}
+        animate={controls}
+        variants={section}
+      >
+        <Grid container spacing={0} justify="center" id="testimonials-anchor">
+          <Grid className="simple-is-better-content" item xs={12} md={6}>
+            <motion.div variants={item}>
+              <Typography variant="h1" align="center" paragraph>
+                Testimonials
+              </Typography>
+            </motion.div>
 
-      <TestimonialsCarousel />
+            <motion.div variants={item}>
+              <Typography paragraph align="center">
+                Check out what others are saying about me.
+              </Typography>
+            </motion.div>
+          </Grid>
+        </Grid>
+
+        <motion.div variants={item}>
+          <TestimonialsCarousel />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

@@ -19,7 +19,6 @@ import { ReactComponent as Rectangle21 } from "../svg/particles/particle-Rectang
 import { ReactComponent as Vector1 } from "../svg/particles/particle-Vector-1.svg";
 import { ReactComponent as Vector2 } from "../svg/particles/particle-Vector-2.svg";
 import { ReactComponent as ArrowDown } from "../svg/graphic-down-arrow.svg";
-import { enterFromBottom, exitToBottom } from "../utils/animations";
 
 const particles = [
   {
@@ -250,7 +249,7 @@ export default function SimpleIsBetter() {
 
   return (
     <section className="simple-is-better" id="projects-anchor">
-      <SimpleParticles disableMovement={true} />
+      <SimpleParticles disableMovement={false} />
       <Grid container spacing={0} justify="center">
         <Grid className="simple-is-better-content" item xs={12} md={8}>
           <motion.div

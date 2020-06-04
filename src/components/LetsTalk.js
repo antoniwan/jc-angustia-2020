@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import debounce from "lodash/debounce";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -229,6 +231,37 @@ export default function LetsTalk() {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState();
   const [message, setMessage] = useState("");
+  const [ref, inView] = useInView({ threshold: 0.7 });
+  const controls = useAnimation();
+
+  const section = {
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { staggerChildren: 0.07 },
+    },
+    hidden: {
+      opacity: 0,
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  };
+
+  const item = {
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 },
+      },
+    },
+    hidden: {
+      y: 20,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 },
+      },
+    },
+  };
 
   const handleChange = function (event) {
     const { name, value } = event.target;
@@ -297,109 +330,139 @@ export default function LetsTalk() {
     return foundError;
   };
 
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  });
+
   return (
     <section className="lets-talk">
-      <TalkParticles disableMovement={true} />
-      <Grid container spacing={0} justify="center">
-        <Grid className="" item xs={12} md={7}>
-          <Typography variant="h2" align="center" paragraph>
-            Let's Talk
-          </Typography>
-          <Typography paragraph align="center">
-            If interested to work with me on your next project feel free to
-            contact me, don't be shy. It would be my pleasure to work on the
-            next big idea.
-          </Typography>
-        </Grid>
-      </Grid>
-      <Grid container spacing={0} justify="center">
-        <Grid className="" item xs={12} md={5}>
-          <form
-            className="lets-talk-form"
-            noValidate
-            autoComplete="off"
-            id="hire-anchor"
-          >
-            {!loading ? (
-              <>
-                <TextField
-                  required
-                  name="name"
-                  id="form-name"
-                  label="Full name"
-                  placeholder={!sent ? `Jane Doe` : name}
-                  variant="outlined"
-                  fullWidth
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                  margin="normal"
-                  value={name.value}
-                  onChange={handleChange}
-                  helperText={nameError}
-                  error={!!nameError}
-                  disabled={sent}
-                />
-                <TextField
-                  required
-                  name="email"
-                  id="form-email"
-                  label="Email"
-                  placeholder={!sent ? `jane.doe@gmail.com` : email}
-                  variant="outlined"
-                  fullWidth
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                  margin="normal"
-                  value={email.value}
-                  onChange={handleChange}
-                  helperText={emailError}
-                  error={!!emailError}
-                  disabled={sent}
-                />
-                <TextField
-                  name="message"
-                  id="outlined-multiline-static"
-                  label="Message"
-                  multiline
-                  rows={3}
-                  variant="outlined"
-                  fullWidth
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                  margin="normal"
-                  value={message}
-                  onChange={handleChange}
-                  disabled={sent}
-                />
-              </>
-            ) : (
-              <CircularProgress size={50} />
-            )}
+      <TalkParticles disableMovement={false} />
+      <motion.div
+        ref={ref}
+        initial={{ y: -100, opacity: 0 }}
+        animate={controls}
+        variants={section}
+      >
+        <Grid container spacing={0} justify="center">
+          <Grid className="" item xs={12} md={7}>
+            <motion.div variants={item}>
+              <Typography variant="h2" align="center" paragraph>
+                Let's Talk
+              </Typography>
+            </motion.div>
 
-            {!sent ? (
-              <Button
-                className="form-submit-button"
-                variant="contained"
-                color="primary"
-                disableElevation
-                fullWidth
-                size="large"
-                onClick={handleFormSubmit}
-                disabled={loading}
-              >
-                {!loading ? `Send message` : `Sending...`}
-              </Button>
-            ) : (
-              <Alert severity="success">
-                <strong>Thank you!</strong> I will contact you ASAP!
-              </Alert>
-            )}
-          </form>
+            <motion.div variants={item}>
+              <Typography paragraph align="center">
+                If interested to work with me on your next project feel free to
+                contact me, don't be shy. It would be my pleasure to work on the
+                next big idea.
+              </Typography>
+            </motion.div>
+          </Grid>
         </Grid>
-      </Grid>
+        <Grid container spacing={0} justify="center">
+          <Grid className="" item xs={12} md={5}>
+            <form
+              className="lets-talk-form"
+              noValidate
+              autoComplete="off"
+              id="hire-anchor"
+            >
+              {!loading ? (
+                <>
+                  <motion.div variants={item}>
+                    <TextField
+                      required
+                      name="name"
+                      id="form-name"
+                      label="Full name"
+                      placeholder={!sent ? `Jane Doe` : name}
+                      variant="outlined"
+                      fullWidth
+                      InputLabelProps={{
+                        shrink: true,
+                      }}
+                      margin="normal"
+                      value={name.value}
+                      onChange={handleChange}
+                      helperText={nameError}
+                      error={!!nameError}
+                      disabled={sent}
+                    />
+                  </motion.div>
+
+                  <motion.div variants={item}>
+                    <TextField
+                      required
+                      name="email"
+                      id="form-email"
+                      label="Email"
+                      placeholder={!sent ? `jane.doe@gmail.com` : email}
+                      variant="outlined"
+                      fullWidth
+                      InputLabelProps={{
+                        shrink: true,
+                      }}
+                      margin="normal"
+                      value={email.value}
+                      onChange={handleChange}
+                      helperText={emailError}
+                      error={!!emailError}
+                      disabled={sent}
+                    />
+                  </motion.div>
+
+                  <motion.div variants={item}>
+                    <TextField
+                      name="message"
+                      id="outlined-multiline-static"
+                      label="Message"
+                      multiline
+                      rows={3}
+                      variant="outlined"
+                      fullWidth
+                      InputLabelProps={{
+                        shrink: true,
+                      }}
+                      margin="normal"
+                      value={message}
+                      onChange={handleChange}
+                      disabled={sent}
+                    />
+                  </motion.div>
+                </>
+              ) : (
+                <CircularProgress size={50} />
+              )}
+
+              {!sent ? (
+                <motion.div variants={item}>
+                  <Button
+                    className="form-submit-button"
+                    variant="contained"
+                    color="primary"
+                    disableElevation
+                    fullWidth
+                    size="large"
+                    onClick={handleFormSubmit}
+                    disabled={loading}
+                  >
+                    {!loading ? `Send message` : `Sending...`}
+                  </Button>
+                </motion.div>
+              ) : (
+                <Alert severity="success">
+                  <strong>Thank you!</strong> I will contact you ASAP!
+                </Alert>
+              )}
+            </form>
+          </Grid>
+        </Grid>
+      </motion.div>
     </section>
   );
 }
