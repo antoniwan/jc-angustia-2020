@@ -208,14 +208,43 @@ function SimpleParticles({ disableMovement }) {
 }
 
 export default function SimpleIsBetter() {
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ threshold: 0.5 });
   const controls = useAnimation();
+
+  const section = {
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { staggerChildren: 0.07 },
+    },
+    hidden: {
+      opacity: 0,
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  };
+
+  const item = {
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 },
+      },
+    },
+    hidden: {
+      y: 20,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 },
+      },
+    },
+  };
 
   useEffect(() => {
     if (inView) {
-      controls.start(enterFromBottom);
+      controls.start("visible");
     } else {
-      controls.start(exitToBottom);
+      controls.start("hidden");
     }
   });
 
@@ -228,35 +257,41 @@ export default function SimpleIsBetter() {
             ref={ref}
             initial={{ y: -100, opacity: 0 }}
             animate={controls}
-            transition={{
-              type: "spring",
-              damping: 20,
-            }}
+            variants={section}
           >
-            <Typography variant="h1" align="center" paragraph>
-              "Simple is Better"
-            </Typography>
-            <Typography paragraph align="center">
-              Through my career as a designer, I've been privileged to work with
-              talented designers to innovate consumer products that simplify
-              millions of people's life.
-            </Typography>
-            <Typography align="center" paragraph>
-              <strong>Here's a few that I'd like to share.</strong>
-            </Typography>
-            <Typography align="center">
-              <motion.div
-                initial={{ y: 0 }}
-                animate={{ y: [20, 40, 20] }}
-                transition={{
-                  loop: Infinity,
-                  ease: "linear",
-                  duration: 1,
-                }}
-              >
-                <ArrowDown />
-              </motion.div>
-            </Typography>
+            <motion.div variants={item}>
+              <Typography variant="h1" align="center" paragraph>
+                "Simple is Better"
+              </Typography>
+            </motion.div>
+            <motion.div variants={item}>
+              <Typography paragraph align="center">
+                Through my career as a designer, I've been privileged to work
+                with talented designers to innovate consumer products that
+                simplify millions of people's life.
+              </Typography>
+            </motion.div>
+            <motion.div variants={item}>
+              <Typography align="center" paragraph>
+                <strong>Here's a few that I'd like to share.</strong>
+              </Typography>
+            </motion.div>
+
+            <motion.div variants={item}>
+              <Typography align="center">
+                <motion.div
+                  initial={{ y: 0 }}
+                  animate={{ y: [20, 40, 20] }}
+                  transition={{
+                    loop: Infinity,
+                    ease: "linear",
+                    duration: 1,
+                  }}
+                >
+                  <ArrowDown />
+                </motion.div>
+              </Typography>
+            </motion.div>
           </motion.div>
         </Grid>
       </Grid>
