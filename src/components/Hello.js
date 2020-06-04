@@ -87,7 +87,7 @@ export default function Hello() {
                 duration: 5,
                 staggerChildren: 0.07,
                 delayChildren: 0.2,
-                y: { stiffness: 1000 },
+                x: { stiffness: 1000 },
               },
             }}
             animate={controls}
@@ -97,14 +97,14 @@ export default function Hello() {
             }}
             variants={section}
           >
-            <motion.div variants={item} whileHover={{ scale: 1.02 }}>
+            <motion.div variants={item}>
               <Typography variant="h1" id="hello-anchor">
                 Hello there!
                 <br />
                 I'm Juan Angustia
               </Typography>
             </motion.div>
-            <motion.div variants={item} whileHover={{ scale: 1.02 }}>
+            <motion.div variants={item}>
               <Typography paragraph>
                 A Visual Designer at{" "}
                 <strong>
@@ -149,7 +149,7 @@ export default function Hello() {
                 , and proud Afro-Latino.
               </Typography>
             </motion.div>
-            <motion.div variants={item} whileHover={{ scale: 1.02 }}>
+            <motion.div variants={item}>
               <Button
                 variant="contained"
                 color="primary"
