@@ -9,7 +9,6 @@ import { ReactComponent as A } from "../svg/graphic-A.svg";
 import { ReactComponent as AwBottomLine } from "../svg/graphic-A-bottom-line.svg";
 import JC1x from "../images/photo-jc.png";
 import JC2x from "../images/photo-jc-2x.png";
-import { enterFromLeft, exitToLeft } from "../utils/animations";
 import AboutMeModal from "../components/AboutMeModal";
 
 export default function Hello() {
@@ -17,7 +16,7 @@ export default function Hello() {
   const [aTranslation, setaTranslation] = useState(0);
   const [aOutlineTranslation, setaOutlineTranslation] = useState(0);
   const [jcTranslation, setjcTranslation] = useState(0);
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ threshold: 0.5 });
   const controls = useAnimation();
 
   const handleScroll = function (e) {
@@ -35,13 +34,42 @@ export default function Hello() {
     setModalOpen(false);
   };
 
+  const section = {
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { staggerChildren: 0.07 },
+    },
+    hidden: {
+      opacity: 0,
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  };
+
+  const item = {
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        x: { stiffness: 1000, velocity: -100 },
+      },
+    },
+    hidden: {
+      x: -200,
+      opacity: 0,
+      transition: {
+        x: { stiffness: 1000 },
+      },
+    },
+  };
+
   useEffect(() => {
     if (inView) {
       window.addEventListener("scroll", debounce(handleScroll, 1));
-      controls.start(enterFromLeft);
+      controls.start("visible");
     } else {
       window.removeEventListener("scroll", handleScroll);
-      controls.start(exitToLeft);
+      controls.start("hidden");
     }
   });
 
@@ -52,69 +80,85 @@ export default function Hello() {
         <Grid className="hello-content" item xs={9} md={6}>
           <motion.div
             className="hello-content"
-            initial={{ x: -100, opacity: 0 }}
+            initial={{
+              x: -200,
+              opacity: 0,
+              transition: {
+                duration: 5,
+                staggerChildren: 0.07,
+                delayChildren: 0.2,
+                y: { stiffness: 1000 },
+              },
+            }}
             animate={controls}
             transition={{
               type: "spring",
               damping: 20,
             }}
+            variants={section}
           >
-            <Typography variant="h1" id="hello-anchor">
-              Hello there!
-              <br />
-              I'm Juan Angustia
-            </Typography>
-            <Typography paragraph>
-              A Visual Designer at{" "}
-              <strong>
-                <a
-                  href="https://students.googleblog.com/2020/02/my-path-to-google-juan-angustia-visual.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Google
-                </a>
-              </strong>
-              , who loves to create simple designs that inspire and engage
-              people. I'm an{" "}
-              <strong>
-                <a
-                  href="https://google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  entrepeneur,
-                </a>
-              </strong>{" "}
-              <strong>
-                <a
-                  href="https://medium.com/@angustia/a-latino-college-dropout-at-google-5eb2d0629710"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  writer
-                </a>
-              </strong>
-              ,{" "}
-              <strong>
-                <a
-                  href="https://www.instagram.com/p/B7JBE0ogWne/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  urban fashion lover
-                </a>
-              </strong>
-              , and proud Afro-Latino.
-            </Typography>
-            <Button
-              variant="contained"
-              color="primary"
-              disableElevation
-              onClick={handleClick}
-            >
-              Read more
-            </Button>
+            <motion.div variants={item} whileHover={{ scale: 1.02 }}>
+              <Typography variant="h1" id="hello-anchor">
+                Hello there!
+                <br />
+                I'm Juan Angustia
+              </Typography>
+            </motion.div>
+            <motion.div variants={item} whileHover={{ scale: 1.02 }}>
+              <Typography paragraph>
+                A Visual Designer at{" "}
+                <strong>
+                  <a
+                    href="https://students.googleblog.com/2020/02/my-path-to-google-juan-angustia-visual.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Google
+                  </a>
+                </strong>
+                , who loves to create simple designs that inspire and engage
+                people. I'm an{" "}
+                <strong>
+                  <a
+                    href="https://google.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    entrepeneur,
+                  </a>
+                </strong>{" "}
+                <strong>
+                  <a
+                    href="https://medium.com/@angustia/a-latino-college-dropout-at-google-5eb2d0629710"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    writer
+                  </a>
+                </strong>
+                ,{" "}
+                <strong>
+                  <a
+                    href="https://www.instagram.com/p/B7JBE0ogWne/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    urban fashion lover
+                  </a>
+                </strong>
+                , and proud Afro-Latino.
+              </Typography>
+            </motion.div>
+            <motion.div variants={item} whileHover={{ scale: 1.02 }}>
+              <Button
+                variant="contained"
+                color="primary"
+                disableElevation
+                onClick={handleClick}
+              >
+                Read more
+              </Button>
+            </motion.div>
           </motion.div>
         </Grid>
         <Grid item xs={3} md={6}>
