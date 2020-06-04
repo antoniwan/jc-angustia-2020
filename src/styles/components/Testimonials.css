@@ -35,6 +35,7 @@
   background: var(--color-light-gray);
   content: " ";
   transition: all 0.5s ease;
+  opacity: 1;
 }
 .testimonials-slider .slick-dots li.slick-active button:before {
   width: 50px;
