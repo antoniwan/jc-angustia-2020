@@ -22,6 +22,7 @@ import { ReactComponent as Group10 } from "../svg/particles/particle-Group-10.sv
 import { ReactComponent as Rectangle37 } from "../svg/particles/particle-Rectangle-37.svg";
 import { ReactComponent as Rectangle38 } from "../svg/particles/particle-Rectangle-38.svg";
 import { ReactComponent as Rectangle21 } from "../svg/particles/particle-Rectangle-21.svg";
+import Footer from "./Footer";
 
 const particles = [
   {
@@ -400,6 +401,8 @@ export default function LetsTalk() {
           </form>
         </Grid>
       </Grid>
+
+      <Footer />
     </section>
   );
 }

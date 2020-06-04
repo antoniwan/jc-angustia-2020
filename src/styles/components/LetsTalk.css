@@ -3,6 +3,9 @@
   padding-bottom: 0rem;
   position: relative;
   overflow: hidden;
+  height: 100vh;
+  max-height: 100vh;
+  scroll-snap-align: start;
 }
 
 .form-submit-button {

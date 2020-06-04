@@ -8,6 +8,7 @@ footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background: var(--color-white);
+  margin-top: 4rem;
 }
 footer ul {
   display: flex;

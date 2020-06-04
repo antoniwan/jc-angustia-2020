@@ -3,9 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import ScrollTop from "./components/ScrollTop";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import Footer from "./components/Footer";
 import "./styles/App.css";
-// import TestingContent from "./components/TestingContent";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,7 +21,7 @@ function App() {
       <Header />
       <div className={classes.offset} />
       <Home />
-      <Footer />
+
       <ScrollTop />
     </>
   );

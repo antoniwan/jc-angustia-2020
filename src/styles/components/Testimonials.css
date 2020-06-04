@@ -1,6 +1,10 @@
 .testimonials {
   padding-top: 6rem;
   padding-bottom: 6rem;
+  height: 100vh;
+  max-height: 100vh;
+  scroll-snap-align: start;
+  padding-top: 15%;
 }
 
 .testimonials-slider .slick-slide {

@@ -1,8 +1,11 @@
 @import "./AboutMeModal.css";
 
 .hello {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  height: 100vh;
+  max-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
 }
 .hello a {
   text-decoration: none;
@@ -38,7 +41,6 @@
 
 @media (min-width: 960px) {
   .hello {
-    padding-bottom: 40px;
   }
   .hello-content {
     margin-top: 11rem;

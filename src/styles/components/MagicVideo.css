@@ -1,5 +1,8 @@
 .magic-video {
   display: none;
+  height: 100vh;
+  max-height: 100vh;
+  scroll-snap-align: start;
 }
 
 @media (min-width: 960px) {
