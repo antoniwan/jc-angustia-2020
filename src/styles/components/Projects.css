@@ -74,6 +74,8 @@ img.project-vevo-music-picture {
   img.project-google-duo-picture {
   }
   img.project-xfinity-stream-picture {
+    left: -8px;
+    position: relative;
   }
 
   section.project-vevo-music {

@@ -49,8 +49,8 @@ const imageExitRight = {
     },
   },
   hidden: {
-    y: 20,
-    x: 200,
+    y: 0,
+    x: 50,
     opacity: 0,
     transition: {
       y: { stiffness: 1000 },
@@ -68,8 +68,8 @@ const imageExitLeft = {
     },
   },
   hidden: {
-    y: 20,
-    x: -200,
+    y: 0,
+    x: -50,
     opacity: 0,
     transition: {
       y: { stiffness: 1000 },
@@ -78,7 +78,7 @@ const imageExitLeft = {
 };
 
 function ProjectGoogleDuo() {
-  const [ref, inView] = useInView({ threshold: 0.5 });
+  const [ref, inView] = useInView({ threshold: 0.25 });
   const controls = useAnimation();
 
   useEffect(() => {
@@ -138,7 +138,7 @@ function ProjectGoogleDuo() {
 }
 
 function ProjectVevoMusic() {
-  const [ref, inView] = useInView({ threshold: 0.5 });
+  const [ref, inView] = useInView({ threshold: 0.25 });
   const controls = useAnimation();
 
   useEffect(() => {
@@ -199,7 +199,7 @@ function ProjectVevoMusic() {
 }
 
 function ProjectXfinityStream() {
-  const [ref, inView] = useInView({ threshold: 0.5 });
+  const [ref, inView] = useInView({ threshold: 0.25 });
   const controls = useAnimation();
 
   useEffect(() => {
