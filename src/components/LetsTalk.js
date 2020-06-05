@@ -350,7 +350,7 @@ export default function LetsTalk() {
         <Grid container spacing={0} justify="center">
           <Grid className="" item xs={12} md={7}>
             <motion.div variants={item}>
-              <Typography variant="h2" align="center" paragraph>
+              <Typography variant="h1" align="center" paragraph>
                 Let's Talk
               </Typography>
             </motion.div>
