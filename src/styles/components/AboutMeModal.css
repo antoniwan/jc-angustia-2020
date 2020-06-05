@@ -56,7 +56,7 @@
 
 @media (min-width: 960px) {
   .about-me-modal .MuiDialog-paperScrollPaper {
-    height: calc(100% - 215px);
+    height: calc(100% - 150px);
     width: calc(100% - 150px);
     max-width: 1290px !important;
     max-height: 715px !important;
@@ -79,5 +79,7 @@
   }
   .about-me-modal .aboutme-content {
     padding: 40px;
+    right: 24px;
+    position: relative;
   }
 }

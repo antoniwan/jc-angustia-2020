@@ -57,10 +57,10 @@ const particles = [
   {
     name: "Vector4",
     source: Vector4,
-    height: 46,
-    width: 78,
-    initialTop: 1260.74,
-    initialLeft: 705,
+    height: 46 * 2,
+    width: 78 * 2,
+    initialTop: 1260.74 + 100,
+    initialLeft: 705 - 50,
     speed: 40,
     transform: `rotate(37.09deg)`,
   },
@@ -69,8 +69,8 @@ const particles = [
     source: Group24,
     height: 64,
     width: 64,
-    initialTop: 642,
-    initialLeft: 987,
+    initialTop: 642 + 150,
+    initialLeft: 987 - 50,
     speed: 7,
   },
   {
@@ -87,8 +87,8 @@ const particles = [
     source: Group23,
     height: 69,
     width: 71.07,
-    initialTop: 1317,
-    initialLeft: 274,
+    initialTop: 1317 + 50,
+    initialLeft: 274 + 50 * 2,
     speed: 100,
     transform: `rotate(40.87deg)`,
   },
@@ -129,7 +129,7 @@ const particles = [
     height: 36,
     width: 38,
     initialTop: 1532,
-    initialLeft: 157.43,
+    initialLeft: 157.43 - 150,
     speed: 50,
     transform: `rotate(-49.11deg)`,
   },
@@ -157,9 +157,9 @@ const particles = [
     height: 69,
     width: 71,
     initialTop: 1428,
-    initialLeft: 1228.15,
+    initialLeft: 1228.15 + 100,
     speed: 50,
-    transform: `rotate(40.87deg)`,
+    transform: `rotate(180.87deg)`,
   },
   {
     name: "Rectangle37",
@@ -231,7 +231,7 @@ export default function LetsTalk() {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState();
   const [message, setMessage] = useState("");
-  const [ref, inView] = useInView({ threshold: 0.9 });
+  const [ref, inView] = useInView({ threshold: 0.15 });
   const controls = useAnimation();
 
   const section = {

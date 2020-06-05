@@ -21,6 +21,9 @@
 .testimonials-slider .testimonial-person-title {
   font-weight: 300;
 }
+.testimonials-slider .slick-dots {
+  bottom: 0;
+}
 .testimonials-slider .slick-dots li {
   width: 20px;
   transition: all 0.5s ease;
@@ -47,6 +50,11 @@
 }
 
 @media (min-width: 960px) {
+  .testimonials {
+    padding-top: 15rem;
+    padding-bottom: 6rem;
+  }
+
   .testimonials-slider-wrapper {
     position: relative;
   }
