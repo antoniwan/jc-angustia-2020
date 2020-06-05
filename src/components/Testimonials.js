@@ -14,7 +14,7 @@ function Slide({ recommendationCopy, writtenBy, writtenByTitle }) {
   return (
     <div>
       <Grid container spacing={0} justify="center">
-        <Grid className="simple-is-better-content" item xs={12} md={6}>
+        <Grid className="simple-is-better-content" item xs={12} md={7} lg={7}>
           <Typography className="testimonial-quote" align="center" paragraph>
             “{recommendationCopy}”
           </Typography>
@@ -115,14 +115,14 @@ export default function Testimonials() {
       y: 0,
       opacity: 1,
       transition: {
-        y: { stiffness: 1000, velocity: -100 },
+        y: { ease: "easeInOut", duration: 0.15 },
       },
     },
     hidden: {
       y: 20,
       opacity: 0,
       transition: {
-        y: { stiffness: 1000 },
+        y: { ease: "easeInOut", duration: 0.15 },
       },
     },
   };

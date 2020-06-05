@@ -227,14 +227,14 @@ export default function SimpleIsBetter() {
       y: 0,
       opacity: 1,
       transition: {
-        y: { stiffness: 1000, velocity: -100 },
+        y: { ease: "easeInOut", duration: 0.15 },
       },
     },
     hidden: {
       y: 20,
       opacity: 0,
       transition: {
-        y: { stiffness: 1000 },
+        y: { ease: "easeInOut", duration: 0.15 },
       },
     },
   };

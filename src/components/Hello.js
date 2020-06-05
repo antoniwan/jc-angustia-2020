@@ -51,14 +51,14 @@ export default function Hello() {
       x: 0,
       opacity: 1,
       transition: {
-        x: { stiffness: 1000, velocity: -100 },
+        x: { ease: "easeInOut", duration: 0.15 },
       },
     },
     hidden: {
       x: -24,
       opacity: 0,
       transition: {
-        x: { stiffness: 1000 },
+        x: { ease: "easeInOut", duration: 0.15 },
       },
     },
   };
@@ -92,6 +92,7 @@ export default function Hello() {
             }}
             animate={controls}
             variants={section}
+            transition={{ ease: "easeInOut", duration: 2 }}
           >
             <motion.div variants={item}>
               <Typography variant="h1" id="hello-anchor">

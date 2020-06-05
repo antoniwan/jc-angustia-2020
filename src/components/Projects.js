@@ -27,14 +27,14 @@ const item = {
     y: 0,
     opacity: 1,
     transition: {
-      y: { stiffness: 1000, velocity: -100 },
+      y: { ease: "easeInOut", duration: 0.15 },
     },
   },
   hidden: {
     y: 20,
     opacity: 0,
     transition: {
-      y: { stiffness: 1000 },
+      y: { ease: "easeInOut", duration: 0.15 },
     },
   },
 };
@@ -45,7 +45,7 @@ const imageExitRight = {
     x: 0,
     opacity: 1,
     transition: {
-      y: { stiffness: 1000, velocity: -100 },
+      y: { ease: "easeInOut", duration: 0.15 },
     },
   },
   hidden: {
@@ -53,7 +53,7 @@ const imageExitRight = {
     x: 50,
     opacity: 0,
     transition: {
-      y: { stiffness: 1000 },
+      y: { ease: "easeInOut", duration: 0.15 },
     },
   },
 };
@@ -64,7 +64,7 @@ const imageExitLeft = {
     x: 0,
     opacity: 1,
     transition: {
-      y: { stiffness: 1000, velocity: -100 },
+      y: { ease: "easeInOut", duration: 0.15 },
     },
   },
   hidden: {
@@ -72,7 +72,7 @@ const imageExitLeft = {
     x: -50,
     opacity: 0,
     transition: {
-      y: { stiffness: 1000 },
+      y: { ease: "easeInOut", duration: 0.15 },
     },
   },
 };
