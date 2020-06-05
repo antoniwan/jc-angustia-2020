@@ -78,8 +78,7 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
               >
                 Comcast
               </a>
-              , <strong>MasterCard</strong>, <strong>Copa Airlines</strong> and
-              among others.
+              , <>MasterCard</>, <>Copa Airlines</> and among others.
             </Typography>
             <Typography paragraph>
               Currently I work in{" "}
@@ -90,7 +89,16 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
               >
                 Google Duo
               </a>
-              , but in my free time I love to work on personal projects such as{" "}
+              , in our{" "}
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://careers.google.com/locations/seattle-kirkland/"
+              >
+                <strong>Seattle/Kirkland</strong>
+              </a>{" "}
+              office, but in my free time I love to work on personal projects
+              such as{" "}
               <a
                 href="https://channelstore.roku.com/details/209306/dominicana-tv"
                 rel="noopener noreferrer"
