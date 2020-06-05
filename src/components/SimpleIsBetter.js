@@ -214,7 +214,7 @@ export default function SimpleIsBetter() {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { staggerChildren: 0.07 },
+      transition: { staggerChildren: 0.2 },
     },
     hidden: {
       opacity: 0,

@@ -38,7 +38,7 @@ export default function Hello() {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { staggerChildren: 0.07 },
+      transition: { staggerChildren: 0.2 },
     },
     hidden: {
       opacity: 0,
@@ -55,7 +55,7 @@ export default function Hello() {
       },
     },
     hidden: {
-      x: -200,
+      x: -24,
       opacity: 0,
       transition: {
         x: { stiffness: 1000 },
@@ -81,11 +81,11 @@ export default function Hello() {
           <motion.div
             className="hello-content"
             initial={{
-              x: -200,
+              x: -24,
               opacity: 0,
               transition: {
                 duration: 5,
-                staggerChildren: 0.07,
+                staggerChildren: 0.2,
                 delayChildren: 0.2,
                 x: { stiffness: 1000 },
               },
