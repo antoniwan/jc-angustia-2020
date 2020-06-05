@@ -32,7 +32,7 @@
   border-radius: 4px;
   height: 4px;
   width: 20px;
-  background: var(--color-light-gray);
+  background: #c4c4c4;
   content: " ";
   transition: all 0.5s ease;
   opacity: 1;
@@ -58,6 +58,7 @@
 
   .testimonials-slider .testimonial-quote {
     font-size: 1.6rem;
+    line-height: 2.3rem !important;
     font-weight: 600;
   }
   .testimonials-slider .testimonial-person {
@@ -72,7 +73,6 @@
     display: block;
     z-index: 9999;
     width: 100%;
-    background: red;
     position: absolute;
     top: calc(50% - 56px);
   }

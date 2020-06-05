@@ -231,7 +231,7 @@ export default function LetsTalk() {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState();
   const [message, setMessage] = useState("");
-  const [ref, inView] = useInView({ threshold: 0.7 });
+  const [ref, inView] = useInView({ threshold: 0.9 });
   const controls = useAnimation();
 
   const section = {

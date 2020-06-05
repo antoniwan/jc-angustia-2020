@@ -14,7 +14,7 @@ function Slide({ recommendationCopy, writtenBy, writtenByTitle }) {
   return (
     <div>
       <Grid container spacing={0} justify="center">
-        <Grid className="simple-is-better-content" item xs={12} md={9}>
+        <Grid className="simple-is-better-content" item xs={12} md={6}>
           <Typography className="testimonial-quote" align="center" paragraph>
             “{recommendationCopy}”
           </Typography>
@@ -83,10 +83,10 @@ function TestimonialsCarousel() {
         />
       </Slider>
       <div className="custom-arrows">
-        <Fab className="next-arrow" onClick={next}>
+        <Fab className="next-arrow" size="large" onClick={next}>
           <NavigateNextIcon />
         </Fab>
-        <Fab className="prev-arrow" onClick={previous}>
+        <Fab className="prev-arrow" size="large" onClick={previous}>
           <NavigateBeforeIcon />
         </Fab>
       </div>
