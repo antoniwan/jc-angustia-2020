@@ -84,17 +84,13 @@ export default function Hello() {
               x: -24,
               opacity: 0,
               transition: {
-                duration: 5,
+                duration: 2,
                 staggerChildren: 0.2,
                 delayChildren: 0.2,
                 x: { stiffness: 1000 },
               },
             }}
             animate={controls}
-            transition={{
-              type: "spring",
-              damping: 20,
-            }}
             variants={section}
           >
             <motion.div variants={item}>
