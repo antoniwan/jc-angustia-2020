@@ -31,11 +31,11 @@ header .resume-tab button {
   height: 40px;
   right: -24px;
 }
-header .resume-tab a {
-  color: var(--color-white);
+header .resume-tab a,
+header .resume-tab a:hover,
+header .resume-tab a:visited {
+  color: var(--color-white) !important;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: bold;
-}
-header .resume-tab a:hover {
 }
