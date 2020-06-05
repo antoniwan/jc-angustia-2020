@@ -31,14 +31,14 @@
 .testimonials-slider .slick-dots li button:before {
   border-radius: 4px;
   height: 4px;
-  width: 20px;
+  width: 26px;
   background: #c4c4c4;
   content: " ";
   transition: all 0.5s ease;
   opacity: 1;
 }
 .testimonials-slider .slick-dots li.slick-active button:before {
-  width: 50px;
+  width: 56px;
   background: var(--color-blue);
 }
 
@@ -84,9 +84,9 @@
   }
 
   .custom-arrows .next-arrow {
-    right: 48px;
+    right: 72px;
   }
   .custom-arrows .prev-arrow {
-    left: 48px;
+    left: 72px;
   }
 }
