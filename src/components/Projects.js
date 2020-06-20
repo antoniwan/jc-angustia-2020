@@ -9,6 +9,7 @@ import PhotoVevoMusic from "../images/photo-vevo-music.png";
 import PhotoVevoMusic2x from "../images/photo-vevo-music-2x.png";
 import PhotoXfinityStream from "../images/photo-xfinity-stream.png";
 import PhotoXfinityStream2x from "../images/photo-xfinity-stream-2x.png";
+import vevoDevicePrototype from "../video/vevo-device-prototype.mp4";
 
 const section = {
   visible: {
@@ -216,6 +217,15 @@ function ProjectVevoMusic() {
         animate={controls}
         variants={imageExitRight}
       >
+        <video
+          className="project-vevo-music-video"
+          maxWidth="100%"
+          loop="true"
+          autoplay="true"
+          muted="true"
+        >
+          <source src={vevoDevicePrototype} type="video/mp4" />
+        </video>
         <img
           className="project-vevo-music-picture"
           srcSet={`${PhotoVevoMusic} 1x, ${PhotoVevoMusic2x} 2x`}
