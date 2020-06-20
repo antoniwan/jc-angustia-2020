@@ -38,29 +38,24 @@ export default function Hello() {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { staggerChildren: 0.2 },
+      transition: {
+        x: { ease: "easeInOut", duration: 0.6 },
+        opacity: { duration: 0.6 },
+      },
     },
     hidden: {
+      x: -60,
       opacity: 0,
-      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+      transition: {
+        x: { ease: "easeInOut", duration: 0.9 },
+        opacity: { duration: 0.6 },
+      },
     },
   };
 
   const item = {
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        x: { ease: "easeInOut", duration: 0.15 },
-      },
-    },
-    hidden: {
-      x: -24,
-      opacity: 0,
-      transition: {
-        x: { ease: "easeInOut", duration: 0.15 },
-      },
-    },
+    visible: {},
+    hidden: {},
   };
 
   useEffect(() => {
@@ -81,13 +76,11 @@ export default function Hello() {
           <motion.div
             className="hello-content"
             initial={{
-              x: -24,
+              x: -60,
               opacity: 0,
               transition: {
-                duration: 2,
-                staggerChildren: 0.2,
-                delayChildren: 0.2,
-                x: { stiffness: 1000 },
+                x: { ease: "easeInOut", duration: 0.9 },
+                opacity: { duration: 0.6 },
               },
             }}
             animate={controls}

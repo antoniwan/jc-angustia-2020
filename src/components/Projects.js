@@ -12,31 +12,45 @@ import PhotoXfinityStream2x from "../images/photo-xfinity-stream-2x.png";
 
 const section = {
   visible: {
-    y: 0,
+    x: 0,
     opacity: 1,
-    transition: { staggerChildren: 0.2 },
+    transition: {
+      x: { ease: "easeInOut", duration: 0.6 },
+      opacity: { duration: 0.6 },
+    },
   },
   hidden: {
+    x: -60,
     opacity: 0,
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    transition: {
+      x: { ease: "easeInOut", duration: 0.9 },
+      opacity: { duration: 0.6 },
+    },
+  },
+};
+
+const sectionRightToLeft = {
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      x: { ease: "easeInOut", duration: 0.6 },
+      opacity: { duration: 0.6 },
+    },
+  },
+  hidden: {
+    x: 60,
+    opacity: 0,
+    transition: {
+      x: { ease: "easeInOut", duration: 0.9 },
+      opacity: { duration: 0.6 },
+    },
   },
 };
 
 const item = {
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { ease: "easeInOut", duration: 0.15 },
-    },
-  },
-  hidden: {
-    y: 20,
-    opacity: 0,
-    transition: {
-      y: { ease: "easeInOut", duration: 0.15 },
-    },
-  },
+  visible: {},
+  hidden: {},
 };
 
 const imageExitRight = {
@@ -152,7 +166,7 @@ function ProjectVevoMusic() {
     <section ref={ref} className="project project-vevo-music vevo-music">
       <motion.div
         className="flex-order-1  project-text"
-        initial={{ y: -20, opacity: 0 }}
+        initial={{ y: -60, opacity: 0 }}
         animate={controls}
         variants={section}
       >
@@ -184,7 +198,7 @@ function ProjectVevoMusic() {
       </motion.div>
       <motion.div
         className="flex-order-1  project-image"
-        initial={{ y: -20, opacity: 0 }}
+        initial={{ y: -60, opacity: 0 }}
         animate={controls}
         variants={imageExitRight}
       >
@@ -216,7 +230,7 @@ function ProjectXfinityStream() {
     >
       <motion.div
         className="flex-order-1  project-image"
-        initial={{ y: -20, opacity: 0 }}
+        initial={{ y: 60, opacity: 0 }}
         animate={controls}
         variants={imageExitLeft}
       >
@@ -230,7 +244,7 @@ function ProjectXfinityStream() {
         className="flex-order-1  project-text"
         initial={{ y: -20, opacity: 0 }}
         animate={controls}
-        variants={section}
+        variants={sectionRightToLeft}
       >
         <motion.div variants={item}>
           <Typography variant="h2" paragraph>
