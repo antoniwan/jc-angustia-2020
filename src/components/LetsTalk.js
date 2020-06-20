@@ -340,7 +340,7 @@ export default function LetsTalk() {
 
   return (
     <section className="lets-talk">
-      <TalkParticles disableMovement={false} />
+      <TalkParticles disableMovement={true} />
       <motion.div
         ref={ref}
         initial={{ y: -100, opacity: 0 }}
