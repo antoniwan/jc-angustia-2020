@@ -15,7 +15,7 @@ export default function MagicVideo() {
   return (
     <div
       className="magic-video  jarallax"
-      data-video-src="https://vimeo.com/415724764"
+      data-video-src="https://www.youtube.com/watch?v=GBF8Tkhjs8U"
     />
   );
 }

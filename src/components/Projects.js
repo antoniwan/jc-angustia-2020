@@ -92,7 +92,7 @@ const imageExitLeft = {
 };
 
 function ProjectGoogleDuo() {
-  const [ref, inView] = useInView({ threshold: 0.25 });
+  const [ref, inView] = useInView({ threshold: 0.5 });
   const controls = useAnimation();
 
   useEffect(() => {
@@ -157,7 +157,7 @@ function ProjectGoogleDuo() {
 }
 
 function ProjectVevoMusic() {
-  const [ref, inView] = useInView({ threshold: 0.25 });
+  const [ref, inView] = useInView({ threshold: 0.5 });
   const controls = useAnimation();
 
   useEffect(() => {
@@ -227,7 +227,7 @@ function ProjectVevoMusic() {
 }
 
 function ProjectXfinityStream() {
-  const [ref, inView] = useInView({ threshold: 0.25 });
+  const [ref, inView] = useInView({ threshold: 0.5 });
   const controls = useAnimation();
 
   useEffect(() => {
