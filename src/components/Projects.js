@@ -130,7 +130,12 @@ function ProjectGoogleDuo() {
         </motion.div>
 
         <motion.div variants={item}>
-          <Button variant="contained" color="primary" disableElevation>
+          <Button
+            variant="contained"
+            color="primary"
+            disableElevation
+            onClick={() => window.open(`https://duo.google.com/about/`)}
+          >
             See more
           </Button>
         </motion.div>
@@ -191,7 +196,16 @@ function ProjectVevoMusic() {
         </motion.div>
 
         <motion.div variants={item}>
-          <Button variant="contained" color="primary" disableElevation>
+          <Button
+            variant="contained"
+            color="primary"
+            disableElevation
+            onClick={() =>
+              window.open(
+                `https://www.behance.net/gallery/41882415/Vevo-Music-Personalize-Your-Music-Experience`
+              )
+            }
+          >
             See more
           </Button>
         </motion.div>
@@ -266,7 +280,16 @@ function ProjectXfinityStream() {
           </Typography>
         </motion.div>
         <motion.div variants={item}>
-          <Button variant="contained" color="primary" disableElevation>
+          <Button
+            variant="contained"
+            color="primary"
+            disableElevation
+            onClick={() =>
+              window.open(
+                "https://www.behance.net/gallery/49381923/XFINITY-Stream-App-(Roku)"
+              )
+            }
+          >
             See more
           </Button>
         </motion.div>
