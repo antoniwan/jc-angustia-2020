@@ -93,7 +93,7 @@ const imageExitLeft = {
 };
 
 function ProjectGoogleDuo() {
-  const [ref, inView] = useInView({ threshold: 0.5 });
+  const [ref, inView] = useInView({ threshold: 0.75 });
   const controls = useAnimation();
 
   useEffect(() => {
@@ -107,7 +107,7 @@ function ProjectGoogleDuo() {
     <section ref={ref} className="project project-google-duo">
       <motion.div
         className="flex-order-1  project-text"
-        initial={{ y: -20, opacity: 0 }}
+        initial={{ x: -60, opacity: 0 }}
         animate={controls}
         variants={section}
       >
@@ -158,7 +158,7 @@ function ProjectGoogleDuo() {
 }
 
 function ProjectVevoMusic() {
-  const [ref, inView] = useInView({ threshold: 0.5 });
+  const [ref, inView] = useInView({ threshold: 0.75 });
   const controls = useAnimation();
 
   useEffect(() => {
@@ -237,7 +237,7 @@ function ProjectVevoMusic() {
 }
 
 function ProjectXfinityStream() {
-  const [ref, inView] = useInView({ threshold: 0.5 });
+  const [ref, inView] = useInView({ threshold: 0.75 });
   const controls = useAnimation();
 
   useEffect(() => {

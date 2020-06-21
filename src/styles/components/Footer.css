@@ -17,7 +17,7 @@ footer ul {
   padding: 0;
 }
 footer li {
-  margin-right: 15px;
+  margin-right: 8px;
   margin-bottom: 15px;
 }
 footer li:last-child {
@@ -31,7 +31,7 @@ footer li a svg {
   color: var(--color-blue);
   transition: all ease-in-out 200ms;
   border: 1.5px solid var(--color-blue);
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 3px;
   text-align: center;
   height: 24px;
