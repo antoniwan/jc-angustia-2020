@@ -105,8 +105,8 @@ export default function Hello() {
                   >
                     Google
                   </a>
-                </strong>
-                , who loves to create simple designs that inspire and engage
+                </strong>{" "}
+                who loves to create simple designs that inspire and engage
                 people. I'm an{" "}
                 <strong>
                   <a
@@ -136,7 +136,7 @@ export default function Hello() {
                     urban fashion lover
                   </a>
                 </strong>
-                , and proud Afro-Latino.
+                , and proud <strong>Afro-Latino</strong>.
               </Typography>
             </motion.div>
             <motion.div variants={item}>
