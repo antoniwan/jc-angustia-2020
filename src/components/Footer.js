@@ -1,12 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {
+  TiSocialLinkedin,
+  TiSocialInstagram,
+  TiSocialTwitter,
+  TiSocialDribbble,
+  TiSocialVimeo,
+} from "react-icons/ti";
+import { FaMediumM } from "react-icons/fa";
 import Typography from "@material-ui/core/Typography";
 import { ReactComponent as Logo } from "../svg/logo.svg";
-import { ReactComponent as Twitter } from "../svg/icon-twitter.svg";
-import { ReactComponent as Instagram } from "../svg/icon-instagram.svg";
-import { ReactComponent as Dribbble } from "../svg/icon-dribbble.svg";
-import { ReactComponent as Vimeo } from "../svg/icon-vimeo.svg";
-import { ReactComponent as Medium } from "../svg/icon-medium.svg";
 import { ReactComponent as Heart } from "../svg/icon-heart.svg";
 
 export default function Footer() {
@@ -16,11 +19,20 @@ export default function Footer() {
         <ul>
           <li>
             <a
+              href="https://www.linkedin.com/in/juanangustia/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TiSocialLinkedin />
+            </a>
+          </li>
+          <li>
+            <a
               href="https://www.instagram.com/jcagarcia/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Instagram />
+              <TiSocialInstagram />
             </a>
           </li>
           <li>
@@ -29,7 +41,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Twitter />
+              <TiSocialTwitter />
             </a>
           </li>
 
@@ -39,7 +51,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <Dribbble />
+              <TiSocialDribbble />
             </a>
           </li>
           <li>
@@ -48,7 +60,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <Vimeo />
+              <TiSocialVimeo />
             </a>
           </li>
           <li>
@@ -57,7 +69,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <Medium />
+              <FaMediumM />
             </a>
           </li>
         </ul>
