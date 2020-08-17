@@ -106,14 +106,6 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
               >
                 Murbanic
               </a>
-              and
-              <a
-                href="https://channelstore.roku.com/details/209306/dominicana-tv"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Dominicana TV
-              </a>
               , an app on Roku that allows Dominicans in the U.S. and Europe to
               watch local Dominican TV and listen to radio stations live and
               free. Also, I love to make videos, like the short film{" "}
