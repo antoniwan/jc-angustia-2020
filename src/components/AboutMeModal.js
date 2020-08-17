@@ -97,8 +97,16 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
               >
                 <strong>Seattle/Kirkland</strong>
               </a>{" "}
-              office, but in my free time I love to work on personal projects
-              such as{" "}
+              office, but in my free time I love to work on my clothing brand design 
+              {" "}
+              <a
+                href="https://www.murbanic.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Murbanic
+              </a>
+              and
               <a
                 href="https://channelstore.roku.com/details/209306/dominicana-tv"
                 rel="noopener noreferrer"
