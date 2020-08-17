@@ -106,9 +106,9 @@ const AboutMeModal = function ({ isOpen, handleClose }) {
               >
                 Murbanic
               </a>
-              , an app on Roku that allows Dominicans in the U.S. and Europe to
-              watch local Dominican TV and listen to radio stations live and
-              free. Also, I love to make videos, like the short film{" "}
+              , an urban clothing brand inspired by vibrant and positive vibes, along with 
+              the energy that evolves from the creativity and individuality of us all. 
+              Also, I love to make videos, like the short film{" "}
               <a
                 href="https://youtu.be/4emMRsvgnyI"
                 rel="noopener noreferrer"
