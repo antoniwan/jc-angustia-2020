@@ -28,7 +28,7 @@ export default function Footer() {
           </li>
           <li>
             <a
-              href="https://www.instagram.com/juanangustia_/"
+              href="https://www.instagram.com/jcagarcia/"
               target="_blank"
               rel="noopener noreferrer"
             >
