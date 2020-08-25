@@ -119,7 +119,7 @@ export default function Hello() {
                 </strong>{" "}
                 <strong>
                   <a
-                    href="https://medium.com/@angustia/a-latino-college-dropout-at-google-5eb2d0629710"
+                    href="https://medium.com/@angustia"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
