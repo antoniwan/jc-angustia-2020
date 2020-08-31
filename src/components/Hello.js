@@ -129,7 +129,7 @@ export default function Hello() {
                 ,{" "}
                 <strong>
                   <a
-                    href="https://www.instagram.com/p/CCwwiFsh_Iu/"
+                    href="https://www.murbanic.com/our-story"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
