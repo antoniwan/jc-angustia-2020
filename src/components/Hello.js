@@ -110,7 +110,7 @@ export default function Hello() {
                 people. I'm an{" "}
                 <strong>
                   <a
-                    href="https://google.com"
+                    href="https://www.murbanic.com/our-story"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -129,7 +129,7 @@ export default function Hello() {
                 ,{" "}
                 <strong>
                   <a
-                    href="https://www.instagram.com/p/B7JBE0ogWne/"
+                    href="https://www.instagram.com/p/CCwwiFsh_Iu/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
