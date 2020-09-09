@@ -114,7 +114,7 @@ export default function Hello() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    entrepeneur,
+                    entrepreneur,
                   </a>
                 </strong>{" "}
                 <strong>
