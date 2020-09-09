@@ -153,7 +153,7 @@ export default function Testimonials() {
 
             <motion.div variants={item}>
               <Typography paragraph align="center">
-                Check out what others are saying about me.
+                Check out what my colleagues have to say about me.
               </Typography>
             </motion.div>
           </Grid>
